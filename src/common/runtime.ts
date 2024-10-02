@@ -11,6 +11,7 @@ import { FileAccessor } from './fileAccessor';
 import {
   AvmDebuggingAssets,
   ProgramSourceDescriptor,
+  isPuyaSourceMap,
   normalizePathAndCasing,
 } from './utils';
 
@@ -411,5 +412,19 @@ export class AvmRuntime extends EventEmitter {
     }
 
     return sourceDescriptors;
+  }
+
+  public isPuyaFrame(frame: TraceStackFrame): boolean {
+    if (frame && frame.source && frame.source.path) {
+      const sourceDescriptors = this.findSourceDescriptorsForPath(
+        frame.source.path,
+      );
+      for (const { descriptor } of sourceDescriptors) {
+        if (isPuyaSourceMap(descriptor.json)) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 }

@@ -155,17 +155,12 @@ interface ISourceMap {
   pc_events?: Record<string, PCEvent>;
 }
 
-interface IPcLocationMap {
-  sources: string[];
-  getLocationForPc(pc: number): algosdk.SourceLocation | undefined;
-}
-
 export class ProgramSourceDescriptor {
   constructor(
     public readonly fileAccessor: FileAccessor,
     public readonly sourcemapFileLocation: string,
     public readonly json: ISourceMap,
-    public readonly sourcemap: IPcLocationMap,
+    public readonly sourcemap: algosdk.ProgramSourceMap,
     public readonly hash: Uint8Array,
   ) {}
 
@@ -323,6 +318,10 @@ export class AvmDebuggingAssets {
 
     return new AvmDebuggingAssets(simulateResponse, txnGroupDescriptorList);
   }
+}
+
+export function isPuyaSourceMap(sourcemap: ISourceMap | undefined): boolean {
+  return sourcemap?.pc_events !== undefined;
 }
 
 function prefixPotentialError<T>(task: Promise<T>, prefix: string): Promise<T> {

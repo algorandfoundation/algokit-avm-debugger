@@ -18,6 +18,7 @@ import { Subject } from 'await-notify';
 import * as algosdk from 'algosdk';
 import { FileAccessor } from './fileAccessor';
 import { AvmDebuggingAssets, utf8Decode, limitArray } from './utils';
+import { ProgramState } from './traceReplayEngine';
 
 const GENERIC_ERROR_ID = 9999;
 
@@ -397,14 +398,22 @@ export class AvmDebugSession extends DebugSession {
 
       const scopes: DebugProtocol.Scope[] = [];
       if (frame !== undefined) {
-        scopes.push(
-          new Scope(
-            'Locals',
-            this._variableHandles.create(new PuyaScope(args.frameId)),
-            false,
-          ),
-        );
-        const state = this.getProgramState(args.frameId);
+        if (this._runtime.isPuyaFrame(frame)) {
+          scopes.push(
+            new Scope(
+              'Locals',
+              this._variableHandles.create(new PuyaScope(args.frameId)),
+              false,
+            ),
+          );
+        }
+
+        let state: ProgramState | undefined;
+        try {
+          state = this.getProgramState(args.frameId);
+        } catch {
+          state = undefined;
+        }
         if (state !== undefined) {
           const programScope = new ProgramStateScope(args.frameId);
           let scopeName = 'Program State';
@@ -420,6 +429,7 @@ export class AvmDebugSession extends DebugSession {
             ),
           );
         }
+
         scopes.push(
           new Scope(
             'On-chain State',

@@ -3,7 +3,8 @@ import {
   SimulationOpcodeTraceUnit,
 } from 'algosdk/dist/types/client/v2/algod/models/types';
 import { FrameSource, ProgramState } from './traceReplayEngine';
-import { PCEvent, ProgramSourceDescriptor } from './utils';
+import { isPuyaSourceMap, PCEvent, ProgramSourceDescriptor } from './utils';
+import algosdk from 'algosdk';
 
 interface CallStack {
   readonly name: string;
@@ -130,7 +131,13 @@ export class ProgramReplay {
     public readonly appId: bigint | undefined,
     traceIndex: number = 0, //index to the next opcode to execute
   ) {
-    this.sourceInfo = checkTraceMatchesSourceInfo(programTrace, sourceInfo);
+    if (isPuyaSourceMap(sourceInfo?.json)) {
+      this.sourceInfo = checkTraceMatchesSourceInfo(programTrace, sourceInfo);
+    } else if (sourceInfo) {
+      this.sourceInfo = sourceInfo;
+    } else {
+      throw new Error('Invalid source info');
+    }
 
     this.reset();
     // advance internal state to match provided index
@@ -307,14 +314,15 @@ function checkTraceMatchesSourceInfo(
     pc_events: events,
   };
   const sourcemap = {
-    sources: sourceInfo.sourcemap.sources,
+    ...sourceInfo.sourcemap,
     getLocationForPc: (pc) => {
       if (pc < pcOffset) {
         return undefined;
       }
       return sourceInfo?.sourcemap.getLocationForPc(pc - pcOffset);
     },
-  };
+  } as unknown as algosdk.ProgramSourceMap;
+
   return new ProgramSourceDescriptor(
     sourceInfo.fileAccessor,
     sourceInfo.sourcemapFileLocation,

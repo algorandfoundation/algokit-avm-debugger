@@ -3440,10 +3440,7 @@
             ]
           },
           "txn-result": {
-            "logs": [
-              "MjIwMiAxOTggMTIwMA==",
-              "FR98dQAAAAAAAAia"
-            ],
+            "logs": ["MjIwMiAxOTggMTIwMA==", "FR98dQAAAAAAAAia"],
             "pool-error": "",
             "txn": {
               "sig": "v22tQlWd3nvG42pNY8yFT2rNd/Rzpl+z2dS8rGVz54bLGmfgBPsPdw59ancNW3JknUqOjWwsh/M7PlPHBMHcAw==",

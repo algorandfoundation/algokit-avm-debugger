@@ -174,5 +174,15 @@
 
       "stopOnEntry": true
     },
+    {
+      "type": "avm",
+      "request": "launch",
+      "name": "Debug Puya & Teal",
+
+      "simulateTraceFile": "${workspaceFolder}/puya_and_teal/contract.simulate.json",
+      "programSourcesDescriptionFile": "${workspaceFolder}/puya_and_teal/sources.json",
+
+      "stopOnEntry": true
+    }
   ]
 }
