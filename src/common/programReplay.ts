@@ -291,7 +291,8 @@ function checkTraceMatchesSourceInfo(
   if (sourceInfo === undefined) {
     throw Error('missing program source information');
   }
-  const pcOffset = traces[sourceInfo.json.op_pc_offset || 0].pc;
+  const offset = sourceInfo.json.op_pc_offset || 0;
+  const pcOffset = offset === 0 ? offset : traces[offset].pc;
   let events = sourceInfo.json.pc_events;
   if (events === undefined) {
     throw Error('not a puya source map');
