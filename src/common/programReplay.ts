@@ -16,6 +16,7 @@ const HIDE_VERSION = true;
 const DEFINED_ONLY = true;
 const INCLUDE_STACK_SCOPE = false;
 const HIDE_TEMP = true;
+const PUYA_SOURCEMAPS_REGEX_BLOCKLIST = [/[/\\]algopy[/\\][^/\\]+\.py$/];
 
 class MutableCallStack implements CallStack {
   public readonly name: string;
@@ -182,6 +183,17 @@ export class ProgramReplay {
     const column = location.column;
     const sourceIndex = location.sourceIndex;
     const source = this.sourceInfo.getFullSourcePath(sourceIndex);
+
+    // TODO: Refine, initial attempt to add fileExists to locationHasAdvanced would require
+    // using vscode.workspace.fs.state or access, which are async.
+    // Making locationHasAdvanced async will require making all methods relying on it async,
+    // which will require a lot of changes.
+    // As a simpler workaround adding a 'blocked' list of regexes for paths considered synthetic
+    // in puya source maps.
+    if (PUYA_SOURCEMAPS_REGEX_BLOCKLIST.some((regex) => source.match(regex))) {
+      return undefined;
+    }
+
     return {
       name: source,
       path: source,

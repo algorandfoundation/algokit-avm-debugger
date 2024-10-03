@@ -467,13 +467,18 @@ export class AvmDebugSession extends DebugSession {
               variablesReference: 0,
               evaluateName: 'pc',
             },
-            {
-              name: 'op',
-              value: state.op || 'unknown',
-              type: 'string',
-              variablesReference: 0,
-              evaluateName: 'op',
-            },
+            // Only include 'op' if it's not 'unknown'
+            ...(state.op !== undefined
+              ? [
+                  {
+                    name: 'op',
+                    value: state.op,
+                    type: 'string',
+                    variablesReference: 0,
+                    evaluateName: 'op',
+                  },
+                ]
+              : []),
             {
               name: 'stack',
               value: state.stack.length === 0 ? '[]' : '[...]',
