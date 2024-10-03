@@ -182,12 +182,12 @@ export class ProgramSourceDescriptor {
 
   static async fromJSONObj(
     fileAccessor: FileAccessor,
-    originFile: string,
+    originPath: string,
     data: ProgramSourceEntry,
   ): Promise<ProgramSourceDescriptor> {
     const sourcemapFileLocation = normalizePathAndCasing(
       fileAccessor,
-      fileAccessor.filePathRelativeTo(originFile, data['sourcemap-location']),
+      fileAccessor.filePathRelativeTo(originPath, data['sourcemap-location']),
     );
     const rawSourcemap = await prefixPotentialError(
       fileAccessor.readFile(sourcemapFileLocation),
@@ -223,19 +223,14 @@ export class ProgramSourceDescriptorRegistry {
     return this.registry.get(hash);
   }
 
-  static async loadFromFile(
+  static async loadFromContent(
     fileAccessor: FileAccessor,
-    programSourcesDescriptionFilePath: string,
+    content: string,
+    originPath?: string,
   ): Promise<ProgramSourceDescriptorRegistry> {
-    const rawSourcesDescription = await prefixPotentialError(
-      fileAccessor.readFile(programSourcesDescriptionFilePath),
-      'Could not read program sources description file',
-    );
     let jsonSourcesDescription: ProgramSourceEntryFile;
     try {
-      jsonSourcesDescription = JSON.parse(
-        new TextDecoder().decode(rawSourcesDescription),
-      ) as ProgramSourceEntryFile;
+      jsonSourcesDescription = JSON.parse(content) as ProgramSourceEntryFile;
       if (
         !Array.isArray(jsonSourcesDescription['txn-group-sources']) ||
         !jsonSourcesDescription['txn-group-sources'].every(
@@ -245,26 +240,44 @@ export class ProgramSourceDescriptorRegistry {
               entry['sourcemap-location'] === null),
         )
       ) {
-        throw new Error('Invalid program sources description file');
+        throw new Error('Invalid program sources description content');
       }
     } catch (e) {
       const err = e as Error;
       throw new Error(
-        `Could not parse program sources description file from '${programSourcesDescriptionFilePath}': ${err.message}`,
+        `Could not parse program sources description content: ${err.message}`,
       );
     }
+
     const programSources = jsonSourcesDescription['txn-group-sources']
       .filter((source) => source['sourcemap-location'] !== null)
       .map((source) =>
         ProgramSourceDescriptor.fromJSONObj(
           fileAccessor,
-          programSourcesDescriptionFilePath,
+          originPath || '',
           source,
         ),
       );
+
     return new ProgramSourceDescriptorRegistry({
       txnGroupSources: await Promise.all(programSources),
     });
+  }
+
+  static async loadFromFile(
+    fileAccessor: FileAccessor,
+    programSourcesDescriptionFilePath: string,
+  ): Promise<ProgramSourceDescriptorRegistry> {
+    const rawSourcesDescription = await prefixPotentialError(
+      fileAccessor.readFile(programSourcesDescriptionFilePath),
+      'Could not read program sources description file',
+    );
+    const content = new TextDecoder().decode(rawSourcesDescription);
+    return this.loadFromContent(
+      fileAccessor,
+      content,
+      programSourcesDescriptionFilePath,
+    );
   }
 }
 
@@ -277,8 +290,11 @@ export class AvmDebuggingAssets {
   static async loadFromFiles(
     fileAccessor: FileAccessor,
     simulateTraceFilePath: string,
-    programSourcesDescriptionFilePath: string,
+    programSourcesDescriptionFilePathOrContent: string,
+    programSourcesDescriptionFolder?: string,
   ): Promise<AvmDebuggingAssets> {
+    const isProgramSourcesDescriptionContent =
+      programSourcesDescriptionFolder !== undefined;
     const rawSimulateTrace = await prefixPotentialError(
       fileAccessor.readFile(simulateTraceFilePath),
       'Could not read simulate trace file',
@@ -310,11 +326,22 @@ export class AvmDebuggingAssets {
       );
     }
 
-    const txnGroupDescriptorList =
-      await ProgramSourceDescriptorRegistry.loadFromFile(
-        fileAccessor,
-        programSourcesDescriptionFilePath,
-      );
+    let txnGroupDescriptorList: ProgramSourceDescriptorRegistry;
+
+    if (isProgramSourcesDescriptionContent) {
+      txnGroupDescriptorList =
+        await ProgramSourceDescriptorRegistry.loadFromContent(
+          fileAccessor,
+          programSourcesDescriptionFilePathOrContent,
+          programSourcesDescriptionFolder,
+        );
+    } else {
+      txnGroupDescriptorList =
+        await ProgramSourceDescriptorRegistry.loadFromFile(
+          fileAccessor,
+          programSourcesDescriptionFilePathOrContent,
+        );
+    }
 
     return new AvmDebuggingAssets(simulateResponse, txnGroupDescriptorList);
   }

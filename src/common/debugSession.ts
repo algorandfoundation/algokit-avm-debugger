@@ -43,7 +43,11 @@ export interface ILaunchRequestArguments
   /** An absolute path to the simulate response to debug. */
   simulateTraceFile: string;
   /** An absolute path to the file which maps programs to source maps. */
-  programSourcesDescriptionFile: string;
+  programSourcesDescriptionFile?: string;
+  /** JSON encoded content of the program sources description file. */
+  programSourcesDescription?: string;
+  /** The folder containing the program sources description file (when using programSourcesDescription). */
+  programSourcesDescriptionFolder?: string;
   /** Automatically stop target after launch. If not specified, target does not stop. */
   stopOnEntry?: boolean;
 }
@@ -194,7 +198,10 @@ export class AvmDebugSession extends DebugSession {
       const debugAssets = await AvmDebuggingAssets.loadFromFiles(
         this.fileAccessor,
         args.simulateTraceFile,
-        args.programSourcesDescriptionFile,
+        args.programSourcesDescription ||
+          args.programSourcesDescriptionFile ||
+          '',
+        args.programSourcesDescriptionFolder,
       );
 
       await this._runtime.onLaunch(debugAssets);
