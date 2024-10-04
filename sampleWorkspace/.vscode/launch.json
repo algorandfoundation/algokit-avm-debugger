@@ -178,16 +178,20 @@
       "type": "avm",
       "request": "launch",
       "name": "Debug Puya & Teal",
-      "simulateTraceFile": "${workspaceFolder}/puya_and_teal/contract.simulate.json",
+      "simulateTraceFile": "${workspaceFolder}/puya_and_teal/simulate-response.json",
       "programSourcesDescription": {
         "txn-group-sources": [
           {
-            "sourcemap-location": "approval.teal.tok.map",
+            "sourcemap-location": "first_app/approval.teal.tok.map",
             "hash": "+M4WXURFSOFzatfICt2miBHDfm5qylmm279/3bZtKjI="
           },
           {
-            "sourcemap-location": "HelloWorld2.approval.puya.map",
+            "sourcemap-location": "second_app/contract_approval.puya.map",
             "hash": "Vg0dtzIh0CIFZN/+hJG/L+6gSSPPyjuzE0wDqGt0zyU="
+          },
+          {
+            "sourcemap-location": "delegated_lsig/lsig.puya.map",
+            "hash": "8Y7ddIVDDdijOZcTKzMOxqa3RpJOjUGswRdND/Hdddg="
           }
         ]
       },
