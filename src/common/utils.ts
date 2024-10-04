@@ -125,11 +125,11 @@ export class ByteArrayMap<T> {
   }
 }
 
-interface ProgramSourceEntryFile {
+export interface ProgramSourceEntryFile {
   'txn-group-sources': ProgramSourceEntry[];
 }
 
-interface ProgramSourceEntry {
+export interface ProgramSourceEntry {
   hash: string;
   'sourcemap-location': string;
 }
@@ -225,12 +225,10 @@ export class ProgramSourceDescriptorRegistry {
 
   static async loadFromContent(
     fileAccessor: FileAccessor,
-    content: string,
+    jsonSourcesDescription: ProgramSourceEntryFile,
     originPath?: string,
   ): Promise<ProgramSourceDescriptorRegistry> {
-    let jsonSourcesDescription: ProgramSourceEntryFile;
     try {
-      jsonSourcesDescription = JSON.parse(content) as ProgramSourceEntryFile;
       if (
         !Array.isArray(jsonSourcesDescription['txn-group-sources']) ||
         !jsonSourcesDescription['txn-group-sources'].every(
@@ -263,22 +261,6 @@ export class ProgramSourceDescriptorRegistry {
       txnGroupSources: await Promise.all(programSources),
     });
   }
-
-  static async loadFromFile(
-    fileAccessor: FileAccessor,
-    programSourcesDescriptionFilePath: string,
-  ): Promise<ProgramSourceDescriptorRegistry> {
-    const rawSourcesDescription = await prefixPotentialError(
-      fileAccessor.readFile(programSourcesDescriptionFilePath),
-      'Could not read program sources description file',
-    );
-    const content = new TextDecoder().decode(rawSourcesDescription);
-    return this.loadFromContent(
-      fileAccessor,
-      content,
-      programSourcesDescriptionFilePath,
-    );
-  }
 }
 
 export class AvmDebuggingAssets {
@@ -290,11 +272,9 @@ export class AvmDebuggingAssets {
   static async loadFromFiles(
     fileAccessor: FileAccessor,
     simulateTraceFilePath: string,
-    programSourcesDescriptionFilePathOrContent: string,
-    programSourcesDescriptionFolder?: string,
+    programSourcesDescription: ProgramSourceEntryFile,
+    programSourcesDescriptionFolder: string,
   ): Promise<AvmDebuggingAssets> {
-    const isProgramSourcesDescriptionContent =
-      programSourcesDescriptionFolder !== undefined;
     const rawSimulateTrace = await prefixPotentialError(
       fileAccessor.readFile(simulateTraceFilePath),
       'Could not read simulate trace file',
@@ -326,22 +306,12 @@ export class AvmDebuggingAssets {
       );
     }
 
-    let txnGroupDescriptorList: ProgramSourceDescriptorRegistry;
-
-    if (isProgramSourcesDescriptionContent) {
-      txnGroupDescriptorList =
-        await ProgramSourceDescriptorRegistry.loadFromContent(
-          fileAccessor,
-          programSourcesDescriptionFilePathOrContent,
-          programSourcesDescriptionFolder,
-        );
-    } else {
-      txnGroupDescriptorList =
-        await ProgramSourceDescriptorRegistry.loadFromFile(
-          fileAccessor,
-          programSourcesDescriptionFilePathOrContent,
-        );
-    }
+    const txnGroupDescriptorList =
+      await ProgramSourceDescriptorRegistry.loadFromContent(
+        fileAccessor,
+        programSourcesDescription,
+        programSourcesDescriptionFolder,
+      );
 
     return new AvmDebuggingAssets(simulateResponse, txnGroupDescriptorList);
   }
@@ -351,7 +321,10 @@ export function isPuyaSourceMap(sourcemap: ISourceMap | undefined): boolean {
   return sourcemap?.pc_events !== undefined;
 }
 
-function prefixPotentialError<T>(task: Promise<T>, prefix: string): Promise<T> {
+export function prefixPotentialError<T>(
+  task: Promise<T>,
+  prefix: string,
+): Promise<T> {
   return task.catch((error) => {
     throw new Error(`${prefix}: ${error.message}`);
   });
