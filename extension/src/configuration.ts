@@ -10,7 +10,7 @@ export class AvmDebugConfigProvider
   implements vscode.DebugConfigurationProvider
 {
   /**
-   * Massage a debug configuration just before a debug session is being launched,
+   * Message a debug configuration just before a debug session is being launched,
    * e.g. add all missing attributes to the debug configuration.
    */
   resolveDebugConfiguration(

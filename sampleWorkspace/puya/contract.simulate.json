@@ -819,9 +819,7 @@
               },
               {
                 "pc": 818,
-                "spawned-inners": [
-                  0
-                ]
+                "spawned-inners": [0]
               },
               {
                 "pc": 819,
@@ -861,9 +859,7 @@
                 "stack-pop-count": 1
               }
             ],
-            "inner-trace": [
-              {}
-            ]
+            "inner-trace": [{}]
           },
           "txn-result": {
             "inner-txns": [
@@ -886,12 +882,8 @@
             "txn": {
               "sig": "o/dVK3Tq5GcjWzcXjk/ljnqkWxz4YxHs2wd3cVP/IODPYkm1vAM6K02+X4aNzxBBgc5yhf0CxhE9jjJgGADrCg==",
               "txn": {
-                "apaa": [
-                  "6UbQaw=="
-                ],
-                "apas": [
-                  1041
-                ],
+                "apaa": ["6UbQaw=="],
+                "apas": [1041],
                 "apbx": [
                   {
                     "n": "mr2ad3aRihQ74ebrG/oVvnvvs9485YscgKOm3vpj1yI="

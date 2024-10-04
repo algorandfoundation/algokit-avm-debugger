@@ -131,7 +131,7 @@ export interface ProgramSourceEntryFile {
 
 export interface ProgramSourceEntry {
   hash: string;
-  'sourcemap-location': string;
+  'sourcemap-location': string | null;
 }
 
 export interface PCEvent {
@@ -187,7 +187,7 @@ export class ProgramSourceDescriptor {
   ): Promise<ProgramSourceDescriptor> {
     const sourcemapFileLocation = normalizePathAndCasing(
       fileAccessor,
-      fileAccessor.filePathRelativeTo(originPath, data['sourcemap-location']),
+      fileAccessor.filePathRelativeTo(originPath, data['sourcemap-location']!),
     );
     const rawSourcemap = await prefixPotentialError(
       fileAccessor.readFile(sourcemapFileLocation),

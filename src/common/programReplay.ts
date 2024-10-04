@@ -123,7 +123,7 @@ export class ProgramReplay {
   public scratch: Map<number, AvmValue> = new Map();
   private traceIndex: number = 0;
   private _callStack: MutableCallStack[] = [];
-  private readonly sourceInfo: ProgramSourceDescriptor;
+  private readonly sourceInfo: ProgramSourceDescriptor | undefined;
 
   constructor(
     private readonly programName: string,
@@ -134,10 +134,10 @@ export class ProgramReplay {
   ) {
     if (isPuyaSourceMap(sourceInfo?.json)) {
       this.sourceInfo = checkTraceMatchesSourceInfo(programTrace, sourceInfo);
-    } else if (sourceInfo) {
-      this.sourceInfo = sourceInfo;
     } else {
-      throw new Error('Invalid source info');
+      // If value is undefined, we still set it given that this can signify that user
+      // wants to skip debugging for this particular program
+      this.sourceInfo = sourceInfo;
     }
 
     this.reset();

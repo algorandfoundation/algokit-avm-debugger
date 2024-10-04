@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { EventEmitter } from 'events';
 import { RuntimeEvents } from './debugSession';
 import { AppState } from './appState';
@@ -363,6 +364,7 @@ export class AvmRuntime extends EventEmitter {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private sendEvent(event: string, ...args: any[]): void {
     setTimeout(() => {
       this.emit(event, ...args);
