@@ -5,6 +5,7 @@ import {
   AvmDebuggingAssets,
   ProgramSourceDescriptor,
   ProgramSourceDescriptorRegistry,
+  isPuyaSourceMap,
 } from './utils';
 import { ProgramReplay } from './programReplay';
 import { AvmValue } from 'algosdk/dist/types/client/v2/algod/models/types';
@@ -272,6 +273,8 @@ export interface TraceStackFrame {
   readonly name: string;
   readonly source: FrameSource | undefined;
   readonly programState: ProgramState | undefined;
+
+  readonly isPuyaFrame: boolean;
 }
 
 export interface ProgramState {
@@ -287,12 +290,13 @@ export interface TraceReplayFrame {
   get callStack(): TraceStackFrame[];
   forward(stack: TraceReplayFrame[]): ExceptionInfo | void;
   backward(stack: TraceReplayFrame[]): ExceptionInfo | void;
+  isPuyaFrame: boolean;
 }
 
 export class TopLevelTransactionGroupsFrame implements TraceReplayFrame {
   private index: number = 0;
   private txnGroupDone: boolean = false;
-
+  public isPuyaFrame: boolean = false;
   constructor(
     private readonly engine: TraceReplayEngine,
     private readonly response: algosdk.modelsv2.SimulateResponse,
@@ -433,6 +437,8 @@ export class TransactionGroupStackFrame implements TraceReplayFrame {
 
   private sourceContent: string;
   private sourceLocations: TransactionSourceLocation[] = [];
+
+  public isPuyaFrame: boolean = false;
 
   constructor(
     private engine: TraceReplayEngine,
@@ -726,6 +732,8 @@ export class ProgramStackFrame implements TraceReplayFrame {
   private blockingException: ExceptionInfo | undefined;
   private programReplay: ProgramReplay;
 
+  public isPuyaFrame: boolean = false;
+
   constructor(
     private readonly engine: TraceReplayEngine,
     private readonly txnPath: number[],
@@ -749,11 +757,16 @@ export class ProgramStackFrame implements TraceReplayFrame {
       const lsigAccount = new algosdk.LogicSigAccount(lsigBytes);
       this.logicSigAddress = lsigAccount.address().toString();
     }
+
+    const sourceMapPath = this.engine.programHashToSource.get(programHash);
+    this.isPuyaFrame = isPuyaSourceMap(sourceMapPath?.json);
+
     this.programReplay = new ProgramReplay(
       this.name,
       programTrace,
-      this.engine.programHashToSource.get(programHash),
+      sourceMapPath,
       this.currentAppID(),
+      undefined,
     );
   }
 
@@ -802,7 +815,9 @@ export class ProgramStackFrame implements TraceReplayFrame {
 
       this.programReplay.forward();
       // loop until location has advanced
-      again = !locationHasAdvanced(lastLocation, this.programReplay.pcSource);
+      again = this.isPuyaFrame
+        ? !locationHasAdvanced(lastLocation, this.programReplay.pcSource)
+        : false;
 
       const currentUnit = this.programTrace[this.index];
       this.processUnit(currentUnit);

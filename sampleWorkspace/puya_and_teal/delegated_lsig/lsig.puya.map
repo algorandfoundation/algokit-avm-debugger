@@ -11,99 +11,98 @@
       "params": {},
       "block": "smart_contracts.lsig.lsig.approve_hello_call",
       "stack_in": [],
+      "op": "pushint 0 // 0",
       "defined_out": [
         "0"
       ],
       "stack_out": [
         "0"
-      ],
-      "op": "pushint 0"
+      ]
     },
     "3": {
+      "op": "gtxns TypeEnum",
       "defined_out": [
         "gtxn_type%0#0"
       ],
       "stack_out": [
         "gtxn_type%0#0"
-      ],
-      "op": "gtxns TypeEnum"
+      ]
     },
     "5": {
+      "op": "pushint 6 // appl",
       "defined_out": [
-        "appl"
+        "appl",
+        "gtxn_type%0#0"
       ],
       "stack_out": [
         "gtxn_type%0#0",
         "appl"
-      ],
-      "op": "pushint 6"
+      ]
     },
     "7": {
+      "op": "==",
       "defined_out": [
         "gtxn_type_matches%0#0"
       ],
       "stack_out": [
         "gtxn_type_matches%0#0"
-      ],
-      "op": "=="
+      ]
     },
     "8": {
-      "stack_out": [],
-      "op": "assert"
+      "op": "assert // transaction type is appl",
+      "stack_out": []
     },
     "9": {
-      "defined_out": [
-        "0"
-      ],
+      "op": "pushint 0 // 0",
       "stack_out": [
         "0"
-      ],
-      "op": "pushint 0"
+      ]
     },
     "11": {
+      "op": "gtxns ApplicationID",
       "defined_out": [
         "tmp%0#0"
       ],
       "stack_out": [
         "tmp%0#0"
-      ],
-      "op": "gtxns ApplicationID"
+      ]
     },
     "13": {
+      "op": "pushint 1002 // 1002",
       "defined_out": [
-        "1002"
+        "1002",
+        "tmp%0#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "1002"
-      ],
-      "op": "pushint 1002"
+      ]
     },
     "16": {
+      "op": "==",
       "defined_out": [
         "tmp%1#0"
       ],
       "stack_out": [
         "tmp%1#0"
-      ],
-      "op": "=="
+      ]
     },
     "17": {
-      "stack_out": [],
-      "op": "assert"
+      "op": "assert",
+      "stack_out": []
     },
     "18": {
+      "op": "pushint 1 // 1",
       "defined_out": [
         "1"
       ],
       "stack_out": [
         "1"
-      ],
-      "op": "pushint 1"
+      ]
     },
     "20": {
-      "stack_out": [],
-      "op": "return"
+      "op": "return",
+      "stack_out": []
     }
   }
 }

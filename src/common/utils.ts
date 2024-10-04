@@ -238,12 +238,14 @@ export class ProgramSourceDescriptorRegistry {
               entry['sourcemap-location'] === null),
         )
       ) {
-        throw new Error('Invalid program sources description content');
+        throw new Error('Invalid program sources description file');
       }
     } catch (e) {
       const err = e as Error;
       throw new Error(
-        `Could not parse program sources description content: ${err.message}`,
+        `Could not parse program sources description ${
+          originPath ? `file from '${originPath}'` : 'content'
+        }: ${err.message}`,
       );
     }
 

@@ -10,19 +10,20 @@ interface CallStack {
   readonly name: string;
   readonly source: FrameSource | undefined;
   readonly programState: ProgramState | undefined;
+  readonly isPuyaFrame: boolean;
   stackOffset: number;
 }
 const HIDE_VERSION = true;
 const DEFINED_ONLY = true;
 const INCLUDE_STACK_SCOPE = false;
 const HIDE_TEMP = true;
-const PUYA_SOURCEMAPS_REGEX_BLOCKLIST = [/[/\\]algopy[/\\][^/\\]+\.py$/];
 
 class MutableCallStack implements CallStack {
   public readonly name: string;
   private definedVariables: Record<string, boolean>;
   private _paramVariables: string[];
   private stack: string[];
+  public isPuyaFrame: boolean = true;
 
   constructor(
     public readonly callEvent: PCEvent,
@@ -154,6 +155,10 @@ export class ProgramReplay {
   }
 
   get nextOpTrace() {
+    if (this.traceIndex >= this.programTrace.length) {
+      return this.programTrace[this.programTrace.length - 1];
+    }
+
     return this.programTrace[this.traceIndex];
   }
 
@@ -163,12 +168,13 @@ export class ProgramReplay {
 
   get nextPcEvent(): PCEvent | undefined {
     if (
-      this.sourceInfo === undefined ||
-      this.sourceInfo.json.pc_events === undefined
+      this.nextPc === undefined &&
+      (this.sourceInfo === undefined ||
+        this.sourceInfo.json.pc_events === undefined)
     ) {
       return undefined;
     }
-    return this.sourceInfo.json.pc_events[this.nextPc.toString()];
+    return this.sourceInfo?.json.pc_events?.[this.nextPc.toString()];
   }
 
   get pcSource(): FrameSource | undefined {
@@ -183,16 +189,6 @@ export class ProgramReplay {
     const column = location.column;
     const sourceIndex = location.sourceIndex;
     const source = this.sourceInfo.getFullSourcePath(sourceIndex);
-
-    // TODO: Refine, initial attempt to add fileExists to locationHasAdvanced would require
-    // using vscode.workspace.fs.state or access, which are async.
-    // Making locationHasAdvanced async will require making all methods relying on it async,
-    // which will require a lot of changes.
-    // As a simpler workaround adding a 'blocked' list of regexes for paths considered synthetic
-    // in puya source maps.
-    if (PUYA_SOURCEMAPS_REGEX_BLOCKLIST.some((regex) => source.match(regex))) {
-      return undefined;
-    }
 
     return {
       name: source,

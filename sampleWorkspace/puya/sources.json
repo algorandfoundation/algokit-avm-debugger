@@ -1,7 +1,7 @@
 {
   "txn-group-sources": [
     {
-      "sourcemap-location": "DebugContract.approval.puya.map",
+      "sourcemap-location": "ProofOfAttendance.approval.puya.map",
       "hash": "cqTkXo2HRQY5h4/nvU46XmZrHlAe5gCdC/Q9eBAPl5k="
     }
   ]

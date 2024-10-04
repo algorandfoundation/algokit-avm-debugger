@@ -201,29 +201,29 @@ export class AvmDebugSession extends DebugSession {
     response: DebugProtocol.LaunchResponse,
     args: ILaunchRequestArguments,
   ) {
-    let programSourcesDescription: ProgramSourceEntryFile;
-    let folder: string;
-    if (args.programSourcesDescription !== undefined) {
-      programSourcesDescription = args.programSourcesDescription;
-      folder = args.programSourcesDescriptionFolder || '';
-    } else if (args.programSourcesDescriptionFile !== undefined) {
-      // earlier versions of avm-debugger passed program source information via a file/
-      folder = args.programSourcesDescriptionFile;
-      const sourcesDescriptionBytes = await prefixPotentialError(
-        this.fileAccessor.readFile(args.programSourcesDescriptionFile),
-        'Could not read program sources description file',
-      );
-      const sourcesDescriptionText = new TextDecoder().decode(
-        sourcesDescriptionBytes,
-      );
-      programSourcesDescription = JSON.parse(
-        sourcesDescriptionText,
-      ) as ProgramSourceEntryFile;
-    } else {
-      throw Error('missing programSources');
-    }
-
     try {
+      let programSourcesDescription: ProgramSourceEntryFile;
+      let folder: string;
+      if (args.programSourcesDescription !== undefined) {
+        programSourcesDescription = args.programSourcesDescription;
+        folder = args.programSourcesDescriptionFolder || '';
+      } else if (args.programSourcesDescriptionFile !== undefined) {
+        // earlier versions of avm-debugger passed program source information via a file/
+        folder = args.programSourcesDescriptionFile;
+        const sourcesDescriptionBytes = await prefixPotentialError(
+          this.fileAccessor.readFile(args.programSourcesDescriptionFile),
+          'Could not read program sources description file',
+        );
+        const sourcesDescriptionText = new TextDecoder().decode(
+          sourcesDescriptionBytes,
+        );
+        programSourcesDescription = JSON.parse(
+          sourcesDescriptionText,
+        ) as ProgramSourceEntryFile;
+      } else {
+        throw Error('missing programSources');
+      }
+
       const debugAssets = await AvmDebuggingAssets.loadFromFiles(
         this.fileAccessor,
         args.simulateTraceFile,
