@@ -3,8 +3,14 @@ import {
   SimulationOpcodeTraceUnit,
 } from 'algosdk/dist/types/client/v2/algod/models/types';
 import { FrameSource, ProgramState } from './traceReplayEngine';
-import { isPuyaSourceMap, PCEvent, ProgramSourceDescriptor } from './utils';
+import {
+  ByteArrayMap,
+  isPuyaSourceMap,
+  PCEvent,
+  ProgramSourceDescriptor,
+} from './utils';
 import algosdk from 'algosdk';
+import { AppState } from './appState';
 
 interface CallStack {
   readonly name: string;
@@ -125,6 +131,7 @@ export class ProgramReplay {
   private traceIndex: number = 0;
   private _callStack: MutableCallStack[] = [];
   private readonly sourceInfo: ProgramSourceDescriptor | undefined;
+  private currentAppState: Map<bigint, AppState>;
 
   constructor(
     private readonly programName: string,
@@ -132,6 +139,7 @@ export class ProgramReplay {
     sourceInfo: ProgramSourceDescriptor | undefined,
     public readonly appId: bigint | undefined,
     traceIndex: number = 0, //index to the next opcode to execute
+    currentAppState: Map<bigint, AppState>,
   ) {
     if (isPuyaSourceMap(sourceInfo?.json)) {
       this.sourceInfo = checkTraceMatchesSourceInfo(programTrace, sourceInfo);
@@ -141,6 +149,7 @@ export class ProgramReplay {
       this.sourceInfo = sourceInfo;
     }
 
+    this.currentAppState = currentAppState;
     this.reset();
     // advance internal state to match provided index
     while (traceIndex-- > 0) {
@@ -215,11 +224,48 @@ export class ProgramReplay {
       return;
     }
     this.processOpExit();
+    this.processUnit(this.nextOpTrace);
     this.traceIndex++;
     if (this.traceIndex < this.programTrace.length) {
       this.processOpEnter();
       this.updateSource();
     }
+  }
+
+  public backward(): void {
+    if (this.traceIndex === 0) {
+      return;
+    }
+
+    const currentSource = this.pcSource;
+    let previousSource: FrameSource | undefined;
+
+    do {
+      this.traceIndex--;
+      this.processOpExit();
+      if (this.traceIndex > 0) {
+        this.processOpEnter();
+        this.updateSource();
+      }
+      previousSource = this.pcSource;
+    } while (
+      this.traceIndex > 0 &&
+      !this.hasLocationChanged(currentSource, previousSource)
+    );
+  }
+
+  private hasLocationChanged(
+    from: FrameSource | undefined,
+    to: FrameSource | undefined,
+  ): boolean {
+    if (from === undefined || to === undefined) {
+      return from !== to;
+    }
+    return (
+      from.path !== to.path ||
+      from.line !== to.line ||
+      from.column !== to.column
+    );
   }
 
   public reset() {
@@ -233,6 +279,56 @@ export class ProgramReplay {
 
   private updateSource() {
     this._callStack[this._callStack.length - 1].source = this.pcSource;
+  }
+
+  private processUnit(unit: algosdk.modelsv2.SimulationOpcodeTraceUnit) {
+    if (unit.stateChanges && unit.stateChanges.length !== 0) {
+      const appID = this.appId;
+      if (typeof appID === 'undefined') {
+        throw new Error('No appID');
+      }
+
+      const state = this.currentAppState.get(appID);
+      if (!state) {
+        throw new Error(`No state for appID ${appID}`);
+      }
+
+      for (const stateChange of unit.stateChanges) {
+        switch (stateChange.appStateType) {
+          case 'g':
+            if (stateChange.operation === 'w') {
+              state.globalState.set(stateChange.key, stateChange.newValue!);
+            } else if (stateChange.operation === 'd') {
+              state.globalState.delete(stateChange.key);
+            }
+            break;
+          case 'l':
+            if (stateChange.operation === 'w') {
+              const accountAddress = stateChange.account!.toString();
+              let accountState = state.localState.get(accountAddress);
+              if (!accountState) {
+                accountState = new ByteArrayMap<algosdk.modelsv2.AvmValue>();
+                state.localState.set(accountAddress, accountState);
+              }
+              accountState.set(stateChange.key, stateChange.newValue!);
+            } else if (stateChange.operation === 'd') {
+              const accountState = state.localState.get(
+                stateChange.account!.toString(),
+              );
+              if (accountState) {
+                accountState.delete(stateChange.key);
+              }
+            }
+            break;
+          case 'b':
+            if (stateChange.operation === 'w') {
+              state.boxState.set(stateChange.key, stateChange.newValue!);
+            } else if (stateChange.operation === 'd') {
+              state.boxState.delete(stateChange.key);
+            }
+        }
+      }
+    }
   }
 
   private processOpEnter() {
