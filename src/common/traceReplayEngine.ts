@@ -813,12 +813,6 @@ export class ProgramStackFrame implements TraceReplayFrame {
         return;
       }
 
-      this.programReplay.forward();
-      // loop until location has advanced
-      again = this.isPuyaFrame
-        ? !locationHasAdvanced(lastLocation, this.programReplay.pcSource)
-        : false;
-
       const currentUnit = this.programTrace[this.index];
       this.processUnit(currentUnit);
 
@@ -860,6 +854,11 @@ export class ProgramStackFrame implements TraceReplayFrame {
         this.handledInnerTxns = true;
         return;
       }
+      this.programReplay.forward();
+      // loop until location has advanced
+      again = this.isPuyaFrame
+        ? !locationHasAdvanced(lastLocation, this.programReplay.pcSource)
+        : false;
 
       this.index++;
 
