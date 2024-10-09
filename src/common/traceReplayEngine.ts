@@ -802,7 +802,7 @@ export class ProgramStackFrame implements TraceReplayFrame {
   }
 
   public forward(stack: TraceReplayFrame[]): ExceptionInfo | void {
-    const lastLocation = this.programReplay.pcSource;
+    const lastLocation = this.programReplay.nextPcSource;
     let again = true;
     while (again) {
       if (this.blockingException) {
@@ -856,7 +856,7 @@ export class ProgramStackFrame implements TraceReplayFrame {
       this.programReplay.forward();
       // loop until location has advanced
       again = this.isPuyaFrame
-        ? !locationHasAdvanced(lastLocation, this.programReplay.pcSource)
+        ? !locationHasAdvanced(lastLocation, this.programReplay.nextPcSource)
         : false;
 
       this.index++;
@@ -913,9 +913,16 @@ export class ProgramStackFrame implements TraceReplayFrame {
       stack.pop();
       return;
     }
+    const initialLocation = this.programReplay.currentPcSource;
     const targetIndex = this.index - 1;
     this.reset();
     while (this.index < targetIndex) {
+      if (
+        this.isPuyaFrame &&
+        this.programReplay.nextPcSource === initialLocation
+      ) {
+        break;
+      }
       this.engine.forward();
     }
   }

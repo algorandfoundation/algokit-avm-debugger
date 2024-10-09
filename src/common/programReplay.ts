@@ -159,8 +159,36 @@ export class ProgramReplay {
 
   private pushCallStack(event: PCEvent) {
     this._callStack.push(
-      new MutableCallStack(event, this.pcSource, this.stack.length, this),
+      new MutableCallStack(event, this.nextPcSource, this.stack.length, this),
     );
+  }
+
+  public get currentPc(): number | undefined {
+    if (this.traceIndex === 0) {
+      return undefined;
+    }
+    return this.programTrace[this.traceIndex - 1]?.pc;
+  }
+
+  public get currentPcSource(): FrameSource | undefined {
+    if (this.sourceInfo === undefined || this.currentPc === undefined) {
+      return undefined;
+    }
+    const location = this.sourceInfo.sourcemap.getLocationForPc(this.currentPc);
+    if (location == undefined) {
+      return undefined;
+    }
+    const line = location.line;
+    const column = location.column;
+    const sourceIndex = location.sourceIndex;
+    const source = this.sourceInfo.getFullSourcePath(sourceIndex);
+
+    return {
+      name: source,
+      path: source,
+      line: line,
+      column: column,
+    };
   }
 
   get nextOpTrace() {
@@ -186,7 +214,7 @@ export class ProgramReplay {
     return this.sourceInfo?.json.pc_events?.[this.nextPc.toString()];
   }
 
-  get pcSource(): FrameSource | undefined {
+  get nextPcSource(): FrameSource | undefined {
     if (this.sourceInfo === undefined) {
       return undefined;
     }
@@ -237,7 +265,7 @@ export class ProgramReplay {
       return;
     }
 
-    const currentSource = this.pcSource;
+    const currentSource = this.nextPcSource;
     let previousSource: FrameSource | undefined;
 
     do {
@@ -247,7 +275,7 @@ export class ProgramReplay {
         this.processOpEnter();
         this.updateSource();
       }
-      previousSource = this.pcSource;
+      previousSource = this.nextPcSource;
     } while (
       this.traceIndex > 0 &&
       !this.hasLocationChanged(currentSource, previousSource)
@@ -278,7 +306,7 @@ export class ProgramReplay {
   }
 
   private updateSource() {
-    this._callStack[this._callStack.length - 1].source = this.pcSource;
+    this._callStack[this._callStack.length - 1].source = this.nextPcSource;
   }
 
   private processUnit(unit: algosdk.modelsv2.SimulationOpcodeTraceUnit) {
