@@ -269,14 +269,6 @@ export interface FrameSource {
   endColumn?: number;
 }
 
-export interface TraceStackFrame {
-  readonly name: string;
-  readonly source: FrameSource | undefined;
-  readonly programState: ProgramState | undefined;
-
-  readonly isPuyaFrame: boolean;
-}
-
 export interface ProgramState {
   readonly stack: AvmValue[];
   readonly scratch: Map<number, AvmValue>;
@@ -286,23 +278,36 @@ export interface ProgramState {
   readonly variables: [string, AvmValue][];
 }
 
-export interface TraceReplayFrame {
-  get callStack(): TraceStackFrame[];
-  forward(stack: TraceReplayFrame[]): ExceptionInfo | void;
-  backward(stack: TraceReplayFrame[]): ExceptionInfo | void;
-  isPuyaFrame: boolean;
+export interface CallStackFrame {
+  /* Represents a function call within a program's call stack */
+  readonly name: string;
+  readonly source: FrameSource | undefined;
+  readonly programState: ProgramState | undefined;
 }
 
-export class TopLevelTransactionGroupsFrame implements TraceReplayFrame {
+export interface TraceReplayFrame {
+  /* 
+    TraceReplayFrame represents a frame within the trace
+    a program frame may have multiple call frames within in it
+    one for each function in the call stack
+  */
+
+  get callStack(): CallStackFrame[];
+  forward(stack: TraceReplayFrame[]): ExceptionInfo | void;
+  backward(stack: TraceReplayFrame[]): ExceptionInfo | void;
+}
+
+export class TopLevelTransactionGroupsFrame
+  implements TraceReplayFrame, CallStackFrame
+{
   private index: number = 0;
   private txnGroupDone: boolean = false;
-  public isPuyaFrame: boolean = false;
   constructor(
     private readonly engine: TraceReplayEngine,
     private readonly response: algosdk.modelsv2.SimulateResponse,
   ) {}
 
-  public get callStack(): TraceStackFrame[] {
+  public get callStack(): CallStackFrame[] {
     return [this];
   }
 
@@ -438,8 +443,6 @@ export class TransactionGroupStackFrame implements TraceReplayFrame {
   private sourceContent: string;
   private sourceLocations: TransactionSourceLocation[] = [];
 
-  public isPuyaFrame: boolean = false;
-
   constructor(
     private engine: TraceReplayEngine,
     private txnPath: number[],
@@ -526,7 +529,7 @@ export class TransactionGroupStackFrame implements TraceReplayFrame {
     }
   }
 
-  public get callStack(): TraceStackFrame[] {
+  public get callStack(): CallStackFrame[] {
     return [this];
   }
 
@@ -725,14 +728,14 @@ export class TransactionGroupStackFrame implements TraceReplayFrame {
 }
 
 export class ProgramStackFrame implements TraceReplayFrame {
+  private lastIndex: number | undefined;
   private index: number = 0;
   private handledInnerTxns: boolean = false;
   private initialAppState: AppState | undefined;
   private logicSigAddress: string | undefined;
   private blockingException: ExceptionInfo | undefined;
   private programReplay: ProgramReplay;
-
-  public isPuyaFrame: boolean = false;
+  public readonly isPuyaFrame: boolean;
 
   constructor(
     private readonly engine: TraceReplayEngine,
@@ -766,7 +769,6 @@ export class ProgramStackFrame implements TraceReplayFrame {
       programTrace,
       sourceMapPath,
       this.currentAppID(),
-      undefined,
       engine.currentAppState,
     );
   }
@@ -786,7 +788,7 @@ export class ProgramStackFrame implements TraceReplayFrame {
     return undefined;
   }
 
-  public get callStack(): TraceStackFrame[] {
+  public get callStack(): CallStackFrame[] {
     return this.programReplay.callStack;
   }
 
@@ -801,7 +803,18 @@ export class ProgramStackFrame implements TraceReplayFrame {
     return `${this.programType} program`;
   }
 
+  get pendingInnerTxn() {
+    const currentUnit = this.programTrace[this.index];
+    const spawnedInners = currentUnit?.spawnedInners;
+    return (
+      !this.handledInnerTxns && spawnedInners && spawnedInners.length !== 0
+    );
+  }
+
   public forward(stack: TraceReplayFrame[]): ExceptionInfo | void {
+    if (!this.pendingInnerTxn && this.index < this.programTrace.length) {
+      this.lastIndex = this.index;
+    }
     const lastLocation = this.programReplay.nextPcSource;
     let again = true;
     while (again) {
@@ -814,13 +827,9 @@ export class ProgramStackFrame implements TraceReplayFrame {
         return;
       }
 
-      const currentUnit = this.programTrace[this.index];
-      const spawnedInners = currentUnit.spawnedInners;
-      if (
-        !this.handledInnerTxns &&
-        spawnedInners &&
-        spawnedInners.length !== 0
-      ) {
+      if (this.pendingInnerTxn) {
+        const currentUnit = this.programTrace[this.index];
+        const spawnedInners = currentUnit.spawnedInners!;
         const spawnedInnerIndexes = spawnedInners.map((i) => Number(i));
         const innerGroupInfo: algosdk.modelsv2.PendingTransactionResponse[] =
           [];
@@ -855,9 +864,9 @@ export class ProgramStackFrame implements TraceReplayFrame {
       }
       this.programReplay.forward();
       // loop until location has advanced
-      again = this.isPuyaFrame
-        ? !locationHasAdvanced(lastLocation, this.programReplay.nextPcSource)
-        : false;
+      again =
+        this.isPuyaFrame &&
+        !locationHasAdvanced(lastLocation, this.programReplay.nextPcSource);
 
       this.index++;
 
@@ -913,21 +922,18 @@ export class ProgramStackFrame implements TraceReplayFrame {
       stack.pop();
       return;
     }
-    const initialLocation = this.programReplay.currentPcSource;
-    const targetIndex = this.index - 1;
+    // reset and then advance until the current index is the lastIndex
+    const stopAt = this.lastIndex;
     this.reset();
-    while (this.index < targetIndex) {
-      if (
-        this.isPuyaFrame &&
-        this.programReplay.nextPcSource === initialLocation
-      ) {
-        break;
+    if (stopAt !== undefined) {
+      while (this.index < stopAt) {
+        this.engine.forward();
       }
-      this.engine.forward();
     }
   }
 
   private reset() {
+    this.lastIndex = undefined;
     this.index = 0;
     this.handledInnerTxns = false;
     this.programReplay.reset();

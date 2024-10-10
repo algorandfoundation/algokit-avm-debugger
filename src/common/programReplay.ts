@@ -2,7 +2,7 @@ import {
   AvmValue,
   SimulationOpcodeTraceUnit,
 } from 'algosdk/dist/types/client/v2/algod/models/types';
-import { FrameSource, ProgramState } from './traceReplayEngine';
+import { FrameSource, CallStackFrame } from './traceReplayEngine';
 import {
   ByteArrayMap,
   isPuyaSourceMap,
@@ -12,24 +12,16 @@ import {
 import algosdk from 'algosdk';
 import { AppState } from './appState';
 
-interface CallStack {
-  readonly name: string;
-  readonly source: FrameSource | undefined;
-  readonly programState: ProgramState | undefined;
-  readonly isPuyaFrame: boolean;
-  stackOffset: number;
-}
 const HIDE_VERSION = true;
 const DEFINED_ONLY = true;
 const INCLUDE_STACK_SCOPE = false;
 const HIDE_TEMP = true;
 
-class MutableCallStack implements CallStack {
+class MutableCallStack implements CallStackFrame {
   public readonly name: string;
   private definedVariables: Record<string, boolean>;
   private _paramVariables: string[];
   private stack: string[];
-  public isPuyaFrame: boolean = true;
 
   constructor(
     public readonly callEvent: PCEvent,
@@ -138,7 +130,6 @@ export class ProgramReplay {
     private readonly programTrace: SimulationOpcodeTraceUnit[],
     sourceInfo: ProgramSourceDescriptor | undefined,
     public readonly appId: bigint | undefined,
-    traceIndex: number = 0, //index to the next opcode to execute
     currentAppState: Map<bigint, AppState>,
   ) {
     if (isPuyaSourceMap(sourceInfo?.json)) {
@@ -151,44 +142,12 @@ export class ProgramReplay {
 
     this.currentAppState = currentAppState;
     this.reset();
-    // advance internal state to match provided index
-    while (traceIndex-- > 0) {
-      this.forward();
-    }
   }
 
   private pushCallStack(event: PCEvent) {
     this._callStack.push(
       new MutableCallStack(event, this.nextPcSource, this.stack.length, this),
     );
-  }
-
-  public get currentPc(): number | undefined {
-    if (this.traceIndex === 0) {
-      return undefined;
-    }
-    return this.programTrace[this.traceIndex - 1]?.pc;
-  }
-
-  public get currentPcSource(): FrameSource | undefined {
-    if (this.sourceInfo === undefined || this.currentPc === undefined) {
-      return undefined;
-    }
-    const location = this.sourceInfo.sourcemap.getLocationForPc(this.currentPc);
-    if (location == undefined) {
-      return undefined;
-    }
-    const line = location.line;
-    const column = location.column;
-    const sourceIndex = location.sourceIndex;
-    const source = this.sourceInfo.getFullSourcePath(sourceIndex);
-
-    return {
-      name: source,
-      path: source,
-      line: line,
-      column: column,
-    };
   }
 
   get nextOpTrace() {
@@ -235,7 +194,7 @@ export class ProgramReplay {
     };
   }
 
-  get callStack(): CallStack[] {
+  get callStack(): CallStackFrame[] {
     return this._callStack;
   }
 
@@ -258,42 +217,6 @@ export class ProgramReplay {
       this.processOpEnter();
       this.updateSource();
     }
-  }
-
-  public backward(): void {
-    if (this.traceIndex === 0) {
-      return;
-    }
-
-    const currentSource = this.nextPcSource;
-    let previousSource: FrameSource | undefined;
-
-    do {
-      this.traceIndex--;
-      this.processOpExit();
-      if (this.traceIndex > 0) {
-        this.processOpEnter();
-        this.updateSource();
-      }
-      previousSource = this.nextPcSource;
-    } while (
-      this.traceIndex > 0 &&
-      !this.hasLocationChanged(currentSource, previousSource)
-    );
-  }
-
-  private hasLocationChanged(
-    from: FrameSource | undefined,
-    to: FrameSource | undefined,
-  ): boolean {
-    if (from === undefined || to === undefined) {
-      return from !== to;
-    }
-    return (
-      from.path !== to.path ||
-      from.line !== to.line ||
-      from.column !== to.column
-    );
   }
 
   public reset() {

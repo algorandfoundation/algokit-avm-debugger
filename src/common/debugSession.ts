@@ -25,7 +25,6 @@ import {
   ProgramSourceEntryFile,
   prefixPotentialError,
 } from './utils';
-import { ProgramState } from './traceReplayEngine';
 
 const GENERIC_ERROR_ID = 9999;
 
@@ -68,9 +67,6 @@ export class AvmDebugSession extends DebugSession {
 
   // txn group walker runtime for walking txn group.
   private _runtime: AvmRuntime;
-
-  // cache to allow cross scope variable references
-  private _expandedAvmValueCache = new Map<string, DebugProtocol.Variable>();
 
   private _variableHandles = new Handles<
     | ProgramStateScope
@@ -435,7 +431,7 @@ export class AvmDebugSession extends DebugSession {
 
       const scopes: DebugProtocol.Scope[] = [];
       if (frame !== undefined) {
-        if (this._runtime.isPuyaFrame(frame)) {
+        if (frame.programState?.variables !== undefined) {
           scopes.push(
             new Scope(
               'Locals',
@@ -445,14 +441,8 @@ export class AvmDebugSession extends DebugSession {
           );
         }
 
-        let state: ProgramState | undefined;
-        try {
-          state = this.getProgramState(args.frameId);
-        } catch {
-          state = undefined;
-        }
+        const state = frame.programState;
         if (state !== undefined) {
-          const programScope = new ProgramStateScope(args.frameId);
           let scopeName = 'Program State';
           const appID = state.appId;
           if (typeof appID !== 'undefined') {
@@ -461,7 +451,7 @@ export class AvmDebugSession extends DebugSession {
           scopes.push(
             new Scope(
               scopeName,
-              this._variableHandles.create(programScope),
+              this._variableHandles.create(new ProgramStateScope(args.frameId)),
               false,
             ),
           );
@@ -490,8 +480,6 @@ export class AvmDebugSession extends DebugSession {
   ): Promise<void> {
     try {
       let variables: DebugProtocol.Variable[] = [];
-      this._expandedAvmValueCache.clear();
-
       const v = this._variableHandles.get(args.variablesReference);
 
       if (v instanceof ProgramStateScope) {
@@ -1099,44 +1087,44 @@ export class AvmDebugSession extends DebugSession {
 
   private expandAvmValue(
     avmValue: algosdk.modelsv2.AvmValue,
-    filter?: string,
+    filter?: 'indexed' | 'named',
   ): DebugProtocol.Variable[] {
     const variables: DebugProtocol.Variable[] = [];
 
     if (avmValue.type === 1) {
       // byte array
       const bytes = avmValue.bytes || new Uint8Array();
-      const baseKey = `${avmValue.type}-${Buffer.from(bytes).toString(
-        'hex',
-      )}-${filter}`;
-
-      const addVariable = (name: string, value: string, type: string) => {
-        const cacheKey = `${baseKey}-${name}`;
-        if (this._expandedAvmValueCache.has(cacheKey)) {
-          variables.push(this._expandedAvmValueCache.get(cacheKey)!);
-        } else {
-          const variable: DebugProtocol.Variable = {
-            name,
-            value,
-            type,
+      if (!filter || filter === 'named') {
+        variables.push({
+          name: 'length',
+          value: bytes.length.toString(),
+          type: 'number',
+          variablesReference: 0,
+        });
+        variables.push({
+          name: 'hex',
+          value: `0x${Buffer.from(bytes).toString('hex')}`,
+          type: 'string',
+          variablesReference: 0,
+        });
+        const utf8String = utf8Decode(bytes);
+        if (typeof utf8String !== 'undefined') {
+          variables.push({
+            name: 'utf8',
+            value: `"${utf8String}"`,
+            type: 'string',
             variablesReference: 0,
-          };
-          this._expandedAvmValueCache.set(cacheKey, variable);
-          variables.push(variable);
+          });
         }
-      };
-
-      addVariable('length', bytes.length.toString(), 'number');
-      addVariable('hex', `0x${Buffer.from(bytes).toString('hex')}`, 'string');
-
-      const utf8String = utf8Decode(bytes);
-      if (typeof utf8String !== 'undefined') {
-        addVariable('utf8', `"${utf8String}"`, 'string');
       }
-
-      if (filter !== 'named') {
+      if (!filter || filter === 'indexed') {
         for (let i = 0; i < bytes.length; i++) {
-          addVariable(i.toString(), bytes[i].toString(), 'number');
+          variables.push({
+            name: i.toString(),
+            value: bytes[i].toString(),
+            type: 'number',
+            variablesReference: 0,
+          });
         }
       }
     }
