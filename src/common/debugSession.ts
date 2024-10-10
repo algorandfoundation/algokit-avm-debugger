@@ -750,11 +750,38 @@ export class AvmDebugSession extends DebugSession {
     args: DebugProtocol.EvaluateArguments,
   ): Promise<void> {
     try {
-      let reply: string | undefined;
-      let rv: DebugProtocol.Variable | undefined = undefined;
-
       // Note, can use args.context to perform different actions based on where the expression is evaluated
 
+      // check if expression matches a Puya local variable
+      const frame =
+        args.frameId !== undefined
+          ? this._runtime.getStackFrame(args.frameId)
+          : undefined;
+      const frameVariables = frame?.programState?.variables;
+      if (frameVariables) {
+        const variable = frameVariables.find(
+          ([name]) => name == args.expression,
+        );
+        if (variable) {
+          const avmValue = variable[1];
+          const debugVariable = this.convertAvmValue(
+            new PuyaScope(args.frameId!),
+            avmValue,
+            args.expression,
+          );
+          response.body = {
+            result: debugVariable.value,
+            type: debugVariable.type,
+            variablesReference: debugVariable.variablesReference,
+            presentationHint: debugVariable.presentationHint,
+          };
+          this.sendResponse(response);
+          return;
+        }
+      }
+
+      let reply: string | undefined;
+      let rv: DebugProtocol.Variable | undefined = undefined;
       let result: [AvmValueScope, number | string] | undefined = undefined;
       try {
         result = evaluateNameToScope(args.expression);
