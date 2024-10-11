@@ -2603,22 +2603,34 @@ describe('Puya Debugging', () => {
       client.assertStoppedLocation('entry', {}),
     ]);
 
-    // Set breakpoint at the beginning of the claim_poa method
+    // Set breakpoint at the beginning of the confirm attendance method
     await client.setBreakpointsRequest({
       source: { path: program },
-      breakpoints: [{ line: 98 }],
+      breakpoints: [{ line: 24 }],
     });
 
     await client.continueRequest({ threadId: 1 });
     await client.assertStoppedLocation('breakpoint', {
       path: program,
-      line: 98,
+      line: 24,
     });
 
-    // Check variables at the start of the claim poa method
+    // Check variables at the start of the confirm attendance method
     await assertVariables(client, {
-      pc: 700,
-      stack: [0, 0],
+      pc: 426,
+      stack: [],
+    });
+
+    // Set breakpoint at the beginning of the confirm attendance method
+    await client.setBreakpointsRequest({
+      source: { path: program },
+      breakpoints: [{ line: 27 }],
+    });
+
+    await client.continueRequest({ threadId: 1 });
+    await client.assertStoppedLocation('breakpoint', {
+      path: program,
+      line: 27,
     });
 
     // Verify Puya-specific variables
@@ -2632,62 +2644,29 @@ describe('Puya Debugging', () => {
       variablesReference: localsScope!.variablesReference,
     });
     assert.deepStrictEqual(
-      variablesResponse.body.variables.find((v) => v.name === 'opt_in_txn'),
+      variablesResponse.body.variables.find((v) => v.name === 'minted_asset'),
       {
-        name: 'opt_in_txn',
-        value: '0',
-        type: 'uint64',
-        variablesReference: 0,
-        evaluateName: 'opt_in_txn',
+        evaluateName: 'minted_asset',
+        indexedVariables: 32,
+        name: 'minted_asset',
+        namedVariables: 2,
+        presentationHint: {
+          attributes: ['rawString'],
+          kind: 'data',
+        },
+        type: 'byte[]',
+        value:
+          '0xd55d3e52e015364e12f1fe09a492b34c9d2bb524b76d32211fa8c1350376e4b3',
+        variablesReference: 1003,
       },
     );
-
-    // Step through the method
-    await client.nextRequest({ threadId: 1 });
-    await client.nextRequest({ threadId: 1 });
-    await client.assertStoppedLocation('step', { path: program, line: 99 });
-
-    // Verify Puya-specific variables again
-    const scopesResponse2 = await client.scopesRequest({ frameId: 0 });
-    const localsScope2 = scopesResponse2.body.scopes.find(
-      (s) => s.name === 'Locals',
-    );
-    assert.ok(localsScope2, 'Locals scope not found');
-
-    const variablesResponse2 = await client.variablesRequest({
-      variablesReference: localsScope2!.variablesReference,
-    });
-    assert.deepStrictEqual(
-      variablesResponse2.body.variables.find((v) => v.name === 'opt_in_txn'),
-      {
-        name: 'opt_in_txn',
-        value: '0',
-        type: 'uint64',
-        variablesReference: 0,
-        evaluateName: 'opt_in_txn',
-      },
-    );
-    const poaIdVariable = variablesResponse2.body.variables.find(
-      (v) => v.name === 'poa_id',
-    );
-    assert.strictEqual(poaIdVariable?.name, 'poa_id');
-    assert.strictEqual(poaIdVariable?.value, '0x0000000000000411');
-    assert.strictEqual(poaIdVariable?.type, 'byte[]');
-    assert.ok(typeof poaIdVariable?.variablesReference === 'number');
-    assert.deepStrictEqual(
-      variablesResponse2.body.variables.find((v) => v.name === 'exists'),
-      {
-        name: 'exists',
-        value: '1',
-        type: 'uint64',
-        variablesReference: 0,
-        evaluateName: 'exists',
-      },
-    );
+    await client.continueRequest({ threadId: 1 });
 
     // Continue to the end
-    await client.continueRequest({ threadId: 1 });
-    await client.waitForEvent('terminated');
+    await Promise.all([
+      client.continueRequest({ threadId: 1 }),
+      client.waitForEvent('terminated'),
+    ]);
   });
 
   it('should correctly step through the entire puya_and_teal example using breakpoints', async () => {
@@ -2789,7 +2768,9 @@ describe('Puya Debugging', () => {
     }
 
     // Continue to the end
-    await client.continueRequest({ threadId: 1 });
-    await client.waitForEvent('terminated');
+    await Promise.all([
+      client.continueRequest({ threadId: 1 }),
+      client.waitForEvent('terminated'),
+    ]);
   });
 });
