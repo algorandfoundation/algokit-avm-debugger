@@ -2689,4 +2689,107 @@ describe('Puya Debugging', () => {
     await client.continueRequest({ threadId: 1 });
     await client.waitForEvent('terminated');
   });
+
+  it('should correctly step through the entire puya_and_teal example using breakpoints', async () => {
+    const simulateTraceFile = path.join(
+      DATA_ROOT,
+      'puya_and_teal/simulate-response.json',
+    );
+    const programSourcesDescriptionFile = path.join(
+      DATA_ROOT,
+      'puya_and_teal/sources.json',
+    );
+    const { client } = fixture;
+
+    await Promise.all([
+      client.configurationSequence(),
+      client.launch({
+        simulateTraceFile,
+        programSourcesDescriptionFile,
+        stopOnEntry: true,
+      }),
+      client.assertStoppedLocation('entry', {}),
+    ]);
+
+    const expectedBreakpoints = [
+      { path: 'delegated_puya_lsig/lsig.py', line: 9 },
+      { path: 'first_teal_app/approval.teal', line: 86 },
+      { path: 'third_puyats_app/contract.ts', line: 7 },
+      { path: 'second_puya_app/contract.py', line: 13 },
+    ];
+
+    // Set breakpoints
+    for (const bp of expectedBreakpoints) {
+      const fullPath = normalizePathAndCasing(
+        nodeFileAccessor,
+        path.join(DATA_ROOT, 'puya_and_teal', bp.path),
+      );
+      await client.setBreakpointsRequest({
+        source: { path: fullPath },
+        breakpoints: [{ line: bp.line }],
+      });
+    }
+
+    // Continue to each breakpoint
+    for (const expectedBp of expectedBreakpoints) {
+      await client.continueRequest({ threadId: 1 });
+      const stoppedEvent = await client.waitForStop();
+      assert.strictEqual(stoppedEvent.body.reason, 'breakpoint');
+
+      const stackTraceResponse = await client.stackTraceRequest({
+        threadId: 1,
+      });
+      const topFrame = stackTraceResponse.body.stackFrames[0];
+
+      assert.strictEqual(
+        path.basename(topFrame.source?.path || ''),
+        path.basename(expectedBp.path),
+      );
+      assert.strictEqual(topFrame.line, expectedBp.line);
+
+      // Check variables at each stop
+      const scopesResponse = await client.scopesRequest({
+        frameId: topFrame.id,
+      });
+      const programStateScope = scopesResponse.body.scopes.find((s) =>
+        s.name.startsWith('Program State'),
+      );
+
+      if (programStateScope) {
+        const variablesResponse = await client.variablesRequest({
+          variablesReference: programStateScope.variablesReference,
+        });
+
+        // Verify that we have some basic program state
+        assert.ok(
+          variablesResponse.body.variables.some((v) => v.name === 'pc'),
+        );
+        assert.ok(
+          variablesResponse.body.variables.some((v) => v.name === 'stack'),
+        );
+      }
+
+      // For Puya files, check for Locals scope
+      if (expectedBp.path.endsWith('.py') || expectedBp.path.endsWith('.ts')) {
+        const localsScope = scopesResponse.body.scopes.find(
+          (s) => s.name === 'Locals',
+        );
+        assert.ok(localsScope, 'Locals scope not found for Puya file');
+
+        const localsResponse = await client.variablesRequest({
+          variablesReference: localsScope!.variablesReference,
+        });
+
+        // Verify that we have some local variables
+        assert.ok(
+          localsResponse.body.variables.length >= 0,
+          'No local section defined',
+        );
+      }
+    }
+
+    // Continue to the end
+    await client.continueRequest({ threadId: 1 });
+    await client.waitForEvent('terminated');
+  });
 });

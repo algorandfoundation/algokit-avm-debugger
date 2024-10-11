@@ -3,20 +3,10 @@
   "sources": [
     "contract.py"
   ],
-  "mappings": "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",
-  "op_pc_offset": 0,
+  "mappings": "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",
+  "op_pc_offset": 2,
   "pc_events": {
-    "1": {
-      "subroutine": "contract.ProofOfAttendance.approval_program",
-      "params": {},
-      "block": "contract.ProofOfAttendance.approval_program",
-      "stack_in": [],
-      "op": "intcblock 0 1 4"
-    },
-    "6": {
-      "op": "bytecblock \"total_attendees\" \"max_attendees\" 0x151f7c75 \"box_map\" \"asset_url\" 0x068101"
-    },
-    "65": {
+    "0": {
       "op": "txn ApplicationID",
       "defined_out": [
         "app_id%0#0"
@@ -25,18 +15,18 @@
         "app_id%0#0"
       ]
     },
-    "67": {
+    "2": {
       "op": "bnz main_entrypoint@2",
       "stack_out": []
     },
-    "70": {
-      "callsub": "contract.ProofOfAttendance.__init__",
+    "5": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.__init__",
       "op": "callsub __init__"
     },
-    "73": {
+    "8": {
       "block": "main_entrypoint@2",
       "stack_in": [],
-      "callsub": "contract.ProofOfAttendance.__puya_arc4_router__",
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.__puya_arc4_router__",
       "op": "callsub __puya_arc4_router__",
       "defined_out": [
         "tmp%0#0"
@@ -45,18 +35,18 @@
         "tmp%0#0"
       ]
     },
-    "76": {
+    "11": {
       "op": "return",
       "stack_out": []
     },
-    "77": {
-      "subroutine": "contract.ProofOfAttendance.__puya_arc4_router__",
+    "12": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.__puya_arc4_router__",
       "params": {},
       "block": "__puya_arc4_router__",
       "stack_in": [],
       "op": "proto 0 1"
     },
-    "80": {
+    "15": {
       "op": "txn NumAppArgs",
       "defined_out": [
         "tmp%0#0"
@@ -65,14 +55,14 @@
         "tmp%0#0"
       ]
     },
-    "82": {
+    "17": {
       "op": "bz __puya_arc4_router___after_if_else@18",
       "stack_out": []
     },
-    "85": {
+    "20": {
       "op": "pushbytess 0x1bcde52d 0xb8962962 0xfe9b38ed 0x9f5df126 0xbb36b1d7 0x77a24669 0xd2709766 0x7f323833 0x03d246c7 0xe946d06b 0x90a65932 0x9b7186d3 0xeb2af226 // method \"init(uint64)void\", method \"confirm_attendance()void\", method \"confirm_attendance_with_box()void\", method \"confirm_attendance_with_box_ref()void\", method \"confirm_attendance_with_box_map()void\", method \"get_poa_id()uint64\", method \"get_poa_id_with_box()uint64\", method \"get_poa_id_with_box_ref()uint64\", method \"get_poa_id_with_box_map()uint64\", method \"claim_poa(axfer)void\", method \"claim_poa_with_box(axfer)void\", method \"claim_poa_with_box_ref(axfer)void\", method \"claim_poa_with_box_map(axfer)void\""
     },
-    "152": {
+    "87": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
         "Method(claim_poa(axfer)void)",
@@ -107,11 +97,11 @@
         "tmp%2#0"
       ]
     },
-    "155": {
+    "90": {
       "op": "match __puya_arc4_router___init_route@2 __puya_arc4_router___confirm_attendance_route@3 __puya_arc4_router___confirm_attendance_with_box_route@4 __puya_arc4_router___confirm_attendance_with_box_ref_route@5 __puya_arc4_router___confirm_attendance_with_box_map_route@6 __puya_arc4_router___get_poa_id_route@7 __puya_arc4_router___get_poa_id_with_box_route@8 __puya_arc4_router___get_poa_id_with_box_ref_route@9 __puya_arc4_router___get_poa_id_with_box_map_route@10 __puya_arc4_router___claim_poa_route@11 __puya_arc4_router___claim_poa_with_box_route@12 __puya_arc4_router___claim_poa_with_box_ref_route@13 __puya_arc4_router___claim_poa_with_box_map_route@14",
       "stack_out": []
     },
-    "183": {
+    "118": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -120,11 +110,11 @@
         "0"
       ]
     },
-    "184": {
+    "119": {
       "retsub": true,
       "op": "retsub"
     },
-    "185": {
+    "120": {
       "block": "__puya_arc4_router___init_route@2",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -135,13 +125,311 @@
         "tmp%3#0"
       ]
     },
-    "187": {
+    "122": {
       "op": "!",
       "defined_out": [
         "tmp%4#0"
       ],
       "stack_out": [
         "tmp%4#0"
+      ]
+    },
+    "123": {
+      "op": "assert // OnCompletion is NoOp",
+      "stack_out": []
+    },
+    "124": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "126": {
+      "op": "!",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "127": {
+      "op": "assert // is creating",
+      "stack_out": []
+    },
+    "128": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "131": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "132": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.init",
+      "op": "callsub init",
+      "stack_out": []
+    },
+    "135": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "136": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "137": {
+      "block": "__puya_arc4_router___confirm_attendance_route@3",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "139": {
+      "op": "!",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "140": {
+      "op": "assert // OnCompletion is NoOp",
+      "stack_out": []
+    },
+    "141": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "143": {
+      "op": "assert // is not creating",
+      "stack_out": []
+    },
+    "144": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.confirm_attendance",
+      "op": "callsub confirm_attendance"
+    },
+    "147": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "148": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "149": {
+      "block": "__puya_arc4_router___confirm_attendance_with_box_route@4",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "151": {
+      "op": "!",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "152": {
+      "op": "assert // OnCompletion is NoOp",
+      "stack_out": []
+    },
+    "153": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "155": {
+      "op": "assert // is not creating",
+      "stack_out": []
+    },
+    "156": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.confirm_attendance_with_box",
+      "op": "callsub confirm_attendance_with_box"
+    },
+    "159": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "160": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "161": {
+      "block": "__puya_arc4_router___confirm_attendance_with_box_ref_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "163": {
+      "op": "!",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0"
+      ]
+    },
+    "164": {
+      "op": "assert // OnCompletion is NoOp",
+      "stack_out": []
+    },
+    "165": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%19#0"
+      ]
+    },
+    "167": {
+      "op": "assert // is not creating",
+      "stack_out": []
+    },
+    "168": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.confirm_attendance_with_box_ref",
+      "op": "callsub confirm_attendance_with_box_ref"
+    },
+    "171": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "172": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "173": {
+      "block": "__puya_arc4_router___confirm_attendance_with_box_map_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0"
+      ]
+    },
+    "175": {
+      "op": "!",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "176": {
+      "op": "assert // OnCompletion is NoOp",
+      "stack_out": []
+    },
+    "177": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "179": {
+      "op": "assert // is not creating",
+      "stack_out": []
+    },
+    "180": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.confirm_attendance_with_box_map",
+      "op": "callsub confirm_attendance_with_box_map"
+    },
+    "183": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "184": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "185": {
+      "block": "__puya_arc4_router___get_poa_id_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "187": {
+      "op": "!",
+      "defined_out": [
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0"
       ]
     },
     "188": {
@@ -151,46 +439,64 @@
     "189": {
       "op": "txn ApplicationID",
       "defined_out": [
-        "tmp%5#0"
+        "tmp%27#0"
       ],
       "stack_out": [
-        "tmp%5#0"
+        "tmp%27#0"
       ]
     },
     "191": {
-      "op": "!",
-      "defined_out": [
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%6#0"
-      ]
-    },
-    "192": {
-      "op": "assert // is creating",
+      "op": "assert // is not creating",
       "stack_out": []
     },
-    "193": {
-      "op": "txna ApplicationArgs 1",
+    "192": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.get_poa_id",
+      "op": "callsub get_poa_id",
       "defined_out": [
-        "tmp%7#0"
+        "tmp%29#0"
       ],
       "stack_out": [
-        "tmp%7#0"
+        "tmp%29#0"
+      ]
+    },
+    "195": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
       ]
     },
     "196": {
-      "op": "btoi",
+      "op": "bytec_2 // 0x151f7c75",
       "defined_out": [
-        "tmp%8#0"
+        "0x151f7c75",
+        "val_as_bytes%0#0"
       ],
       "stack_out": [
-        "tmp%8#0"
+        "val_as_bytes%0#0",
+        "0x151f7c75"
       ]
     },
     "197": {
-      "callsub": "contract.ProofOfAttendance.init",
-      "op": "callsub init",
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "198": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%30#0"
+      ],
+      "stack_out": [
+        "tmp%30#0"
+      ]
+    },
+    "199": {
+      "op": "log",
       "stack_out": []
     },
     "200": {
@@ -207,322 +513,6 @@
       "op": "retsub"
     },
     "202": {
-      "block": "__puya_arc4_router___confirm_attendance_route@3",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%9#0"
-      ]
-    },
-    "204": {
-      "op": "!",
-      "defined_out": [
-        "tmp%10#0"
-      ],
-      "stack_out": [
-        "tmp%10#0"
-      ]
-    },
-    "205": {
-      "op": "assert // OnCompletion is NoOp",
-      "stack_out": []
-    },
-    "206": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%11#0"
-      ],
-      "stack_out": [
-        "tmp%11#0"
-      ]
-    },
-    "208": {
-      "op": "assert // is not creating",
-      "stack_out": []
-    },
-    "209": {
-      "callsub": "contract.ProofOfAttendance.confirm_attendance",
-      "op": "callsub confirm_attendance"
-    },
-    "212": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "1"
-      ],
-      "stack_out": [
-        "1"
-      ]
-    },
-    "213": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "214": {
-      "block": "__puya_arc4_router___confirm_attendance_with_box_route@4",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%13#0"
-      ]
-    },
-    "216": {
-      "op": "!",
-      "defined_out": [
-        "tmp%14#0"
-      ],
-      "stack_out": [
-        "tmp%14#0"
-      ]
-    },
-    "217": {
-      "op": "assert // OnCompletion is NoOp",
-      "stack_out": []
-    },
-    "218": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%15#0"
-      ],
-      "stack_out": [
-        "tmp%15#0"
-      ]
-    },
-    "220": {
-      "op": "assert // is not creating",
-      "stack_out": []
-    },
-    "221": {
-      "callsub": "contract.ProofOfAttendance.confirm_attendance_with_box",
-      "op": "callsub confirm_attendance_with_box"
-    },
-    "224": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "1"
-      ],
-      "stack_out": [
-        "1"
-      ]
-    },
-    "225": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "226": {
-      "block": "__puya_arc4_router___confirm_attendance_with_box_ref_route@5",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%17#0"
-      ],
-      "stack_out": [
-        "tmp%17#0"
-      ]
-    },
-    "228": {
-      "op": "!",
-      "defined_out": [
-        "tmp%18#0"
-      ],
-      "stack_out": [
-        "tmp%18#0"
-      ]
-    },
-    "229": {
-      "op": "assert // OnCompletion is NoOp",
-      "stack_out": []
-    },
-    "230": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%19#0"
-      ],
-      "stack_out": [
-        "tmp%19#0"
-      ]
-    },
-    "232": {
-      "op": "assert // is not creating",
-      "stack_out": []
-    },
-    "233": {
-      "callsub": "contract.ProofOfAttendance.confirm_attendance_with_box_ref",
-      "op": "callsub confirm_attendance_with_box_ref"
-    },
-    "236": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "1"
-      ],
-      "stack_out": [
-        "1"
-      ]
-    },
-    "237": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "238": {
-      "block": "__puya_arc4_router___confirm_attendance_with_box_map_route@6",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%21#0"
-      ],
-      "stack_out": [
-        "tmp%21#0"
-      ]
-    },
-    "240": {
-      "op": "!",
-      "defined_out": [
-        "tmp%22#0"
-      ],
-      "stack_out": [
-        "tmp%22#0"
-      ]
-    },
-    "241": {
-      "op": "assert // OnCompletion is NoOp",
-      "stack_out": []
-    },
-    "242": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%23#0"
-      ],
-      "stack_out": [
-        "tmp%23#0"
-      ]
-    },
-    "244": {
-      "op": "assert // is not creating",
-      "stack_out": []
-    },
-    "245": {
-      "callsub": "contract.ProofOfAttendance.confirm_attendance_with_box_map",
-      "op": "callsub confirm_attendance_with_box_map"
-    },
-    "248": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "1"
-      ],
-      "stack_out": [
-        "1"
-      ]
-    },
-    "249": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "250": {
-      "block": "__puya_arc4_router___get_poa_id_route@7",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%25#0"
-      ],
-      "stack_out": [
-        "tmp%25#0"
-      ]
-    },
-    "252": {
-      "op": "!",
-      "defined_out": [
-        "tmp%26#0"
-      ],
-      "stack_out": [
-        "tmp%26#0"
-      ]
-    },
-    "253": {
-      "op": "assert // OnCompletion is NoOp",
-      "stack_out": []
-    },
-    "254": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%27#0"
-      ],
-      "stack_out": [
-        "tmp%27#0"
-      ]
-    },
-    "256": {
-      "op": "assert // is not creating",
-      "stack_out": []
-    },
-    "257": {
-      "callsub": "contract.ProofOfAttendance.get_poa_id",
-      "op": "callsub get_poa_id",
-      "defined_out": [
-        "tmp%29#0"
-      ],
-      "stack_out": [
-        "tmp%29#0"
-      ]
-    },
-    "260": {
-      "op": "itob",
-      "defined_out": [
-        "val_as_bytes%0#0"
-      ],
-      "stack_out": [
-        "val_as_bytes%0#0"
-      ]
-    },
-    "261": {
-      "op": "bytec_2 // 0x151f7c75",
-      "defined_out": [
-        "0x151f7c75",
-        "val_as_bytes%0#0"
-      ],
-      "stack_out": [
-        "val_as_bytes%0#0",
-        "0x151f7c75"
-      ]
-    },
-    "262": {
-      "op": "swap",
-      "stack_out": [
-        "0x151f7c75",
-        "val_as_bytes%0#0"
-      ]
-    },
-    "263": {
-      "op": "concat",
-      "defined_out": [
-        "tmp%30#0"
-      ],
-      "stack_out": [
-        "tmp%30#0"
-      ]
-    },
-    "264": {
-      "op": "log",
-      "stack_out": []
-    },
-    "265": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "1"
-      ],
-      "stack_out": [
-        "1"
-      ]
-    },
-    "266": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "267": {
       "block": "__puya_arc4_router___get_poa_id_with_box_route@8",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -533,7 +523,7 @@
         "tmp%31#0"
       ]
     },
-    "269": {
+    "204": {
       "op": "!",
       "defined_out": [
         "tmp%32#0"
@@ -542,11 +532,11 @@
         "tmp%32#0"
       ]
     },
-    "270": {
+    "205": {
       "op": "assert // OnCompletion is NoOp",
       "stack_out": []
     },
-    "271": {
+    "206": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%33#0"
@@ -555,12 +545,12 @@
         "tmp%33#0"
       ]
     },
-    "273": {
+    "208": {
       "op": "assert // is not creating",
       "stack_out": []
     },
-    "274": {
-      "callsub": "contract.ProofOfAttendance.get_poa_id_with_box",
+    "209": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.get_poa_id_with_box",
       "op": "callsub get_poa_id_with_box",
       "defined_out": [
         "tmp%35#0"
@@ -569,7 +559,7 @@
         "tmp%35#0"
       ]
     },
-    "277": {
+    "212": {
       "op": "itob",
       "defined_out": [
         "val_as_bytes%1#0"
@@ -578,7 +568,7 @@
         "val_as_bytes%1#0"
       ]
     },
-    "278": {
+    "213": {
       "op": "bytec_2 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
@@ -589,14 +579,14 @@
         "0x151f7c75"
       ]
     },
-    "279": {
+    "214": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "val_as_bytes%1#0"
       ]
     },
-    "280": {
+    "215": {
       "op": "concat",
       "defined_out": [
         "tmp%36#0"
@@ -605,11 +595,11 @@
         "tmp%36#0"
       ]
     },
-    "281": {
+    "216": {
       "op": "log",
       "stack_out": []
     },
-    "282": {
+    "217": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1"
@@ -618,11 +608,11 @@
         "1"
       ]
     },
-    "283": {
+    "218": {
       "retsub": true,
       "op": "retsub"
     },
-    "284": {
+    "219": {
       "block": "__puya_arc4_router___get_poa_id_with_box_ref_route@9",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -633,7 +623,7 @@
         "tmp%37#0"
       ]
     },
-    "286": {
+    "221": {
       "op": "!",
       "defined_out": [
         "tmp%38#0"
@@ -642,11 +632,11 @@
         "tmp%38#0"
       ]
     },
-    "287": {
+    "222": {
       "op": "assert // OnCompletion is NoOp",
       "stack_out": []
     },
-    "288": {
+    "223": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%39#0"
@@ -655,12 +645,12 @@
         "tmp%39#0"
       ]
     },
-    "290": {
+    "225": {
       "op": "assert // is not creating",
       "stack_out": []
     },
-    "291": {
-      "callsub": "contract.ProofOfAttendance.get_poa_id_with_box_ref",
+    "226": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.get_poa_id_with_box_ref",
       "op": "callsub get_poa_id_with_box_ref",
       "defined_out": [
         "tmp%41#0"
@@ -669,7 +659,7 @@
         "tmp%41#0"
       ]
     },
-    "294": {
+    "229": {
       "op": "itob",
       "defined_out": [
         "val_as_bytes%2#0"
@@ -678,7 +668,7 @@
         "val_as_bytes%2#0"
       ]
     },
-    "295": {
+    "230": {
       "op": "bytec_2 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
@@ -689,14 +679,14 @@
         "0x151f7c75"
       ]
     },
-    "296": {
+    "231": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "val_as_bytes%2#0"
       ]
     },
-    "297": {
+    "232": {
       "op": "concat",
       "defined_out": [
         "tmp%42#0"
@@ -705,11 +695,11 @@
         "tmp%42#0"
       ]
     },
-    "298": {
+    "233": {
       "op": "log",
       "stack_out": []
     },
-    "299": {
+    "234": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1"
@@ -718,11 +708,11 @@
         "1"
       ]
     },
-    "300": {
+    "235": {
       "retsub": true,
       "op": "retsub"
     },
-    "301": {
+    "236": {
       "block": "__puya_arc4_router___get_poa_id_with_box_map_route@10",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -733,7 +723,7 @@
         "tmp%43#0"
       ]
     },
-    "303": {
+    "238": {
       "op": "!",
       "defined_out": [
         "tmp%44#0"
@@ -742,11 +732,11 @@
         "tmp%44#0"
       ]
     },
-    "304": {
+    "239": {
       "op": "assert // OnCompletion is NoOp",
       "stack_out": []
     },
-    "305": {
+    "240": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%45#0"
@@ -755,12 +745,12 @@
         "tmp%45#0"
       ]
     },
-    "307": {
+    "242": {
       "op": "assert // is not creating",
       "stack_out": []
     },
-    "308": {
-      "callsub": "contract.ProofOfAttendance.get_poa_id_with_box_map",
+    "243": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.get_poa_id_with_box_map",
       "op": "callsub get_poa_id_with_box_map",
       "defined_out": [
         "tmp%47#0"
@@ -769,7 +759,7 @@
         "tmp%47#0"
       ]
     },
-    "311": {
+    "246": {
       "op": "itob",
       "defined_out": [
         "val_as_bytes%3#0"
@@ -778,7 +768,7 @@
         "val_as_bytes%3#0"
       ]
     },
-    "312": {
+    "247": {
       "op": "bytec_2 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
@@ -789,14 +779,14 @@
         "0x151f7c75"
       ]
     },
-    "313": {
+    "248": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "val_as_bytes%3#0"
       ]
     },
-    "314": {
+    "249": {
       "op": "concat",
       "defined_out": [
         "tmp%48#0"
@@ -805,11 +795,11 @@
         "tmp%48#0"
       ]
     },
-    "315": {
+    "250": {
       "op": "log",
       "stack_out": []
     },
-    "316": {
+    "251": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1"
@@ -818,11 +808,11 @@
         "1"
       ]
     },
-    "317": {
+    "252": {
       "retsub": true,
       "op": "retsub"
     },
-    "318": {
+    "253": {
       "block": "__puya_arc4_router___claim_poa_route@11",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -833,7 +823,7 @@
         "tmp%49#0"
       ]
     },
-    "320": {
+    "255": {
       "op": "!",
       "defined_out": [
         "tmp%50#0"
@@ -842,11 +832,11 @@
         "tmp%50#0"
       ]
     },
-    "321": {
+    "256": {
       "op": "assert // OnCompletion is NoOp",
       "stack_out": []
     },
-    "322": {
+    "257": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%51#0"
@@ -855,11 +845,11 @@
         "tmp%51#0"
       ]
     },
-    "324": {
+    "259": {
       "op": "assert // is not creating",
       "stack_out": []
     },
-    "325": {
+    "260": {
       "op": "txn GroupIndex",
       "defined_out": [
         "tmp%53#0"
@@ -868,7 +858,7 @@
         "tmp%53#0"
       ]
     },
-    "327": {
+    "262": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -879,7 +869,7 @@
         "1"
       ]
     },
-    "328": {
+    "263": {
       "op": "-",
       "defined_out": [
         "gtxn_idx%0#0"
@@ -888,7 +878,7 @@
         "gtxn_idx%0#0"
       ]
     },
-    "329": {
+    "264": {
       "op": "dup",
       "defined_out": [
         "gtxn_idx%0#0",
@@ -899,7 +889,7 @@
         "gtxn_idx%0#0 (copy)"
       ]
     },
-    "330": {
+    "265": {
       "op": "gtxns TypeEnum",
       "defined_out": [
         "gtxn_idx%0#0",
@@ -910,7 +900,7 @@
         "gtxn_type%0#0"
       ]
     },
-    "332": {
+    "267": {
       "op": "intc_2 // axfer",
       "defined_out": [
         "axfer",
@@ -923,7 +913,7 @@
         "axfer"
       ]
     },
-    "333": {
+    "268": {
       "op": "==",
       "defined_out": [
         "gtxn_idx%0#0",
@@ -934,28 +924,28 @@
         "gtxn_type_matches%0#0"
       ]
     },
-    "334": {
+    "269": {
       "op": "assert // transaction type is axfer",
       "stack_out": [
         "gtxn_idx%0#0"
       ]
     },
-    "335": {
-      "callsub": "contract.ProofOfAttendance.claim_poa",
+    "270": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.claim_poa",
       "op": "callsub claim_poa",
       "stack_out": []
     },
-    "338": {
+    "273": {
       "op": "intc_1 // 1",
       "stack_out": [
         "1"
       ]
     },
-    "339": {
+    "274": {
       "retsub": true,
       "op": "retsub"
     },
-    "340": {
+    "275": {
       "block": "__puya_arc4_router___claim_poa_with_box_route@12",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -966,7 +956,7 @@
         "tmp%54#0"
       ]
     },
-    "342": {
+    "277": {
       "op": "!",
       "defined_out": [
         "tmp%55#0"
@@ -975,11 +965,11 @@
         "tmp%55#0"
       ]
     },
-    "343": {
+    "278": {
       "op": "assert // OnCompletion is NoOp",
       "stack_out": []
     },
-    "344": {
+    "279": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%56#0"
@@ -988,11 +978,11 @@
         "tmp%56#0"
       ]
     },
-    "346": {
+    "281": {
       "op": "assert // is not creating",
       "stack_out": []
     },
-    "347": {
+    "282": {
       "op": "txn GroupIndex",
       "defined_out": [
         "tmp%58#0"
@@ -1001,7 +991,7 @@
         "tmp%58#0"
       ]
     },
-    "349": {
+    "284": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -1012,7 +1002,7 @@
         "1"
       ]
     },
-    "350": {
+    "285": {
       "op": "-",
       "defined_out": [
         "gtxn_idx%1#0"
@@ -1021,7 +1011,7 @@
         "gtxn_idx%1#0"
       ]
     },
-    "351": {
+    "286": {
       "op": "dup",
       "defined_out": [
         "gtxn_idx%1#0",
@@ -1032,7 +1022,7 @@
         "gtxn_idx%1#0 (copy)"
       ]
     },
-    "352": {
+    "287": {
       "op": "gtxns TypeEnum",
       "defined_out": [
         "gtxn_idx%1#0",
@@ -1043,7 +1033,7 @@
         "gtxn_type%1#0"
       ]
     },
-    "354": {
+    "289": {
       "op": "intc_2 // axfer",
       "defined_out": [
         "axfer",
@@ -1056,7 +1046,7 @@
         "axfer"
       ]
     },
-    "355": {
+    "290": {
       "op": "==",
       "defined_out": [
         "gtxn_idx%1#0",
@@ -1067,28 +1057,28 @@
         "gtxn_type_matches%1#0"
       ]
     },
-    "356": {
+    "291": {
       "op": "assert // transaction type is axfer",
       "stack_out": [
         "gtxn_idx%1#0"
       ]
     },
-    "357": {
-      "callsub": "contract.ProofOfAttendance.claim_poa_with_box",
+    "292": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.claim_poa_with_box",
       "op": "callsub claim_poa_with_box",
       "stack_out": []
     },
-    "360": {
+    "295": {
       "op": "intc_1 // 1",
       "stack_out": [
         "1"
       ]
     },
-    "361": {
+    "296": {
       "retsub": true,
       "op": "retsub"
     },
-    "362": {
+    "297": {
       "block": "__puya_arc4_router___claim_poa_with_box_ref_route@13",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -1099,7 +1089,7 @@
         "tmp%59#0"
       ]
     },
-    "364": {
+    "299": {
       "op": "!",
       "defined_out": [
         "tmp%60#0"
@@ -1108,11 +1098,11 @@
         "tmp%60#0"
       ]
     },
-    "365": {
+    "300": {
       "op": "assert // OnCompletion is NoOp",
       "stack_out": []
     },
-    "366": {
+    "301": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%61#0"
@@ -1121,11 +1111,11 @@
         "tmp%61#0"
       ]
     },
-    "368": {
+    "303": {
       "op": "assert // is not creating",
       "stack_out": []
     },
-    "369": {
+    "304": {
       "op": "txn GroupIndex",
       "defined_out": [
         "tmp%63#0"
@@ -1134,7 +1124,7 @@
         "tmp%63#0"
       ]
     },
-    "371": {
+    "306": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -1145,7 +1135,7 @@
         "1"
       ]
     },
-    "372": {
+    "307": {
       "op": "-",
       "defined_out": [
         "gtxn_idx%2#0"
@@ -1154,7 +1144,7 @@
         "gtxn_idx%2#0"
       ]
     },
-    "373": {
+    "308": {
       "op": "dup",
       "defined_out": [
         "gtxn_idx%2#0",
@@ -1165,7 +1155,7 @@
         "gtxn_idx%2#0 (copy)"
       ]
     },
-    "374": {
+    "309": {
       "op": "gtxns TypeEnum",
       "defined_out": [
         "gtxn_idx%2#0",
@@ -1176,7 +1166,7 @@
         "gtxn_type%2#0"
       ]
     },
-    "376": {
+    "311": {
       "op": "intc_2 // axfer",
       "defined_out": [
         "axfer",
@@ -1189,7 +1179,7 @@
         "axfer"
       ]
     },
-    "377": {
+    "312": {
       "op": "==",
       "defined_out": [
         "gtxn_idx%2#0",
@@ -1200,28 +1190,28 @@
         "gtxn_type_matches%2#0"
       ]
     },
-    "378": {
+    "313": {
       "op": "assert // transaction type is axfer",
       "stack_out": [
         "gtxn_idx%2#0"
       ]
     },
-    "379": {
-      "callsub": "contract.ProofOfAttendance.claim_poa_with_box_ref",
+    "314": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.claim_poa_with_box_ref",
       "op": "callsub claim_poa_with_box_ref",
       "stack_out": []
     },
-    "382": {
+    "317": {
       "op": "intc_1 // 1",
       "stack_out": [
         "1"
       ]
     },
-    "383": {
+    "318": {
       "retsub": true,
       "op": "retsub"
     },
-    "384": {
+    "319": {
       "block": "__puya_arc4_router___claim_poa_with_box_map_route@14",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -1232,7 +1222,7 @@
         "tmp%64#0"
       ]
     },
-    "386": {
+    "321": {
       "op": "!",
       "defined_out": [
         "tmp%65#0"
@@ -1241,11 +1231,11 @@
         "tmp%65#0"
       ]
     },
-    "387": {
+    "322": {
       "op": "assert // OnCompletion is NoOp",
       "stack_out": []
     },
-    "388": {
+    "323": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%66#0"
@@ -1254,11 +1244,11 @@
         "tmp%66#0"
       ]
     },
-    "390": {
+    "325": {
       "op": "assert // is not creating",
       "stack_out": []
     },
-    "391": {
+    "326": {
       "op": "txn GroupIndex",
       "defined_out": [
         "tmp%68#0"
@@ -1267,7 +1257,7 @@
         "tmp%68#0"
       ]
     },
-    "393": {
+    "328": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -1278,7 +1268,7 @@
         "1"
       ]
     },
-    "394": {
+    "329": {
       "op": "-",
       "defined_out": [
         "gtxn_idx%3#0"
@@ -1287,7 +1277,7 @@
         "gtxn_idx%3#0"
       ]
     },
-    "395": {
+    "330": {
       "op": "dup",
       "defined_out": [
         "gtxn_idx%3#0",
@@ -1298,7 +1288,7 @@
         "gtxn_idx%3#0 (copy)"
       ]
     },
-    "396": {
+    "331": {
       "op": "gtxns TypeEnum",
       "defined_out": [
         "gtxn_idx%3#0",
@@ -1309,7 +1299,7 @@
         "gtxn_type%3#0"
       ]
     },
-    "398": {
+    "333": {
       "op": "intc_2 // axfer",
       "defined_out": [
         "axfer",
@@ -1322,7 +1312,7 @@
         "axfer"
       ]
     },
-    "399": {
+    "334": {
       "op": "==",
       "defined_out": [
         "gtxn_idx%3#0",
@@ -1333,28 +1323,28 @@
         "gtxn_type_matches%3#0"
       ]
     },
-    "400": {
+    "335": {
       "op": "assert // transaction type is axfer",
       "stack_out": [
         "gtxn_idx%3#0"
       ]
     },
-    "401": {
-      "callsub": "contract.ProofOfAttendance.claim_poa_with_box_map",
+    "336": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance.claim_poa_with_box_map",
       "op": "callsub claim_poa_with_box_map",
       "stack_out": []
     },
-    "404": {
+    "339": {
       "op": "intc_1 // 1",
       "stack_out": [
         "1"
       ]
     },
-    "405": {
+    "340": {
       "retsub": true,
       "op": "retsub"
     },
-    "406": {
+    "341": {
       "block": "__puya_arc4_router___after_if_else@18",
       "stack_in": [],
       "op": "intc_0 // 0",
@@ -1365,12 +1355,12 @@
         "0"
       ]
     },
-    "407": {
+    "342": {
       "retsub": true,
       "op": "retsub"
     },
-    "408": {
-      "subroutine": "contract.ProofOfAttendance.init",
+    "343": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.init",
       "params": {
         "max_attendees#0": "uint64"
       },
@@ -1378,10 +1368,10 @@
       "stack_in": [],
       "op": "proto 1 0"
     },
-    "411": {
+    "346": {
       "op": "txn Sender"
     },
-    "413": {
+    "348": {
       "op": "global CreatorAddress",
       "defined_out": [
         "tmp%0#0",
@@ -1392,7 +1382,7 @@
         "tmp%1#0"
       ]
     },
-    "415": {
+    "350": {
       "op": "==",
       "defined_out": [
         "tmp%2#0"
@@ -1401,11 +1391,11 @@
         "tmp%2#0"
       ]
     },
-    "416": {
+    "351": {
       "op": "assert // Only creator can initialize",
       "stack_out": []
     },
-    "417": {
+    "352": {
       "op": "bytec_1 // \"max_attendees\"",
       "defined_out": [
         "\"max_attendees\""
@@ -1414,7 +1404,7 @@
         "\"max_attendees\""
       ]
     },
-    "418": {
+    "353": {
       "op": "frame_dig -1",
       "defined_out": [
         "\"max_attendees\"",
@@ -1425,22 +1415,22 @@
         "max_attendees#0 (copy)"
       ]
     },
-    "420": {
+    "355": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "421": {
+    "356": {
       "retsub": true,
       "op": "retsub"
     },
-    "422": {
-      "subroutine": "contract.ProofOfAttendance.confirm_attendance",
+    "357": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.confirm_attendance",
       "params": {},
       "block": "confirm_attendance",
       "stack_in": [],
       "op": "proto 0 0"
     },
-    "425": {
+    "360": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -1449,7 +1439,7 @@
         "0"
       ]
     },
-    "426": {
+    "361": {
       "op": "bytec_0 // \"total_attendees\"",
       "defined_out": [
         "\"total_attendees\"",
@@ -1460,7 +1450,7 @@
         "\"total_attendees\""
       ]
     },
-    "427": {
+    "362": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1471,20 +1461,20 @@
         "maybe_exists%0#0"
       ]
     },
-    "428": {
+    "363": {
       "op": "assert // check self.total_attendees exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "429": {
+    "364": {
       "op": "intc_0 // 0",
       "stack_out": [
         "maybe_value%0#0",
         "0"
       ]
     },
-    "430": {
+    "365": {
       "op": "bytec_1 // \"max_attendees\"",
       "defined_out": [
         "\"max_attendees\"",
@@ -1497,7 +1487,7 @@
         "\"max_attendees\""
       ]
     },
-    "431": {
+    "366": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -1510,14 +1500,14 @@
         "maybe_exists%1#0"
       ]
     },
-    "432": {
+    "367": {
       "op": "assert // check self.max_attendees exists",
       "stack_out": [
         "maybe_value%0#0",
         "maybe_value%1#0"
       ]
     },
-    "433": {
+    "368": {
       "op": "<",
       "defined_out": [
         "tmp%0#0"
@@ -1526,11 +1516,11 @@
         "tmp%0#0"
       ]
     },
-    "434": {
+    "369": {
       "op": "assert // Max attendees reached",
       "stack_out": []
     },
-    "435": {
+    "370": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%1#0"
@@ -1539,8 +1529,8 @@
         "tmp%1#0"
       ]
     },
-    "437": {
-      "callsub": "contract.ProofOfAttendance._mint_poa",
+    "372": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance._mint_poa",
       "op": "callsub _mint_poa",
       "defined_out": [
         "minted_asset#0"
@@ -1549,14 +1539,14 @@
         "minted_asset#0"
       ]
     },
-    "440": {
+    "375": {
       "op": "intc_0 // 0",
       "stack_out": [
         "minted_asset#0",
         "0"
       ]
     },
-    "441": {
+    "376": {
       "op": "bytec_0 // \"total_attendees\"",
       "stack_out": [
         "minted_asset#0",
@@ -1564,7 +1554,7 @@
         "\"total_attendees\""
       ]
     },
-    "442": {
+    "377": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -1577,27 +1567,27 @@
         "maybe_exists%2#0"
       ]
     },
-    "443": {
+    "378": {
       "op": "assert // check self.total_attendees exists",
       "stack_out": [
         "minted_asset#0",
         "maybe_value%2#0"
       ]
     },
-    "444": {
-      "op": "intc_1 // 1",
+    "379": {
+      "op": "intc_3 // TMPL_INCREMENT",
       "defined_out": [
-        "1",
+        "TMPL_INCREMENT",
         "maybe_value%2#0",
         "minted_asset#0"
       ],
       "stack_out": [
         "minted_asset#0",
         "maybe_value%2#0",
-        "1"
+        "TMPL_INCREMENT"
       ]
     },
-    "445": {
+    "380": {
       "op": "+",
       "defined_out": [
         "minted_asset#0",
@@ -1608,7 +1598,7 @@
         "new_state_value%0#0"
       ]
     },
-    "446": {
+    "381": {
       "op": "bytec_0 // \"total_attendees\"",
       "stack_out": [
         "minted_asset#0",
@@ -1616,7 +1606,7 @@
         "\"total_attendees\""
       ]
     },
-    "447": {
+    "382": {
       "op": "swap",
       "stack_out": [
         "minted_asset#0",
@@ -1624,13 +1614,13 @@
         "new_state_value%0#0"
       ]
     },
-    "448": {
+    "383": {
       "op": "app_global_put",
       "stack_out": [
         "minted_asset#0"
       ]
     },
-    "449": {
+    "384": {
       "op": "txn Sender",
       "defined_out": [
         "minted_asset#0",
@@ -1641,7 +1631,7 @@
         "tmp%2#0"
       ]
     },
-    "451": {
+    "386": {
       "op": "box_get",
       "defined_out": [
         "_id#0",
@@ -1654,14 +1644,14 @@
         "has_claimed#0"
       ]
     },
-    "452": {
+    "387": {
       "op": "bury 1",
       "stack_out": [
         "minted_asset#0",
         "has_claimed#0"
       ]
     },
-    "454": {
+    "389": {
       "op": "!",
       "defined_out": [
         "minted_asset#0",
@@ -1672,13 +1662,13 @@
         "tmp%3#0"
       ]
     },
-    "455": {
+    "390": {
       "op": "assert // Already claimed POA",
       "stack_out": [
         "minted_asset#0"
       ]
     },
-    "456": {
+    "391": {
       "op": "txn Sender",
       "defined_out": [
         "minted_asset#0",
@@ -1689,14 +1679,14 @@
         "tmp%4#0"
       ]
     },
-    "458": {
+    "393": {
       "op": "swap",
       "stack_out": [
         "tmp%4#0",
         "minted_asset#0"
       ]
     },
-    "459": {
+    "394": {
       "op": "itob",
       "defined_out": [
         "tmp%4#0",
@@ -1707,16 +1697,16 @@
         "tmp%5#0"
       ]
     },
-    "460": {
+    "395": {
       "op": "box_put",
       "stack_out": []
     },
-    "461": {
+    "396": {
       "retsub": true,
       "op": "retsub"
     },
-    "462": {
-      "subroutine": "contract.ProofOfAttendance._mint_poa",
+    "397": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance._mint_poa",
       "params": {
         "claimer#0": "bytes"
       },
@@ -1724,7 +1714,7 @@
       "stack_in": [],
       "op": "proto 1 1"
     },
-    "465": {
+    "400": {
       "op": "pushint 10000 // 10000",
       "defined_out": [
         "10000"
@@ -1733,7 +1723,7 @@
         "10000"
       ]
     },
-    "468": {
+    "403": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -1744,12 +1734,12 @@
         "1"
       ]
     },
-    "469": {
+    "404": {
       "callsub": "_puya_lib.util.ensure_budget",
       "op": "callsub ensure_budget",
       "stack_out": []
     },
-    "472": {
+    "407": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -1758,7 +1748,7 @@
         "0"
       ]
     },
-    "473": {
+    "408": {
       "op": "bytec_0 // \"total_attendees\"",
       "defined_out": [
         "\"total_attendees\"",
@@ -1769,7 +1759,7 @@
         "\"total_attendees\""
       ]
     },
-    "474": {
+    "409": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1780,13 +1770,13 @@
         "maybe_exists%0#0"
       ]
     },
-    "475": {
+    "410": {
       "op": "assert // check self.total_attendees exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "476": {
+    "411": {
       "op": "itob",
       "defined_out": [
         "tmp%0#0"
@@ -1795,7 +1785,7 @@
         "tmp%0#0"
       ]
     },
-    "477": {
+    "412": {
       "op": "pushbytes 0x416c676f4b697420504f412023",
       "defined_out": [
         "0x416c676f4b697420504f412023",
@@ -1806,14 +1796,14 @@
         "0x416c676f4b697420504f412023"
       ]
     },
-    "492": {
+    "427": {
       "op": "swap",
       "stack_out": [
         "0x416c676f4b697420504f412023",
         "tmp%0#0"
       ]
     },
-    "493": {
+    "428": {
       "op": "concat",
       "defined_out": [
         "asset_name#0"
@@ -1822,17 +1812,17 @@
         "asset_name#0"
       ]
     },
-    "494": {
+    "429": {
       "op": "itxn_begin"
     },
-    "495": {
+    "430": {
       "op": "intc_0 // 0",
       "stack_out": [
         "asset_name#0",
         "0"
       ]
     },
-    "496": {
+    "431": {
       "op": "bytec 4 // \"asset_url\"",
       "defined_out": [
         "\"asset_url\"",
@@ -1845,7 +1835,7 @@
         "\"asset_url\""
       ]
     },
-    "498": {
+    "433": {
       "op": "app_global_get_ex",
       "defined_out": [
         "asset_name#0",
@@ -1858,14 +1848,14 @@
         "maybe_exists%1#0"
       ]
     },
-    "499": {
+    "434": {
       "op": "assert // check self.asset_url exists",
       "stack_out": [
         "asset_name#0",
         "maybe_value%1#0"
       ]
     },
-    "500": {
+    "435": {
       "op": "frame_dig -1",
       "defined_out": [
         "asset_name#0",
@@ -1878,46 +1868,46 @@
         "claimer#0 (copy)"
       ]
     },
-    "502": {
+    "437": {
       "op": "itxn_field ConfigAssetManager",
       "stack_out": [
         "asset_name#0",
         "maybe_value%1#0"
       ]
     },
-    "504": {
+    "439": {
       "op": "itxn_field ConfigAssetURL",
       "stack_out": [
         "asset_name#0"
       ]
     },
-    "506": {
+    "441": {
       "op": "intc_0 // 0",
       "stack_out": [
         "asset_name#0",
         "0"
       ]
     },
-    "507": {
+    "442": {
       "op": "itxn_field ConfigAssetDecimals",
       "stack_out": [
         "asset_name#0"
       ]
     },
-    "509": {
+    "444": {
       "op": "intc_1 // 1",
       "stack_out": [
         "asset_name#0",
         "1"
       ]
     },
-    "510": {
+    "445": {
       "op": "itxn_field ConfigAssetTotal",
       "stack_out": [
         "asset_name#0"
       ]
     },
-    "512": {
+    "447": {
       "op": "pushbytes \"POA\"",
       "defined_out": [
         "\"POA\"",
@@ -1928,17 +1918,17 @@
         "\"POA\""
       ]
     },
-    "517": {
+    "452": {
       "op": "itxn_field ConfigAssetUnitName",
       "stack_out": [
         "asset_name#0"
       ]
     },
-    "519": {
+    "454": {
       "op": "itxn_field ConfigAssetName",
       "stack_out": []
     },
-    "521": {
+    "456": {
       "op": "pushint 3 // acfg",
       "defined_out": [
         "acfg"
@@ -1947,24 +1937,24 @@
         "acfg"
       ]
     },
-    "523": {
+    "458": {
       "op": "itxn_field TypeEnum",
       "stack_out": []
     },
-    "525": {
+    "460": {
       "op": "intc_0 // 0",
       "stack_out": [
         "0"
       ]
     },
-    "526": {
+    "461": {
       "op": "itxn_field Fee",
       "stack_out": []
     },
-    "528": {
+    "463": {
       "op": "itxn_submit"
     },
-    "529": {
+    "464": {
       "op": "itxn CreatedAssetID",
       "defined_out": [
         "tmp%1#0"
@@ -1973,18 +1963,18 @@
         "tmp%1#0"
       ]
     },
-    "531": {
+    "466": {
       "retsub": true,
       "op": "retsub"
     },
-    "532": {
-      "subroutine": "contract.ProofOfAttendance.confirm_attendance_with_box",
+    "467": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.confirm_attendance_with_box",
       "params": {},
       "block": "confirm_attendance_with_box",
       "stack_in": [],
       "op": "proto 0 0"
     },
-    "535": {
+    "470": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -1993,7 +1983,7 @@
         "0"
       ]
     },
-    "536": {
+    "471": {
       "op": "bytec_0 // \"total_attendees\"",
       "defined_out": [
         "\"total_attendees\"",
@@ -2004,7 +1994,7 @@
         "\"total_attendees\""
       ]
     },
-    "537": {
+    "472": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -2015,20 +2005,20 @@
         "maybe_exists%0#0"
       ]
     },
-    "538": {
+    "473": {
       "op": "assert // check self.total_attendees exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "539": {
+    "474": {
       "op": "intc_0 // 0",
       "stack_out": [
         "maybe_value%0#0",
         "0"
       ]
     },
-    "540": {
+    "475": {
       "op": "bytec_1 // \"max_attendees\"",
       "defined_out": [
         "\"max_attendees\"",
@@ -2041,7 +2031,7 @@
         "\"max_attendees\""
       ]
     },
-    "541": {
+    "476": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -2054,14 +2044,14 @@
         "maybe_exists%1#0"
       ]
     },
-    "542": {
+    "477": {
       "op": "assert // check self.max_attendees exists",
       "stack_out": [
         "maybe_value%0#0",
         "maybe_value%1#0"
       ]
     },
-    "543": {
+    "478": {
       "op": "<",
       "defined_out": [
         "tmp%0#0"
@@ -2070,11 +2060,11 @@
         "tmp%0#0"
       ]
     },
-    "544": {
+    "479": {
       "op": "assert // Max attendees reached",
       "stack_out": []
     },
-    "545": {
+    "480": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%1#0"
@@ -2083,8 +2073,8 @@
         "tmp%1#0"
       ]
     },
-    "547": {
-      "callsub": "contract.ProofOfAttendance._mint_poa",
+    "482": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance._mint_poa",
       "op": "callsub _mint_poa",
       "defined_out": [
         "minted_asset#0"
@@ -2093,14 +2083,14 @@
         "minted_asset#0"
       ]
     },
-    "550": {
+    "485": {
       "op": "intc_0 // 0",
       "stack_out": [
         "minted_asset#0",
         "0"
       ]
     },
-    "551": {
+    "486": {
       "op": "bytec_0 // \"total_attendees\"",
       "stack_out": [
         "minted_asset#0",
@@ -2108,7 +2098,7 @@
         "\"total_attendees\""
       ]
     },
-    "552": {
+    "487": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -2121,14 +2111,14 @@
         "maybe_exists%2#0"
       ]
     },
-    "553": {
+    "488": {
       "op": "assert // check self.total_attendees exists",
       "stack_out": [
         "minted_asset#0",
         "maybe_value%2#0"
       ]
     },
-    "554": {
+    "489": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -2141,7 +2131,7 @@
         "1"
       ]
     },
-    "555": {
+    "490": {
       "op": "+",
       "defined_out": [
         "minted_asset#0",
@@ -2152,7 +2142,7 @@
         "new_state_value%0#0"
       ]
     },
-    "556": {
+    "491": {
       "op": "bytec_0 // \"total_attendees\"",
       "stack_out": [
         "minted_asset#0",
@@ -2160,7 +2150,7 @@
         "\"total_attendees\""
       ]
     },
-    "557": {
+    "492": {
       "op": "swap",
       "stack_out": [
         "minted_asset#0",
@@ -2168,16 +2158,16 @@
         "new_state_value%0#0"
       ]
     },
-    "558": {
+    "493": {
       "op": "app_global_put",
       "stack_out": [
         "minted_asset#0"
       ]
     },
-    "559": {
+    "494": {
       "op": "txn Sender"
     },
-    "561": {
+    "496": {
       "op": "dup",
       "defined_out": [
         "box#0",
@@ -2190,7 +2180,7 @@
         "box#0 (copy)"
       ]
     },
-    "562": {
+    "497": {
       "op": "box_len",
       "defined_out": [
         "box#0",
@@ -2205,7 +2195,7 @@
         "has_claimed#0"
       ]
     },
-    "563": {
+    "498": {
       "op": "bury 1",
       "stack_out": [
         "minted_asset#0",
@@ -2213,7 +2203,7 @@
         "has_claimed#0"
       ]
     },
-    "565": {
+    "500": {
       "op": "!",
       "defined_out": [
         "box#0",
@@ -2226,21 +2216,21 @@
         "tmp%2#0"
       ]
     },
-    "566": {
+    "501": {
       "op": "assert // Already claimed POA",
       "stack_out": [
         "minted_asset#0",
         "box#0"
       ]
     },
-    "567": {
+    "502": {
       "op": "swap",
       "stack_out": [
         "box#0",
         "minted_asset#0"
       ]
     },
-    "568": {
+    "503": {
       "op": "itob",
       "defined_out": [
         "box#0",
@@ -2251,22 +2241,22 @@
         "new_box_value%0#0"
       ]
     },
-    "569": {
+    "504": {
       "op": "box_put",
       "stack_out": []
     },
-    "570": {
+    "505": {
       "retsub": true,
       "op": "retsub"
     },
-    "571": {
-      "subroutine": "contract.ProofOfAttendance.confirm_attendance_with_box_ref",
+    "506": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.confirm_attendance_with_box_ref",
       "params": {},
       "block": "confirm_attendance_with_box_ref",
       "stack_in": [],
       "op": "proto 0 0"
     },
-    "574": {
+    "509": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -2275,7 +2265,7 @@
         "0"
       ]
     },
-    "575": {
+    "510": {
       "op": "bytec_0 // \"total_attendees\"",
       "defined_out": [
         "\"total_attendees\"",
@@ -2286,7 +2276,7 @@
         "\"total_attendees\""
       ]
     },
-    "576": {
+    "511": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -2297,20 +2287,20 @@
         "maybe_exists%0#0"
       ]
     },
-    "577": {
+    "512": {
       "op": "assert // check self.total_attendees exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "578": {
+    "513": {
       "op": "intc_0 // 0",
       "stack_out": [
         "maybe_value%0#0",
         "0"
       ]
     },
-    "579": {
+    "514": {
       "op": "bytec_1 // \"max_attendees\"",
       "defined_out": [
         "\"max_attendees\"",
@@ -2323,7 +2313,7 @@
         "\"max_attendees\""
       ]
     },
-    "580": {
+    "515": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -2336,14 +2326,14 @@
         "maybe_exists%1#0"
       ]
     },
-    "581": {
+    "516": {
       "op": "assert // check self.max_attendees exists",
       "stack_out": [
         "maybe_value%0#0",
         "maybe_value%1#0"
       ]
     },
-    "582": {
+    "517": {
       "op": "<",
       "defined_out": [
         "tmp%0#0"
@@ -2352,11 +2342,11 @@
         "tmp%0#0"
       ]
     },
-    "583": {
+    "518": {
       "op": "assert // Max attendees reached",
       "stack_out": []
     },
-    "584": {
+    "519": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%1#0"
@@ -2365,8 +2355,8 @@
         "tmp%1#0"
       ]
     },
-    "586": {
-      "callsub": "contract.ProofOfAttendance._mint_poa",
+    "521": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance._mint_poa",
       "op": "callsub _mint_poa",
       "defined_out": [
         "minted_asset#0"
@@ -2375,14 +2365,14 @@
         "minted_asset#0"
       ]
     },
-    "589": {
+    "524": {
       "op": "intc_0 // 0",
       "stack_out": [
         "minted_asset#0",
         "0"
       ]
     },
-    "590": {
+    "525": {
       "op": "bytec_0 // \"total_attendees\"",
       "stack_out": [
         "minted_asset#0",
@@ -2390,7 +2380,7 @@
         "\"total_attendees\""
       ]
     },
-    "591": {
+    "526": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -2403,14 +2393,14 @@
         "maybe_exists%2#0"
       ]
     },
-    "592": {
+    "527": {
       "op": "assert // check self.total_attendees exists",
       "stack_out": [
         "minted_asset#0",
         "maybe_value%2#0"
       ]
     },
-    "593": {
+    "528": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -2423,7 +2413,7 @@
         "1"
       ]
     },
-    "594": {
+    "529": {
       "op": "+",
       "defined_out": [
         "minted_asset#0",
@@ -2434,7 +2424,7 @@
         "new_state_value%0#0"
       ]
     },
-    "595": {
+    "530": {
       "op": "bytec_0 // \"total_attendees\"",
       "stack_out": [
         "minted_asset#0",
@@ -2442,7 +2432,7 @@
         "\"total_attendees\""
       ]
     },
-    "596": {
+    "531": {
       "op": "swap",
       "stack_out": [
         "minted_asset#0",
@@ -2450,16 +2440,16 @@
         "new_state_value%0#0"
       ]
     },
-    "597": {
+    "532": {
       "op": "app_global_put",
       "stack_out": [
         "minted_asset#0"
       ]
     },
-    "598": {
+    "533": {
       "op": "txn Sender"
     },
-    "600": {
+    "535": {
       "op": "dup",
       "defined_out": [
         "box_ref#0",
@@ -2472,7 +2462,7 @@
         "box_ref#0 (copy)"
       ]
     },
-    "601": {
+    "536": {
       "op": "box_len",
       "defined_out": [
         "box_ref#0",
@@ -2487,7 +2477,7 @@
         "has_claimed#0"
       ]
     },
-    "602": {
+    "537": {
       "op": "bury 1",
       "stack_out": [
         "minted_asset#0",
@@ -2495,7 +2485,7 @@
         "has_claimed#0"
       ]
     },
-    "604": {
+    "539": {
       "op": "!",
       "defined_out": [
         "box_ref#0",
@@ -2508,21 +2498,21 @@
         "tmp%2#0"
       ]
     },
-    "605": {
+    "540": {
       "op": "assert // Already claimed POA",
       "stack_out": [
         "minted_asset#0",
         "box_ref#0"
       ]
     },
-    "606": {
+    "541": {
       "op": "swap",
       "stack_out": [
         "box_ref#0",
         "minted_asset#0"
       ]
     },
-    "607": {
+    "542": {
       "op": "itob",
       "defined_out": [
         "box_ref#0",
@@ -2533,22 +2523,22 @@
         "tmp%3#0"
       ]
     },
-    "608": {
+    "543": {
       "op": "box_put",
       "stack_out": []
     },
-    "609": {
+    "544": {
       "retsub": true,
       "op": "retsub"
     },
-    "610": {
-      "subroutine": "contract.ProofOfAttendance.confirm_attendance_with_box_map",
+    "545": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.confirm_attendance_with_box_map",
       "params": {},
       "block": "confirm_attendance_with_box_map",
       "stack_in": [],
       "op": "proto 0 0"
     },
-    "613": {
+    "548": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -2557,7 +2547,7 @@
         "0"
       ]
     },
-    "614": {
+    "549": {
       "op": "bytec_0 // \"total_attendees\"",
       "defined_out": [
         "\"total_attendees\"",
@@ -2568,7 +2558,7 @@
         "\"total_attendees\""
       ]
     },
-    "615": {
+    "550": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -2579,20 +2569,20 @@
         "maybe_exists%0#0"
       ]
     },
-    "616": {
+    "551": {
       "op": "assert // check self.total_attendees exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "617": {
+    "552": {
       "op": "intc_0 // 0",
       "stack_out": [
         "maybe_value%0#0",
         "0"
       ]
     },
-    "618": {
+    "553": {
       "op": "bytec_1 // \"max_attendees\"",
       "defined_out": [
         "\"max_attendees\"",
@@ -2605,7 +2595,7 @@
         "\"max_attendees\""
       ]
     },
-    "619": {
+    "554": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -2618,14 +2608,14 @@
         "maybe_exists%1#0"
       ]
     },
-    "620": {
+    "555": {
       "op": "assert // check self.max_attendees exists",
       "stack_out": [
         "maybe_value%0#0",
         "maybe_value%1#0"
       ]
     },
-    "621": {
+    "556": {
       "op": "<",
       "defined_out": [
         "tmp%0#0"
@@ -2634,11 +2624,11 @@
         "tmp%0#0"
       ]
     },
-    "622": {
+    "557": {
       "op": "assert // Max attendees reached",
       "stack_out": []
     },
-    "623": {
+    "558": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%1#0"
@@ -2647,8 +2637,8 @@
         "tmp%1#0"
       ]
     },
-    "625": {
-      "callsub": "contract.ProofOfAttendance._mint_poa",
+    "560": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance._mint_poa",
       "op": "callsub _mint_poa",
       "defined_out": [
         "minted_asset#0"
@@ -2657,14 +2647,14 @@
         "minted_asset#0"
       ]
     },
-    "628": {
+    "563": {
       "op": "intc_0 // 0",
       "stack_out": [
         "minted_asset#0",
         "0"
       ]
     },
-    "629": {
+    "564": {
       "op": "bytec_0 // \"total_attendees\"",
       "stack_out": [
         "minted_asset#0",
@@ -2672,7 +2662,7 @@
         "\"total_attendees\""
       ]
     },
-    "630": {
+    "565": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -2685,14 +2675,14 @@
         "maybe_exists%2#0"
       ]
     },
-    "631": {
+    "566": {
       "op": "assert // check self.total_attendees exists",
       "stack_out": [
         "minted_asset#0",
         "maybe_value%2#0"
       ]
     },
-    "632": {
+    "567": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -2705,7 +2695,7 @@
         "1"
       ]
     },
-    "633": {
+    "568": {
       "op": "+",
       "defined_out": [
         "minted_asset#0",
@@ -2716,7 +2706,7 @@
         "new_state_value%0#0"
       ]
     },
-    "634": {
+    "569": {
       "op": "bytec_0 // \"total_attendees\"",
       "stack_out": [
         "minted_asset#0",
@@ -2724,7 +2714,7 @@
         "\"total_attendees\""
       ]
     },
-    "635": {
+    "570": {
       "op": "swap",
       "stack_out": [
         "minted_asset#0",
@@ -2732,16 +2722,16 @@
         "new_state_value%0#0"
       ]
     },
-    "636": {
+    "571": {
       "op": "app_global_put",
       "stack_out": [
         "minted_asset#0"
       ]
     },
-    "637": {
+    "572": {
       "op": "bytec_3 // \"box_map\""
     },
-    "638": {
+    "573": {
       "op": "txn Sender",
       "defined_out": [
         "\"box_map\"",
@@ -2754,7 +2744,7 @@
         "tmp%2#0"
       ]
     },
-    "640": {
+    "575": {
       "op": "concat",
       "defined_out": [
         "minted_asset#0",
@@ -2765,7 +2755,7 @@
         "tmp%3#0"
       ]
     },
-    "641": {
+    "576": {
       "op": "box_len",
       "defined_out": [
         "has_claimed#0",
@@ -2778,14 +2768,14 @@
         "has_claimed#0"
       ]
     },
-    "642": {
+    "577": {
       "op": "bury 1",
       "stack_out": [
         "minted_asset#0",
         "has_claimed#0"
       ]
     },
-    "644": {
+    "579": {
       "op": "!",
       "defined_out": [
         "minted_asset#0",
@@ -2796,16 +2786,16 @@
         "tmp%4#0"
       ]
     },
-    "645": {
+    "580": {
       "op": "assert // Already claimed POA",
       "stack_out": [
         "minted_asset#0"
       ]
     },
-    "646": {
+    "581": {
       "op": "bytec_3 // \"box_map\""
     },
-    "647": {
+    "582": {
       "op": "txn Sender",
       "defined_out": [
         "\"box_map\"",
@@ -2818,7 +2808,7 @@
         "tmp%5#0"
       ]
     },
-    "649": {
+    "584": {
       "op": "concat",
       "defined_out": [
         "minted_asset#0",
@@ -2829,14 +2819,14 @@
         "tmp%6#0"
       ]
     },
-    "650": {
+    "585": {
       "op": "swap",
       "stack_out": [
         "tmp%6#0",
         "minted_asset#0"
       ]
     },
-    "651": {
+    "586": {
       "op": "itob",
       "defined_out": [
         "new_box_value%0#0",
@@ -2847,22 +2837,22 @@
         "new_box_value%0#0"
       ]
     },
-    "652": {
+    "587": {
       "op": "box_put",
       "stack_out": []
     },
-    "653": {
+    "588": {
       "retsub": true,
       "op": "retsub"
     },
-    "654": {
-      "subroutine": "contract.ProofOfAttendance.get_poa_id",
+    "589": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.get_poa_id",
       "params": {},
       "block": "get_poa_id",
       "stack_in": [],
       "op": "proto 0 1"
     },
-    "657": {
+    "592": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%0#0"
@@ -2871,7 +2861,7 @@
         "tmp%0#0"
       ]
     },
-    "659": {
+    "594": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -2882,13 +2872,13 @@
         "exists#0"
       ]
     },
-    "660": {
+    "595": {
       "op": "assert // POA not found",
       "stack_out": [
         "poa_id#0"
       ]
     },
-    "661": {
+    "596": {
       "op": "btoi",
       "defined_out": [
         "tmp%1#0"
@@ -2897,18 +2887,18 @@
         "tmp%1#0"
       ]
     },
-    "662": {
+    "597": {
       "retsub": true,
       "op": "retsub"
     },
-    "663": {
-      "subroutine": "contract.ProofOfAttendance.get_poa_id_with_box",
+    "598": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.get_poa_id_with_box",
       "params": {},
       "block": "get_poa_id_with_box",
       "stack_in": [],
       "op": "proto 0 1"
     },
-    "666": {
+    "601": {
       "op": "txn Sender",
       "defined_out": [
         "box#0"
@@ -2917,7 +2907,7 @@
         "box#0"
       ]
     },
-    "668": {
+    "603": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -2928,14 +2918,14 @@
         "exists#0"
       ]
     },
-    "669": {
+    "604": {
       "op": "swap",
       "stack_out": [
         "exists#0",
         "maybe_value%0#0"
       ]
     },
-    "670": {
+    "605": {
       "op": "btoi",
       "defined_out": [
         "exists#0",
@@ -2946,31 +2936,31 @@
         "poa_id#0"
       ]
     },
-    "671": {
+    "606": {
       "op": "swap",
       "stack_out": [
         "poa_id#0",
         "exists#0"
       ]
     },
-    "672": {
+    "607": {
       "op": "assert // POA not found",
       "stack_out": [
         "poa_id#0"
       ]
     },
-    "673": {
+    "608": {
       "retsub": true,
       "op": "retsub"
     },
-    "674": {
-      "subroutine": "contract.ProofOfAttendance.get_poa_id_with_box_ref",
+    "609": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.get_poa_id_with_box_ref",
       "params": {},
       "block": "get_poa_id_with_box_ref",
       "stack_in": [],
       "op": "proto 0 1"
     },
-    "677": {
+    "612": {
       "op": "txn Sender",
       "defined_out": [
         "box_ref#0"
@@ -2979,7 +2969,7 @@
         "box_ref#0"
       ]
     },
-    "679": {
+    "614": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -2990,13 +2980,13 @@
         "exists#0"
       ]
     },
-    "680": {
+    "615": {
       "op": "assert // POA not found",
       "stack_out": [
         "poa_id#0"
       ]
     },
-    "681": {
+    "616": {
       "op": "btoi",
       "defined_out": [
         "tmp%0#0"
@@ -3005,21 +2995,21 @@
         "tmp%0#0"
       ]
     },
-    "682": {
+    "617": {
       "retsub": true,
       "op": "retsub"
     },
-    "683": {
-      "subroutine": "contract.ProofOfAttendance.get_poa_id_with_box_map",
+    "618": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.get_poa_id_with_box_map",
       "params": {},
       "block": "get_poa_id_with_box_map",
       "stack_in": [],
       "op": "proto 0 1"
     },
-    "686": {
+    "621": {
       "op": "bytec_3 // \"box_map\""
     },
-    "687": {
+    "622": {
       "op": "txn Sender",
       "defined_out": [
         "\"box_map\"",
@@ -3030,7 +3020,7 @@
         "tmp%0#0"
       ]
     },
-    "689": {
+    "624": {
       "op": "concat",
       "defined_out": [
         "tmp%1#0"
@@ -3039,7 +3029,7 @@
         "tmp%1#0"
       ]
     },
-    "690": {
+    "625": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -3050,14 +3040,14 @@
         "exists#0"
       ]
     },
-    "691": {
+    "626": {
       "op": "swap",
       "stack_out": [
         "exists#0",
         "maybe_value%0#0"
       ]
     },
-    "692": {
+    "627": {
       "op": "btoi",
       "defined_out": [
         "exists#0",
@@ -3068,25 +3058,25 @@
         "poa_id#0"
       ]
     },
-    "693": {
+    "628": {
       "op": "swap",
       "stack_out": [
         "poa_id#0",
         "exists#0"
       ]
     },
-    "694": {
+    "629": {
       "op": "assert // POA not found",
       "stack_out": [
         "poa_id#0"
       ]
     },
-    "695": {
+    "630": {
       "retsub": true,
       "op": "retsub"
     },
-    "696": {
-      "subroutine": "contract.ProofOfAttendance.claim_poa",
+    "631": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.claim_poa",
       "params": {
         "opt_in_txn#0": "uint64"
       },
@@ -3094,13 +3084,13 @@
       "stack_in": [],
       "op": "proto 1 0"
     },
-    "699": {
+    "634": {
       "op": "intc_0 // 0",
       "stack_out": [
         "awst_tmp%1#0"
       ]
     },
-    "700": {
+    "635": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%0#0"
@@ -3110,7 +3100,7 @@
         "tmp%0#0"
       ]
     },
-    "702": {
+    "637": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -3122,14 +3112,14 @@
         "exists#0"
       ]
     },
-    "703": {
+    "638": {
       "op": "assert // POA not found, attendance validation failed!",
       "stack_out": [
         "awst_tmp%1#0",
         "poa_id#0"
       ]
     },
-    "704": {
+    "639": {
       "op": "frame_dig -1",
       "defined_out": [
         "opt_in_txn#0 (copy)",
@@ -3141,7 +3131,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "706": {
+    "641": {
       "op": "gtxns XferAsset",
       "defined_out": [
         "poa_id#0",
@@ -3153,7 +3143,7 @@
         "tmp%1#0"
       ]
     },
-    "708": {
+    "643": {
       "op": "swap",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3161,7 +3151,7 @@
         "poa_id#0"
       ]
     },
-    "709": {
+    "644": {
       "op": "btoi",
       "defined_out": [
         "tmp%1#0",
@@ -3173,7 +3163,7 @@
         "tmp%2#0"
       ]
     },
-    "710": {
+    "645": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3182,7 +3172,7 @@
         "tmp%2#0"
       ]
     },
-    "711": {
+    "646": {
       "op": "cover 2",
       "defined_out": [
         "tmp%1#0",
@@ -3195,7 +3185,7 @@
         "tmp%2#0"
       ]
     },
-    "713": {
+    "648": {
       "op": "==",
       "defined_out": [
         "tmp%2#0",
@@ -3207,14 +3197,14 @@
         "tmp%3#0"
       ]
     },
-    "714": {
+    "649": {
       "op": "assert // POA ID mismatch",
       "stack_out": [
         "awst_tmp%1#0",
         "tmp%2#0"
       ]
     },
-    "715": {
+    "650": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3222,7 +3212,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "717": {
+    "652": {
       "op": "gtxns Fee",
       "defined_out": [
         "tmp%2#0",
@@ -3234,7 +3224,7 @@
         "tmp%4#0"
       ]
     },
-    "719": {
+    "654": {
       "op": "!",
       "defined_out": [
         "tmp%2#0",
@@ -3246,14 +3236,14 @@
         "tmp%5#0"
       ]
     },
-    "720": {
+    "655": {
       "op": "assert // We got you covered for free!",
       "stack_out": [
         "awst_tmp%1#0",
         "tmp%2#0"
       ]
     },
-    "721": {
+    "656": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3261,7 +3251,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "723": {
+    "658": {
       "op": "gtxns AssetAmount",
       "defined_out": [
         "tmp%2#0",
@@ -3273,7 +3263,7 @@
         "tmp%6#0"
       ]
     },
-    "725": {
+    "660": {
       "op": "!",
       "defined_out": [
         "tmp%2#0",
@@ -3285,14 +3275,14 @@
         "tmp%7#0"
       ]
     },
-    "726": {
+    "661": {
       "op": "assert",
       "stack_out": [
         "awst_tmp%1#0",
         "tmp%2#0"
       ]
     },
-    "727": {
+    "662": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3300,7 +3290,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "729": {
+    "664": {
       "op": "gtxns Sender",
       "defined_out": [
         "tmp%2#0",
@@ -3312,7 +3302,7 @@
         "tmp%8#0"
       ]
     },
-    "731": {
+    "666": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3321,7 +3311,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "733": {
+    "668": {
       "op": "gtxns AssetReceiver",
       "defined_out": [
         "awst_tmp%0#0",
@@ -3335,7 +3325,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "735": {
+    "670": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3345,7 +3335,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "736": {
+    "671": {
       "op": "cover 2",
       "defined_out": [
         "awst_tmp%0#0",
@@ -3360,7 +3350,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "738": {
+    "673": {
       "op": "==",
       "defined_out": [
         "awst_tmp%0#0",
@@ -3374,7 +3364,7 @@
         "tmp%9#0"
       ]
     },
-    "739": {
+    "674": {
       "op": "bz claim_poa_bool_false@3",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3382,10 +3372,10 @@
         "awst_tmp%0#0"
       ]
     },
-    "742": {
+    "677": {
       "op": "frame_dig 2"
     },
-    "744": {
+    "679": {
       "op": "txn Sender",
       "defined_out": [
         "awst_tmp%0#0",
@@ -3400,7 +3390,7 @@
         "tmp%10#0"
       ]
     },
-    "746": {
+    "681": {
       "op": "==",
       "defined_out": [
         "awst_tmp%0#0",
@@ -3414,7 +3404,7 @@
         "tmp%11#0"
       ]
     },
-    "747": {
+    "682": {
       "op": "bz claim_poa_bool_false@3",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3422,7 +3412,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "750": {
+    "685": {
       "op": "intc_1 // 1",
       "defined_out": [
         "and_result%0#0",
@@ -3436,10 +3426,10 @@
         "and_result%0#0"
       ]
     },
-    "751": {
+    "686": {
       "op": "b claim_poa_bool_merge@4"
     },
-    "754": {
+    "689": {
       "block": "claim_poa_bool_false@3",
       "stack_in": [
         "awst_tmp%1#0",
@@ -3457,7 +3447,7 @@
         "and_result%0#0"
       ]
     },
-    "755": {
+    "690": {
       "block": "claim_poa_bool_merge@4",
       "stack_in": [
         "awst_tmp%1#0",
@@ -3473,7 +3463,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "756": {
+    "691": {
       "op": "frame_dig -1",
       "defined_out": [
         "opt_in_txn#0 (copy)"
@@ -3485,7 +3475,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "758": {
+    "693": {
       "op": "gtxns AssetCloseTo",
       "defined_out": [
         "tmp%12#0"
@@ -3497,7 +3487,7 @@
         "tmp%12#0"
       ]
     },
-    "760": {
+    "695": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3507,7 +3497,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "762": {
+    "697": {
       "op": "gtxns RekeyTo",
       "defined_out": [
         "awst_tmp%1#0",
@@ -3521,7 +3511,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "764": {
+    "699": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3532,7 +3522,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "765": {
+    "700": {
       "op": "frame_bury 0",
       "defined_out": [
         "awst_tmp%1#0",
@@ -3546,7 +3536,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "767": {
+    "702": {
       "op": "==",
       "defined_out": [
         "awst_tmp%1#0",
@@ -3559,7 +3549,7 @@
         "tmp%13#0"
       ]
     },
-    "768": {
+    "703": {
       "op": "bz claim_poa_bool_false@7",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3567,10 +3557,10 @@
         "awst_tmp%0#0"
       ]
     },
-    "771": {
+    "706": {
       "op": "frame_dig 0"
     },
-    "773": {
+    "708": {
       "op": "global ZeroAddress",
       "defined_out": [
         "awst_tmp%1#0",
@@ -3584,7 +3574,7 @@
         "tmp%14#0"
       ]
     },
-    "775": {
+    "710": {
       "op": "==",
       "defined_out": [
         "awst_tmp%1#0",
@@ -3597,7 +3587,7 @@
         "tmp%15#0"
       ]
     },
-    "776": {
+    "711": {
       "op": "bz claim_poa_bool_false@7",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3605,7 +3595,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "779": {
+    "714": {
       "op": "intc_1 // 1",
       "defined_out": [
         "and_result%1#0",
@@ -3618,10 +3608,10 @@
         "and_result%1#0"
       ]
     },
-    "780": {
+    "715": {
       "op": "b claim_poa_bool_merge@8"
     },
-    "783": {
+    "718": {
       "block": "claim_poa_bool_false@7",
       "stack_in": [
         "awst_tmp%1#0",
@@ -3639,7 +3629,7 @@
         "and_result%1#0"
       ]
     },
-    "784": {
+    "719": {
       "block": "claim_poa_bool_merge@8",
       "stack_in": [
         "awst_tmp%1#0",
@@ -3655,7 +3645,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "785": {
+    "720": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%16#0"
@@ -3667,7 +3657,7 @@
         "tmp%16#0"
       ]
     },
-    "787": {
+    "722": {
       "op": "frame_dig 1",
       "defined_out": [
         "tmp%16#0",
@@ -3681,8 +3671,8 @@
         "tmp%2#0"
       ]
     },
-    "789": {
-      "callsub": "contract.ProofOfAttendance._send_poa",
+    "724": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance._send_poa",
       "op": "callsub _send_poa",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3690,12 +3680,12 @@
         "awst_tmp%0#0"
       ]
     },
-    "792": {
+    "727": {
       "retsub": true,
       "op": "retsub"
     },
-    "793": {
-      "subroutine": "contract.ProofOfAttendance._send_poa",
+    "728": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance._send_poa",
       "params": {
         "receiver#0": "bytes",
         "asset_id#0": "uint64"
@@ -3704,10 +3694,10 @@
       "stack_in": [],
       "op": "proto 2 0"
     },
-    "796": {
+    "731": {
       "op": "itxn_begin"
     },
-    "797": {
+    "732": {
       "op": "global CurrentApplicationAddress",
       "defined_out": [
         "inner_txn_params%0%%param_Sender_idx_0#0"
@@ -3716,7 +3706,7 @@
         "inner_txn_params%0%%param_Sender_idx_0#0"
       ]
     },
-    "799": {
+    "734": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -3727,13 +3717,13 @@
         "1"
       ]
     },
-    "800": {
+    "735": {
       "op": "itxn_field AssetAmount",
       "stack_out": [
         "inner_txn_params%0%%param_Sender_idx_0#0"
       ]
     },
-    "802": {
+    "737": {
       "op": "frame_dig -2",
       "defined_out": [
         "inner_txn_params%0%%param_Sender_idx_0#0",
@@ -3744,17 +3734,17 @@
         "receiver#0 (copy)"
       ]
     },
-    "804": {
+    "739": {
       "op": "itxn_field AssetReceiver",
       "stack_out": [
         "inner_txn_params%0%%param_Sender_idx_0#0"
       ]
     },
-    "806": {
+    "741": {
       "op": "itxn_field Sender",
       "stack_out": []
     },
-    "808": {
+    "743": {
       "op": "frame_dig -1",
       "defined_out": [
         "asset_id#0 (copy)"
@@ -3763,11 +3753,11 @@
         "asset_id#0 (copy)"
       ]
     },
-    "810": {
+    "745": {
       "op": "itxn_field XferAsset",
       "stack_out": []
     },
-    "812": {
+    "747": {
       "op": "intc_2 // axfer",
       "defined_out": [
         "axfer"
@@ -3776,11 +3766,11 @@
         "axfer"
       ]
     },
-    "813": {
+    "748": {
       "op": "itxn_field TypeEnum",
       "stack_out": []
     },
-    "815": {
+    "750": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -3789,19 +3779,19 @@
         "0"
       ]
     },
-    "816": {
+    "751": {
       "op": "itxn_field Fee",
       "stack_out": []
     },
-    "818": {
+    "753": {
       "op": "itxn_submit"
     },
-    "819": {
+    "754": {
       "retsub": true,
       "op": "retsub"
     },
-    "820": {
-      "subroutine": "contract.ProofOfAttendance.claim_poa_with_box",
+    "755": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.claim_poa_with_box",
       "params": {
         "opt_in_txn#0": "uint64"
       },
@@ -3809,13 +3799,13 @@
       "stack_in": [],
       "op": "proto 1 0"
     },
-    "823": {
+    "758": {
       "op": "intc_0 // 0",
       "stack_out": [
         "awst_tmp%1#0"
       ]
     },
-    "824": {
+    "759": {
       "op": "txn Sender",
       "defined_out": [
         "box#0"
@@ -3825,7 +3815,7 @@
         "box#0"
       ]
     },
-    "826": {
+    "761": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -3837,7 +3827,7 @@
         "exists#0"
       ]
     },
-    "827": {
+    "762": {
       "op": "swap",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3845,7 +3835,7 @@
         "maybe_value%0#0"
       ]
     },
-    "828": {
+    "763": {
       "op": "btoi",
       "defined_out": [
         "exists#0",
@@ -3857,7 +3847,7 @@
         "poa_id#0"
       ]
     },
-    "829": {
+    "764": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3866,7 +3856,7 @@
         "poa_id#0 (copy)"
       ]
     },
-    "830": {
+    "765": {
       "op": "uncover 2",
       "defined_out": [
         "exists#0",
@@ -3879,7 +3869,7 @@
         "exists#0"
       ]
     },
-    "832": {
+    "767": {
       "op": "assert // POA not found, attendance validation failed!",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3887,7 +3877,7 @@
         "poa_id#0"
       ]
     },
-    "833": {
+    "768": {
       "op": "frame_dig -1",
       "defined_out": [
         "opt_in_txn#0 (copy)",
@@ -3900,7 +3890,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "835": {
+    "770": {
       "op": "gtxns XferAsset",
       "defined_out": [
         "poa_id#0",
@@ -3913,7 +3903,7 @@
         "tmp%0#0"
       ]
     },
-    "837": {
+    "772": {
       "op": "==",
       "defined_out": [
         "poa_id#0",
@@ -3925,14 +3915,14 @@
         "tmp%1#0"
       ]
     },
-    "838": {
+    "773": {
       "op": "assert // POA ID mismatch",
       "stack_out": [
         "awst_tmp%1#0",
         "poa_id#0"
       ]
     },
-    "839": {
+    "774": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3940,7 +3930,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "841": {
+    "776": {
       "op": "gtxns Fee",
       "defined_out": [
         "poa_id#0",
@@ -3952,7 +3942,7 @@
         "tmp%2#0"
       ]
     },
-    "843": {
+    "778": {
       "op": "!",
       "defined_out": [
         "poa_id#0",
@@ -3964,14 +3954,14 @@
         "tmp%3#0"
       ]
     },
-    "844": {
+    "779": {
       "op": "assert // We got you covered for free!",
       "stack_out": [
         "awst_tmp%1#0",
         "poa_id#0"
       ]
     },
-    "845": {
+    "780": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -3979,7 +3969,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "847": {
+    "782": {
       "op": "gtxns AssetAmount",
       "defined_out": [
         "poa_id#0",
@@ -3991,7 +3981,7 @@
         "tmp%4#0"
       ]
     },
-    "849": {
+    "784": {
       "op": "!",
       "defined_out": [
         "poa_id#0",
@@ -4003,14 +3993,14 @@
         "tmp%5#0"
       ]
     },
-    "850": {
+    "785": {
       "op": "assert",
       "stack_out": [
         "awst_tmp%1#0",
         "poa_id#0"
       ]
     },
-    "851": {
+    "786": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4018,7 +4008,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "853": {
+    "788": {
       "op": "gtxns Sender",
       "defined_out": [
         "poa_id#0",
@@ -4030,7 +4020,7 @@
         "tmp%6#0"
       ]
     },
-    "855": {
+    "790": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4039,7 +4029,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "857": {
+    "792": {
       "op": "gtxns AssetReceiver",
       "defined_out": [
         "awst_tmp%0#0",
@@ -4053,7 +4043,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "859": {
+    "794": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4063,7 +4053,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "860": {
+    "795": {
       "op": "cover 2",
       "defined_out": [
         "awst_tmp%0#0",
@@ -4078,7 +4068,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "862": {
+    "797": {
       "op": "==",
       "defined_out": [
         "awst_tmp%0#0",
@@ -4092,7 +4082,7 @@
         "tmp%7#0"
       ]
     },
-    "863": {
+    "798": {
       "op": "bz claim_poa_with_box_bool_false@3",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4100,10 +4090,10 @@
         "awst_tmp%0#0"
       ]
     },
-    "866": {
+    "801": {
       "op": "frame_dig 2"
     },
-    "868": {
+    "803": {
       "op": "txn Sender",
       "defined_out": [
         "awst_tmp%0#0",
@@ -4118,7 +4108,7 @@
         "tmp%8#0"
       ]
     },
-    "870": {
+    "805": {
       "op": "==",
       "defined_out": [
         "awst_tmp%0#0",
@@ -4132,7 +4122,7 @@
         "tmp%9#0"
       ]
     },
-    "871": {
+    "806": {
       "op": "bz claim_poa_with_box_bool_false@3",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4140,7 +4130,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "874": {
+    "809": {
       "op": "intc_1 // 1",
       "defined_out": [
         "and_result%0#0",
@@ -4154,10 +4144,10 @@
         "and_result%0#0"
       ]
     },
-    "875": {
+    "810": {
       "op": "b claim_poa_with_box_bool_merge@4"
     },
-    "878": {
+    "813": {
       "block": "claim_poa_with_box_bool_false@3",
       "stack_in": [
         "awst_tmp%1#0",
@@ -4175,7 +4165,7 @@
         "and_result%0#0"
       ]
     },
-    "879": {
+    "814": {
       "block": "claim_poa_with_box_bool_merge@4",
       "stack_in": [
         "awst_tmp%1#0",
@@ -4191,7 +4181,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "880": {
+    "815": {
       "op": "frame_dig -1",
       "defined_out": [
         "opt_in_txn#0 (copy)"
@@ -4203,7 +4193,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "882": {
+    "817": {
       "op": "gtxns AssetCloseTo",
       "defined_out": [
         "tmp%10#0"
@@ -4215,7 +4205,7 @@
         "tmp%10#0"
       ]
     },
-    "884": {
+    "819": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4225,7 +4215,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "886": {
+    "821": {
       "op": "gtxns RekeyTo",
       "defined_out": [
         "awst_tmp%1#0",
@@ -4239,7 +4229,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "888": {
+    "823": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4250,7 +4240,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "889": {
+    "824": {
       "op": "frame_bury 0",
       "defined_out": [
         "awst_tmp%1#0",
@@ -4264,7 +4254,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "891": {
+    "826": {
       "op": "==",
       "defined_out": [
         "awst_tmp%1#0",
@@ -4277,7 +4267,7 @@
         "tmp%11#0"
       ]
     },
-    "892": {
+    "827": {
       "op": "bz claim_poa_with_box_bool_false@7",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4285,10 +4275,10 @@
         "awst_tmp%0#0"
       ]
     },
-    "895": {
+    "830": {
       "op": "frame_dig 0"
     },
-    "897": {
+    "832": {
       "op": "global ZeroAddress",
       "defined_out": [
         "awst_tmp%1#0",
@@ -4302,7 +4292,7 @@
         "tmp%12#0"
       ]
     },
-    "899": {
+    "834": {
       "op": "==",
       "defined_out": [
         "awst_tmp%1#0",
@@ -4315,7 +4305,7 @@
         "tmp%13#0"
       ]
     },
-    "900": {
+    "835": {
       "op": "bz claim_poa_with_box_bool_false@7",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4323,7 +4313,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "903": {
+    "838": {
       "op": "intc_1 // 1",
       "defined_out": [
         "and_result%1#0",
@@ -4336,10 +4326,10 @@
         "and_result%1#0"
       ]
     },
-    "904": {
+    "839": {
       "op": "b claim_poa_with_box_bool_merge@8"
     },
-    "907": {
+    "842": {
       "block": "claim_poa_with_box_bool_false@7",
       "stack_in": [
         "awst_tmp%1#0",
@@ -4357,7 +4347,7 @@
         "and_result%1#0"
       ]
     },
-    "908": {
+    "843": {
       "block": "claim_poa_with_box_bool_merge@8",
       "stack_in": [
         "awst_tmp%1#0",
@@ -4373,7 +4363,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "909": {
+    "844": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%14#0"
@@ -4385,7 +4375,7 @@
         "tmp%14#0"
       ]
     },
-    "911": {
+    "846": {
       "op": "frame_dig 1",
       "defined_out": [
         "poa_id#0",
@@ -4399,8 +4389,8 @@
         "poa_id#0"
       ]
     },
-    "913": {
-      "callsub": "contract.ProofOfAttendance._send_poa",
+    "848": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance._send_poa",
       "op": "callsub _send_poa",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4408,12 +4398,12 @@
         "awst_tmp%0#0"
       ]
     },
-    "916": {
+    "851": {
       "retsub": true,
       "op": "retsub"
     },
-    "917": {
-      "subroutine": "contract.ProofOfAttendance.claim_poa_with_box_ref",
+    "852": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.claim_poa_with_box_ref",
       "params": {
         "opt_in_txn#0": "uint64"
       },
@@ -4421,13 +4411,13 @@
       "stack_in": [],
       "op": "proto 1 0"
     },
-    "920": {
+    "855": {
       "op": "intc_0 // 0",
       "stack_out": [
         "awst_tmp%1#0"
       ]
     },
-    "921": {
+    "856": {
       "op": "txn Sender",
       "defined_out": [
         "box_ref#0"
@@ -4437,7 +4427,7 @@
         "box_ref#0"
       ]
     },
-    "923": {
+    "858": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -4449,14 +4439,14 @@
         "exists#0"
       ]
     },
-    "924": {
+    "859": {
       "op": "assert // POA not found, attendance validation failed!",
       "stack_out": [
         "awst_tmp%1#0",
         "poa_id#0"
       ]
     },
-    "925": {
+    "860": {
       "op": "frame_dig -1",
       "defined_out": [
         "opt_in_txn#0 (copy)",
@@ -4468,7 +4458,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "927": {
+    "862": {
       "op": "gtxns XferAsset",
       "defined_out": [
         "poa_id#0",
@@ -4480,7 +4470,7 @@
         "tmp%0#0"
       ]
     },
-    "929": {
+    "864": {
       "op": "swap",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4488,7 +4478,7 @@
         "poa_id#0"
       ]
     },
-    "930": {
+    "865": {
       "op": "btoi",
       "defined_out": [
         "tmp%0#0",
@@ -4500,7 +4490,7 @@
         "tmp%1#0"
       ]
     },
-    "931": {
+    "866": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4509,7 +4499,7 @@
         "tmp%1#0"
       ]
     },
-    "932": {
+    "867": {
       "op": "cover 2",
       "defined_out": [
         "tmp%0#0",
@@ -4522,7 +4512,7 @@
         "tmp%1#0"
       ]
     },
-    "934": {
+    "869": {
       "op": "==",
       "defined_out": [
         "tmp%1#0",
@@ -4534,14 +4524,14 @@
         "tmp%2#0"
       ]
     },
-    "935": {
+    "870": {
       "op": "assert // POA ID mismatch",
       "stack_out": [
         "awst_tmp%1#0",
         "tmp%1#0"
       ]
     },
-    "936": {
+    "871": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4549,7 +4539,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "938": {
+    "873": {
       "op": "gtxns Fee",
       "defined_out": [
         "tmp%1#0",
@@ -4561,7 +4551,7 @@
         "tmp%3#0"
       ]
     },
-    "940": {
+    "875": {
       "op": "!",
       "defined_out": [
         "tmp%1#0",
@@ -4573,14 +4563,14 @@
         "tmp%4#0"
       ]
     },
-    "941": {
+    "876": {
       "op": "assert // We got you covered for free!",
       "stack_out": [
         "awst_tmp%1#0",
         "tmp%1#0"
       ]
     },
-    "942": {
+    "877": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4588,7 +4578,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "944": {
+    "879": {
       "op": "gtxns AssetAmount",
       "defined_out": [
         "tmp%1#0",
@@ -4600,7 +4590,7 @@
         "tmp%5#0"
       ]
     },
-    "946": {
+    "881": {
       "op": "!",
       "defined_out": [
         "tmp%1#0",
@@ -4612,14 +4602,14 @@
         "tmp%6#0"
       ]
     },
-    "947": {
+    "882": {
       "op": "assert",
       "stack_out": [
         "awst_tmp%1#0",
         "tmp%1#0"
       ]
     },
-    "948": {
+    "883": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4627,7 +4617,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "950": {
+    "885": {
       "op": "gtxns Sender",
       "defined_out": [
         "tmp%1#0",
@@ -4639,7 +4629,7 @@
         "tmp%7#0"
       ]
     },
-    "952": {
+    "887": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4648,7 +4638,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "954": {
+    "889": {
       "op": "gtxns AssetReceiver",
       "defined_out": [
         "awst_tmp%0#0",
@@ -4662,7 +4652,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "956": {
+    "891": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4672,7 +4662,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "957": {
+    "892": {
       "op": "cover 2",
       "defined_out": [
         "awst_tmp%0#0",
@@ -4687,7 +4677,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "959": {
+    "894": {
       "op": "==",
       "defined_out": [
         "awst_tmp%0#0",
@@ -4701,7 +4691,7 @@
         "tmp%8#0"
       ]
     },
-    "960": {
+    "895": {
       "op": "bz claim_poa_with_box_ref_bool_false@3",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4709,10 +4699,10 @@
         "awst_tmp%0#0"
       ]
     },
-    "963": {
+    "898": {
       "op": "frame_dig 2"
     },
-    "965": {
+    "900": {
       "op": "txn Sender",
       "defined_out": [
         "awst_tmp%0#0",
@@ -4727,7 +4717,7 @@
         "tmp%9#0"
       ]
     },
-    "967": {
+    "902": {
       "op": "==",
       "defined_out": [
         "awst_tmp%0#0",
@@ -4741,7 +4731,7 @@
         "tmp%10#0"
       ]
     },
-    "968": {
+    "903": {
       "op": "bz claim_poa_with_box_ref_bool_false@3",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4749,7 +4739,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "971": {
+    "906": {
       "op": "intc_1 // 1",
       "defined_out": [
         "and_result%0#0",
@@ -4763,10 +4753,10 @@
         "and_result%0#0"
       ]
     },
-    "972": {
+    "907": {
       "op": "b claim_poa_with_box_ref_bool_merge@4"
     },
-    "975": {
+    "910": {
       "block": "claim_poa_with_box_ref_bool_false@3",
       "stack_in": [
         "awst_tmp%1#0",
@@ -4784,7 +4774,7 @@
         "and_result%0#0"
       ]
     },
-    "976": {
+    "911": {
       "block": "claim_poa_with_box_ref_bool_merge@4",
       "stack_in": [
         "awst_tmp%1#0",
@@ -4800,7 +4790,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "977": {
+    "912": {
       "op": "frame_dig -1",
       "defined_out": [
         "opt_in_txn#0 (copy)"
@@ -4812,7 +4802,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "979": {
+    "914": {
       "op": "gtxns AssetCloseTo",
       "defined_out": [
         "tmp%11#0"
@@ -4824,7 +4814,7 @@
         "tmp%11#0"
       ]
     },
-    "981": {
+    "916": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4834,7 +4824,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "983": {
+    "918": {
       "op": "gtxns RekeyTo",
       "defined_out": [
         "awst_tmp%1#0",
@@ -4848,7 +4838,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "985": {
+    "920": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4859,7 +4849,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "986": {
+    "921": {
       "op": "frame_bury 0",
       "defined_out": [
         "awst_tmp%1#0",
@@ -4873,7 +4863,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "988": {
+    "923": {
       "op": "==",
       "defined_out": [
         "awst_tmp%1#0",
@@ -4886,7 +4876,7 @@
         "tmp%12#0"
       ]
     },
-    "989": {
+    "924": {
       "op": "bz claim_poa_with_box_ref_bool_false@7",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4894,10 +4884,10 @@
         "awst_tmp%0#0"
       ]
     },
-    "992": {
+    "927": {
       "op": "frame_dig 0"
     },
-    "994": {
+    "929": {
       "op": "global ZeroAddress",
       "defined_out": [
         "awst_tmp%1#0",
@@ -4911,7 +4901,7 @@
         "tmp%13#0"
       ]
     },
-    "996": {
+    "931": {
       "op": "==",
       "defined_out": [
         "awst_tmp%1#0",
@@ -4924,7 +4914,7 @@
         "tmp%14#0"
       ]
     },
-    "997": {
+    "932": {
       "op": "bz claim_poa_with_box_ref_bool_false@7",
       "stack_out": [
         "awst_tmp%1#0",
@@ -4932,7 +4922,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "1000": {
+    "935": {
       "op": "intc_1 // 1",
       "defined_out": [
         "and_result%1#0",
@@ -4945,10 +4935,10 @@
         "and_result%1#0"
       ]
     },
-    "1001": {
+    "936": {
       "op": "b claim_poa_with_box_ref_bool_merge@8"
     },
-    "1004": {
+    "939": {
       "block": "claim_poa_with_box_ref_bool_false@7",
       "stack_in": [
         "awst_tmp%1#0",
@@ -4966,7 +4956,7 @@
         "and_result%1#0"
       ]
     },
-    "1005": {
+    "940": {
       "block": "claim_poa_with_box_ref_bool_merge@8",
       "stack_in": [
         "awst_tmp%1#0",
@@ -4982,7 +4972,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "1006": {
+    "941": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%15#0"
@@ -4994,7 +4984,7 @@
         "tmp%15#0"
       ]
     },
-    "1008": {
+    "943": {
       "op": "frame_dig 1",
       "defined_out": [
         "tmp%1#0",
@@ -5008,8 +4998,8 @@
         "tmp%1#0"
       ]
     },
-    "1010": {
-      "callsub": "contract.ProofOfAttendance._send_poa",
+    "945": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance._send_poa",
       "op": "callsub _send_poa",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5017,12 +5007,12 @@
         "awst_tmp%0#0"
       ]
     },
-    "1013": {
+    "948": {
       "retsub": true,
       "op": "retsub"
     },
-    "1014": {
-      "subroutine": "contract.ProofOfAttendance.claim_poa_with_box_map",
+    "949": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.claim_poa_with_box_map",
       "params": {
         "opt_in_txn#0": "uint64"
       },
@@ -5030,13 +5020,13 @@
       "stack_in": [],
       "op": "proto 1 0"
     },
-    "1017": {
+    "952": {
       "op": "intc_0 // 0"
     },
-    "1018": {
+    "953": {
       "op": "bytec_3 // \"box_map\""
     },
-    "1019": {
+    "954": {
       "op": "txn Sender",
       "defined_out": [
         "\"box_map\"",
@@ -5048,7 +5038,7 @@
         "tmp%0#0"
       ]
     },
-    "1021": {
+    "956": {
       "op": "concat",
       "defined_out": [
         "tmp%1#0"
@@ -5058,7 +5048,7 @@
         "tmp%1#0"
       ]
     },
-    "1022": {
+    "957": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -5070,7 +5060,7 @@
         "exists#0"
       ]
     },
-    "1023": {
+    "958": {
       "op": "swap",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5078,7 +5068,7 @@
         "maybe_value%0#0"
       ]
     },
-    "1024": {
+    "959": {
       "op": "btoi",
       "defined_out": [
         "exists#0",
@@ -5090,7 +5080,7 @@
         "poa_id#0"
       ]
     },
-    "1025": {
+    "960": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5099,7 +5089,7 @@
         "poa_id#0 (copy)"
       ]
     },
-    "1026": {
+    "961": {
       "op": "uncover 2",
       "defined_out": [
         "exists#0",
@@ -5112,7 +5102,7 @@
         "exists#0"
       ]
     },
-    "1028": {
+    "963": {
       "op": "assert // POA not found, attendance validation failed!",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5120,7 +5110,7 @@
         "poa_id#0"
       ]
     },
-    "1029": {
+    "964": {
       "op": "frame_dig -1",
       "defined_out": [
         "opt_in_txn#0 (copy)",
@@ -5133,7 +5123,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "1031": {
+    "966": {
       "op": "gtxns XferAsset",
       "defined_out": [
         "poa_id#0",
@@ -5146,7 +5136,7 @@
         "tmp%2#0"
       ]
     },
-    "1033": {
+    "968": {
       "op": "==",
       "defined_out": [
         "poa_id#0",
@@ -5158,14 +5148,14 @@
         "tmp%3#0"
       ]
     },
-    "1034": {
+    "969": {
       "op": "assert // POA ID mismatch",
       "stack_out": [
         "awst_tmp%1#0",
         "poa_id#0"
       ]
     },
-    "1035": {
+    "970": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5173,7 +5163,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "1037": {
+    "972": {
       "op": "gtxns Fee",
       "defined_out": [
         "poa_id#0",
@@ -5185,7 +5175,7 @@
         "tmp%4#0"
       ]
     },
-    "1039": {
+    "974": {
       "op": "!",
       "defined_out": [
         "poa_id#0",
@@ -5197,14 +5187,14 @@
         "tmp%5#0"
       ]
     },
-    "1040": {
+    "975": {
       "op": "assert // We got you covered for free!",
       "stack_out": [
         "awst_tmp%1#0",
         "poa_id#0"
       ]
     },
-    "1041": {
+    "976": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5212,7 +5202,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "1043": {
+    "978": {
       "op": "gtxns AssetAmount",
       "defined_out": [
         "poa_id#0",
@@ -5224,7 +5214,7 @@
         "tmp%6#0"
       ]
     },
-    "1045": {
+    "980": {
       "op": "!",
       "defined_out": [
         "poa_id#0",
@@ -5236,14 +5226,14 @@
         "tmp%7#0"
       ]
     },
-    "1046": {
+    "981": {
       "op": "assert",
       "stack_out": [
         "awst_tmp%1#0",
         "poa_id#0"
       ]
     },
-    "1047": {
+    "982": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5251,7 +5241,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "1049": {
+    "984": {
       "op": "gtxns Sender",
       "defined_out": [
         "poa_id#0",
@@ -5263,7 +5253,7 @@
         "tmp%8#0"
       ]
     },
-    "1051": {
+    "986": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5272,7 +5262,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "1053": {
+    "988": {
       "op": "gtxns AssetReceiver",
       "defined_out": [
         "awst_tmp%0#0",
@@ -5286,7 +5276,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "1055": {
+    "990": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5296,7 +5286,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "1056": {
+    "991": {
       "op": "cover 2",
       "defined_out": [
         "awst_tmp%0#0",
@@ -5311,7 +5301,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "1058": {
+    "993": {
       "op": "==",
       "defined_out": [
         "awst_tmp%0#0",
@@ -5325,7 +5315,7 @@
         "tmp%9#0"
       ]
     },
-    "1059": {
+    "994": {
       "op": "bz claim_poa_with_box_map_bool_false@3",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5333,10 +5323,10 @@
         "awst_tmp%0#0"
       ]
     },
-    "1062": {
+    "997": {
       "op": "frame_dig 2"
     },
-    "1064": {
+    "999": {
       "op": "txn Sender",
       "defined_out": [
         "awst_tmp%0#0",
@@ -5351,7 +5341,7 @@
         "tmp%10#0"
       ]
     },
-    "1066": {
+    "1001": {
       "op": "==",
       "defined_out": [
         "awst_tmp%0#0",
@@ -5365,7 +5355,7 @@
         "tmp%11#0"
       ]
     },
-    "1067": {
+    "1002": {
       "op": "bz claim_poa_with_box_map_bool_false@3",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5373,7 +5363,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "1070": {
+    "1005": {
       "op": "intc_1 // 1",
       "defined_out": [
         "and_result%0#0",
@@ -5387,10 +5377,10 @@
         "and_result%0#0"
       ]
     },
-    "1071": {
+    "1006": {
       "op": "b claim_poa_with_box_map_bool_merge@4"
     },
-    "1074": {
+    "1009": {
       "block": "claim_poa_with_box_map_bool_false@3",
       "stack_in": [
         "awst_tmp%1#0",
@@ -5408,7 +5398,7 @@
         "and_result%0#0"
       ]
     },
-    "1075": {
+    "1010": {
       "block": "claim_poa_with_box_map_bool_merge@4",
       "stack_in": [
         "awst_tmp%1#0",
@@ -5424,7 +5414,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "1076": {
+    "1011": {
       "op": "frame_dig -1",
       "defined_out": [
         "opt_in_txn#0 (copy)"
@@ -5436,7 +5426,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "1078": {
+    "1013": {
       "op": "gtxns AssetCloseTo",
       "defined_out": [
         "tmp%12#0"
@@ -5448,7 +5438,7 @@
         "tmp%12#0"
       ]
     },
-    "1080": {
+    "1015": {
       "op": "frame_dig -1",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5458,7 +5448,7 @@
         "opt_in_txn#0 (copy)"
       ]
     },
-    "1082": {
+    "1017": {
       "op": "gtxns RekeyTo",
       "defined_out": [
         "awst_tmp%1#0",
@@ -5472,7 +5462,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "1084": {
+    "1019": {
       "op": "dup",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5483,7 +5473,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "1085": {
+    "1020": {
       "op": "frame_bury 0",
       "defined_out": [
         "awst_tmp%1#0",
@@ -5497,7 +5487,7 @@
         "awst_tmp%1#0"
       ]
     },
-    "1087": {
+    "1022": {
       "op": "==",
       "defined_out": [
         "awst_tmp%1#0",
@@ -5510,7 +5500,7 @@
         "tmp%13#0"
       ]
     },
-    "1088": {
+    "1023": {
       "op": "bz claim_poa_with_box_map_bool_false@7",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5518,10 +5508,10 @@
         "awst_tmp%0#0"
       ]
     },
-    "1091": {
+    "1026": {
       "op": "frame_dig 0"
     },
-    "1093": {
+    "1028": {
       "op": "global ZeroAddress",
       "defined_out": [
         "awst_tmp%1#0",
@@ -5535,7 +5525,7 @@
         "tmp%14#0"
       ]
     },
-    "1095": {
+    "1030": {
       "op": "==",
       "defined_out": [
         "awst_tmp%1#0",
@@ -5548,7 +5538,7 @@
         "tmp%15#0"
       ]
     },
-    "1096": {
+    "1031": {
       "op": "bz claim_poa_with_box_map_bool_false@7",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5556,7 +5546,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "1099": {
+    "1034": {
       "op": "intc_1 // 1",
       "defined_out": [
         "and_result%1#0",
@@ -5569,10 +5559,10 @@
         "and_result%1#0"
       ]
     },
-    "1100": {
+    "1035": {
       "op": "b claim_poa_with_box_map_bool_merge@8"
     },
-    "1103": {
+    "1038": {
       "block": "claim_poa_with_box_map_bool_false@7",
       "stack_in": [
         "awst_tmp%1#0",
@@ -5590,7 +5580,7 @@
         "and_result%1#0"
       ]
     },
-    "1104": {
+    "1039": {
       "block": "claim_poa_with_box_map_bool_merge@8",
       "stack_in": [
         "awst_tmp%1#0",
@@ -5606,7 +5596,7 @@
         "awst_tmp%0#0"
       ]
     },
-    "1105": {
+    "1040": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%16#0"
@@ -5618,7 +5608,7 @@
         "tmp%16#0"
       ]
     },
-    "1107": {
+    "1042": {
       "op": "frame_dig 1",
       "defined_out": [
         "poa_id#0",
@@ -5632,8 +5622,8 @@
         "poa_id#0"
       ]
     },
-    "1109": {
-      "callsub": "contract.ProofOfAttendance._send_poa",
+    "1044": {
+      "callsub": "smart_contracts.poa.contract.ProofOfAttendance._send_poa",
       "op": "callsub _send_poa",
       "stack_out": [
         "awst_tmp%1#0",
@@ -5641,18 +5631,18 @@
         "awst_tmp%0#0"
       ]
     },
-    "1112": {
+    "1047": {
       "retsub": true,
       "op": "retsub"
     },
-    "1113": {
-      "subroutine": "contract.ProofOfAttendance.__init__",
+    "1048": {
+      "subroutine": "smart_contracts.poa.contract.ProofOfAttendance.__init__",
       "params": {},
       "block": "__init__",
       "stack_in": [],
       "op": "proto 0 0"
     },
-    "1116": {
+    "1051": {
       "op": "bytec_1 // \"max_attendees\"",
       "defined_out": [
         "\"max_attendees\""
@@ -5661,7 +5651,7 @@
         "\"max_attendees\""
       ]
     },
-    "1117": {
+    "1052": {
       "op": "pushint 30 // 30",
       "defined_out": [
         "\"max_attendees\"",
@@ -5672,11 +5662,11 @@
         "30"
       ]
     },
-    "1119": {
+    "1054": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "1120": {
+    "1055": {
       "op": "bytec 4 // \"asset_url\"",
       "defined_out": [
         "\"asset_url\""
@@ -5685,7 +5675,7 @@
         "\"asset_url\""
       ]
     },
-    "1122": {
+    "1057": {
       "op": "pushbytes \"ipfs://QmW5vERkgeJJtSY1YQdcWU6gsHCZCyLFtM1oT9uyy2WGm8\"",
       "defined_out": [
         "\"asset_url\"",
@@ -5696,11 +5686,11 @@
         "\"ipfs://QmW5vERkgeJJtSY1YQdcWU6gsHCZCyLFtM1oT9uyy2WGm8\""
       ]
     },
-    "1177": {
+    "1112": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "1178": {
+    "1113": {
       "op": "bytec_0 // \"total_attendees\"",
       "defined_out": [
         "\"total_attendees\""
@@ -5709,7 +5699,7 @@
         "\"total_attendees\""
       ]
     },
-    "1179": {
+    "1114": {
       "op": "intc_0 // 0",
       "defined_out": [
         "\"total_attendees\"",
@@ -5720,15 +5710,15 @@
         "0"
       ]
     },
-    "1180": {
+    "1115": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "1181": {
+    "1116": {
       "retsub": true,
       "op": "retsub"
     },
-    "1182": {
+    "1117": {
       "subroutine": "_puya_lib.util.ensure_budget",
       "params": {
         "required_budget#0": "uint64",
@@ -5738,7 +5728,7 @@
       "stack_in": [],
       "op": "proto 2 0"
     },
-    "1185": {
+    "1120": {
       "op": "frame_dig -2",
       "defined_out": [
         "required_budget#0 (copy)"
@@ -5747,7 +5737,7 @@
         "required_budget#0 (copy)"
       ]
     },
-    "1187": {
+    "1122": {
       "op": "pushint 10 // 10",
       "defined_out": [
         "10",
@@ -5758,7 +5748,7 @@
         "10"
       ]
     },
-    "1189": {
+    "1124": {
       "op": "+",
       "defined_out": [
         "required_budget_with_buffer#0"
@@ -5767,14 +5757,14 @@
         "required_budget_with_buffer#0"
       ]
     },
-    "1190": {
+    "1125": {
       "block": "ensure_budget_while_top@1",
       "stack_in": [
         "required_budget_with_buffer#0"
       ],
       "op": "frame_dig 0"
     },
-    "1192": {
+    "1127": {
       "op": "global OpcodeBudget",
       "defined_out": [
         "required_budget_with_buffer#0",
@@ -5786,7 +5776,7 @@
         "tmp%0#0"
       ]
     },
-    "1194": {
+    "1129": {
       "op": ">",
       "defined_out": [
         "required_budget_with_buffer#0",
@@ -5797,16 +5787,16 @@
         "tmp%1#0"
       ]
     },
-    "1195": {
+    "1130": {
       "op": "bz ensure_budget_after_while@7",
       "stack_out": [
         "required_budget_with_buffer#0"
       ]
     },
-    "1198": {
+    "1133": {
       "op": "itxn_begin"
     },
-    "1199": {
+    "1134": {
       "op": "pushint 6 // appl",
       "defined_out": [
         "appl",
@@ -5817,13 +5807,13 @@
         "appl"
       ]
     },
-    "1201": {
+    "1136": {
       "op": "itxn_field TypeEnum",
       "stack_out": [
         "required_budget_with_buffer#0"
       ]
     },
-    "1203": {
+    "1138": {
       "op": "pushint 5 // DeleteApplication",
       "defined_out": [
         "DeleteApplication",
@@ -5834,13 +5824,13 @@
         "DeleteApplication"
       ]
     },
-    "1205": {
+    "1140": {
       "op": "itxn_field OnCompletion",
       "stack_out": [
         "required_budget_with_buffer#0"
       ]
     },
-    "1207": {
+    "1142": {
       "op": "bytec 5 // 0x068101",
       "defined_out": [
         "0x068101",
@@ -5851,26 +5841,26 @@
         "0x068101"
       ]
     },
-    "1209": {
+    "1144": {
       "op": "itxn_field ApprovalProgram",
       "stack_out": [
         "required_budget_with_buffer#0"
       ]
     },
-    "1211": {
+    "1146": {
       "op": "bytec 5 // 0x068101",
       "stack_out": [
         "required_budget_with_buffer#0",
         "0x068101"
       ]
     },
-    "1213": {
+    "1148": {
       "op": "itxn_field ClearStateProgram",
       "stack_out": [
         "required_budget_with_buffer#0"
       ]
     },
-    "1215": {
+    "1150": {
       "op": "frame_dig -1",
       "defined_out": [
         "fee_source#0 (copy)",
@@ -5881,16 +5871,16 @@
         "fee_source#0 (copy)"
       ]
     },
-    "1217": {
+    "1152": {
       "op": "switch ensure_budget_switch_case_0@3 ensure_budget_switch_case_1@4",
       "stack_out": [
         "required_budget_with_buffer#0"
       ]
     },
-    "1223": {
+    "1158": {
       "op": "b ensure_budget_switch_case_next@6"
     },
-    "1226": {
+    "1161": {
       "block": "ensure_budget_switch_case_0@3",
       "stack_in": [
         "required_budget_with_buffer#0"
@@ -5904,16 +5894,16 @@
         "0"
       ]
     },
-    "1227": {
+    "1162": {
       "op": "itxn_field Fee",
       "stack_out": [
         "required_budget_with_buffer#0"
       ]
     },
-    "1229": {
+    "1164": {
       "op": "b ensure_budget_switch_case_next@6"
     },
-    "1232": {
+    "1167": {
       "block": "ensure_budget_switch_case_1@4",
       "stack_in": [
         "required_budget_with_buffer#0"
@@ -5927,23 +5917,23 @@
         "tmp%2#0"
       ]
     },
-    "1234": {
+    "1169": {
       "op": "itxn_field Fee",
       "stack_out": [
         "required_budget_with_buffer#0"
       ]
     },
-    "1236": {
+    "1171": {
       "block": "ensure_budget_switch_case_next@6",
       "stack_in": [
         "required_budget_with_buffer#0"
       ],
       "op": "itxn_submit"
     },
-    "1237": {
+    "1172": {
       "op": "b ensure_budget_while_top@1"
     },
-    "1240": {
+    "1175": {
       "block": "ensure_budget_after_while@7",
       "stack_in": [
         "required_budget_with_buffer#0"

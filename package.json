@@ -69,7 +69,7 @@
   },
   "dependencies": {
     "@vscode/debugadapter": "^1.64.0",
-    "algosdk": "^3.0.0-beta.1",
+    "algosdk": "^3.0.0",
     "await-notify": "^1.0.1"
   },
   "devDependencies": {

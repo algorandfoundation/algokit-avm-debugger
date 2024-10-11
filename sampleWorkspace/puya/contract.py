@@ -1,4 +1,6 @@
 import algopy
+from algopy import TemplateVar
+from algopy import UInt64
 
 
 class ProofOfAttendance(algopy.ARC4Contract):
@@ -22,7 +24,7 @@ class ProofOfAttendance(algopy.ARC4Contract):
         assert self.total_attendees < self.max_attendees, "Max attendees reached"
 
         minted_asset = self._mint_poa(algopy.Txn.sender)
-        self.total_attendees += 1
+        self.total_attendees += TemplateVar[UInt64]("INCREMENT")
 
         _id, has_claimed = algopy.op.Box.get(algopy.Txn.sender.bytes)
         assert not has_claimed, "Already claimed POA"

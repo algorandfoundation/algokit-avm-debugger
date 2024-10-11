@@ -59,6 +59,9 @@
       },
       {
         "language": "python"
+      },
+      {
+        "language": "typescript"
       }
     ],
     "debuggers": [

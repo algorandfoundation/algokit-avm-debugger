@@ -1,6 +1,8 @@
 #pragma version 10
 
 smart_contracts.hello_world.contract.HelloWorld.approval_program:
+    intcblock 0 1
+    bytecblock 0x151f7c75
     callsub __puya_arc4_router__
     return
 
@@ -10,10 +12,10 @@ __puya_arc4_router__:
     proto 0 1
     txn NumAppArgs
     bz __puya_arc4_router___bare_routing@5
-    method "hello(string,application)string"
+    pushbytes 0x1362e526 // method "hello(string,application,application)string"
     txna ApplicationArgs 0
     match __puya_arc4_router___hello_route@2
-    int 0
+    intc_0 // 0
     retsub
 
 __puya_arc4_router___hello_route@2:
@@ -27,6 +29,9 @@ __puya_arc4_router___hello_route@2:
     txna ApplicationArgs 2
     btoi
     txnas Applications
+    txna ApplicationArgs 3
+    btoi
+    txnas Applications
     callsub hello
     dup
     len
@@ -34,11 +39,11 @@ __puya_arc4_router___hello_route@2:
     extract 6 2
     swap
     concat
-    byte 0x151f7c75
+    bytec_0 // 0x151f7c75
     swap
     concat
     log
-    int 1
+    intc_1 // 1
     retsub
 
 __puya_arc4_router___bare_routing@5:
@@ -47,32 +52,36 @@ __puya_arc4_router___bare_routing@5:
     txn ApplicationID
     !
     assert // is creating
-    int 1
+    intc_1 // 1
     retsub
 
 __puya_arc4_router___after_if_else@9:
-    int 0
+    intc_0 // 0
     retsub
 
 
-// smart_contracts.hello_world.contract.HelloWorld.hello(name: bytes, second_app_id: uint64) -> bytes:
+// smart_contracts.hello_world.contract.HelloWorld.hello(name: bytes, second_app_id: uint64, third_app_id: uint64) -> bytes:
 hello:
-    proto 2 1
+    proto 3 1
     itxn_begin
-    frame_dig -2
+    frame_dig -3
     len
     itob
     extract 6 2
-    frame_dig -2
+    frame_dig -3
     concat
-    frame_dig -1
+    frame_dig -2
     itxn_field ApplicationID
-    method "hello(string)string"
+    frame_dig -1
+    itxn_field Applications
+    pushbytes 0x59931a70 // method "hello(string,application)string"
     itxn_field ApplicationArgs
     itxn_field ApplicationArgs
-    int appl
+    pushbytes 0x01
+    itxn_field ApplicationArgs
+    pushint 6 // appl
     itxn_field TypeEnum
-    int 0
+    intc_0 // 0
     itxn_field Fee
     itxn_submit
     itxn LastLog
@@ -80,7 +89,7 @@ hello:
     extract 4 0
     swap
     extract 0 4
-    byte 0x151f7c75
+    bytec_0 // 0x151f7c75
     ==
     assert // ARC4 prefix is valid
     extract 2 0

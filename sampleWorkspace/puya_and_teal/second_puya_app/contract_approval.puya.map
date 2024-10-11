@@ -3,7 +3,7 @@
   "sources": [
     "contract.py"
   ],
-  "mappings": ";;;;;;;;;AAKA;;;AAAA;;AAAA;;;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;AAAA;AACK;;AAAA;AAAA;AAAA;;AAAA;AADL;;;AAAA;;;AACK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AADL;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACA;;;AAEe;;;;;;;;;AAAA;;AAAA;AAAP",
+  "mappings": ";;;;;;;;;AAKA;;;AAAA;;AAAA;;;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;AAAA;AACK;;AAAA;AAAA;AAAA;;AAAA;AADL;;;AAAA;;;AAAA;;;AAAA;AAAA;;AACK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AADL;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACA;;;AAEmB;AACkB;;;;;;;;;;;;;;;;AADlB;;;;AAC+D;;;AAD/D;AAAA;;AAIX",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -48,16 +48,16 @@
       "stack_out": []
     },
     "17": {
-      "op": "pushbytes 0x02bece11 // method \"hello(string)string\""
+      "op": "pushbytes 0x59931a70 // method \"hello(string,application)string\""
     },
     "23": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
-        "Method(hello(string)string)",
+        "Method(hello(string,application)string)",
         "tmp%2#0"
       ],
       "stack_out": [
-        "Method(hello(string)string)",
+        "Method(hello(string,application)string)",
         "tmp%2#0"
       ]
     },
@@ -134,67 +134,100 @@
       ]
     },
     "45": {
-      "callsub": "smart_contracts.hello_world2.contract.HelloWorld2.hello",
-      "op": "callsub hello",
+      "op": "txna ApplicationArgs 2",
       "defined_out": [
+        "tmp%8#0",
         "tmp%9#0"
       ],
       "stack_out": [
+        "tmp%8#0",
         "tmp%9#0"
       ]
     },
     "48": {
-      "op": "dup",
+      "op": "btoi",
       "defined_out": [
-        "tmp%9#0",
-        "tmp%9#0 (copy)"
+        "tmp%10#0",
+        "tmp%8#0"
       ],
       "stack_out": [
-        "tmp%9#0",
-        "tmp%9#0 (copy)"
+        "tmp%8#0",
+        "tmp%10#0"
       ]
     },
     "49": {
-      "op": "len",
+      "op": "txnas Applications",
       "defined_out": [
-        "length%0#0",
-        "tmp%9#0"
+        "tmp%11#0",
+        "tmp%8#0"
       ],
       "stack_out": [
-        "tmp%9#0",
-        "length%0#0"
-      ]
-    },
-    "50": {
-      "op": "itob",
-      "defined_out": [
-        "as_bytes%0#0",
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%9#0",
-        "as_bytes%0#0"
+        "tmp%8#0",
+        "tmp%11#0"
       ]
     },
     "51": {
-      "op": "extract 6 2",
+      "callsub": "smart_contracts.hello_world2.contract.HelloWorld2.hello",
+      "op": "callsub hello",
       "defined_out": [
-        "length_uint16%0#0",
-        "tmp%9#0"
+        "tmp%12#0"
       ],
       "stack_out": [
-        "tmp%9#0",
-        "length_uint16%0#0"
+        "tmp%12#0"
       ]
     },
     "54": {
-      "op": "swap",
+      "op": "dup",
+      "defined_out": [
+        "tmp%12#0",
+        "tmp%12#0 (copy)"
+      ],
       "stack_out": [
-        "length_uint16%0#0",
-        "tmp%9#0"
+        "tmp%12#0",
+        "tmp%12#0 (copy)"
       ]
     },
     "55": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "length%0#0"
+      ]
+    },
+    "56": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "57": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "60": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%0#0",
+        "tmp%12#0"
+      ]
+    },
+    "61": {
       "op": "concat",
       "defined_out": [
         "encoded_value%0#0"
@@ -203,7 +236,7 @@
         "encoded_value%0#0"
       ]
     },
-    "56": {
+    "62": {
       "op": "pushbytes 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
@@ -214,27 +247,27 @@
         "0x151f7c75"
       ]
     },
-    "62": {
+    "68": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "encoded_value%0#0"
       ]
     },
-    "63": {
+    "69": {
       "op": "concat",
       "defined_out": [
-        "tmp%10#0"
+        "tmp%13#0"
       ],
       "stack_out": [
-        "tmp%10#0"
+        "tmp%13#0"
       ]
     },
-    "64": {
+    "70": {
       "op": "log",
       "stack_out": []
     },
-    "65": {
+    "71": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1"
@@ -243,48 +276,48 @@
         "1"
       ]
     },
-    "66": {
+    "72": {
       "retsub": true,
       "op": "retsub"
     },
-    "67": {
+    "73": {
       "block": "__puya_arc4_router___bare_routing@5",
       "stack_in": [],
       "op": "txn OnCompletion",
       "defined_out": [
-        "tmp%11#0"
+        "tmp%14#0"
       ],
       "stack_out": [
-        "tmp%11#0"
-      ]
-    },
-    "69": {
-      "op": "bnz __puya_arc4_router___after_if_else@9",
-      "stack_out": []
-    },
-    "72": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%12#0"
-      ],
-      "stack_out": [
-        "tmp%12#0"
-      ]
-    },
-    "74": {
-      "op": "!",
-      "defined_out": [
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%13#0"
+        "tmp%14#0"
       ]
     },
     "75": {
+      "op": "bnz __puya_arc4_router___after_if_else@9",
+      "stack_out": []
+    },
+    "78": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "80": {
+      "op": "!",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "81": {
       "op": "assert // is creating",
       "stack_out": []
     },
-    "76": {
+    "82": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1"
@@ -293,11 +326,11 @@
         "1"
       ]
     },
-    "77": {
+    "83": {
       "retsub": true,
       "op": "retsub"
     },
-    "78": {
+    "84": {
       "block": "__puya_arc4_router___after_if_else@9",
       "stack_in": [],
       "op": "intc_0 // 0",
@@ -308,49 +341,101 @@
         "0"
       ]
     },
-    "79": {
+    "85": {
       "retsub": true,
       "op": "retsub"
     },
-    "80": {
+    "86": {
       "subroutine": "smart_contracts.hello_world2.contract.HelloWorld2.hello",
       "params": {
-        "name#0": "bytes"
+        "name#0": "bytes",
+        "app_id#0": "uint64"
       },
       "block": "hello",
       "stack_in": [],
-      "op": "proto 1 1"
+      "op": "proto 2 1"
     },
-    "83": {
-      "op": "pushbytes \"Hello, \"",
+    "89": {
+      "op": "itxn_begin"
+    },
+    "90": {
+      "op": "pushbytes 0xee67fb50",
       "defined_out": [
-        "\"Hello, \""
+        "0xee67fb50"
       ],
       "stack_out": [
-        "\"Hello, \""
+        "0xee67fb50"
       ]
     },
-    "92": {
+    "96": {
+      "op": "itxn_field ApplicationArgs",
+      "stack_out": []
+    },
+    "98": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "name#0 (copy)"
+      ]
+    },
+    "100": {
+      "op": "itxn_field ApplicationArgs",
+      "stack_out": []
+    },
+    "102": {
       "op": "frame_dig -1",
       "defined_out": [
-        "\"Hello, \"",
-        "name#0 (copy)"
+        "app_id#0 (copy)"
       ],
       "stack_out": [
-        "\"Hello, \"",
-        "name#0 (copy)"
+        "app_id#0 (copy)"
       ]
     },
-    "94": {
-      "op": "concat",
+    "104": {
+      "op": "itxn_field ApplicationID",
+      "stack_out": []
+    },
+    "106": {
+      "op": "pushint 6 // appl",
       "defined_out": [
-        "tmp%0#0"
+        "appl"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "appl"
       ]
     },
-    "95": {
+    "108": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "110": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "111": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "113": {
+      "op": "itxn_submit"
+    },
+    "114": {
+      "op": "itxn LastLog",
+      "defined_out": [
+        "response.LastLog#0"
+      ],
+      "stack_out": [
+        "response.LastLog#0"
+      ]
+    },
+    "116": {
       "retsub": true,
       "op": "retsub"
     }
