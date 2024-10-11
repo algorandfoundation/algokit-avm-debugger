@@ -408,7 +408,7 @@ export class AvmDebugSession extends DebugSession {
       });
 
       response.body = {
-        totalFrames: stk.total,
+        totalFrames: stk.count,
         stackFrames: stackFramesForResponse,
         // 4 options for 'totalFrames':
         //omit totalFrames property: 	// VS Code has to probe/guess. Should result in a max. of two requests
@@ -441,6 +441,7 @@ export class AvmDebugSession extends DebugSession {
           );
         }
 
+        const programScope = new ProgramStateScope(args.frameId);
         const state = frame.programState;
         if (state !== undefined) {
           let scopeName = 'Program State';
@@ -451,12 +452,11 @@ export class AvmDebugSession extends DebugSession {
           scopes.push(
             new Scope(
               scopeName,
-              this._variableHandles.create(new ProgramStateScope(args.frameId)),
+              this._variableHandles.create(programScope),
               false,
             ),
           );
         }
-
         scopes.push(
           new Scope(
             'On-chain State',
@@ -480,24 +480,25 @@ export class AvmDebugSession extends DebugSession {
   ): Promise<void> {
     try {
       let variables: DebugProtocol.Variable[] = [];
+
       const v = this._variableHandles.get(args.variablesReference);
 
       if (v instanceof ProgramStateScope) {
-        const state = this.getProgramState(v.frameIndex);
+        const programState = this.getProgramState(v.frameIndex);
         if (v.specificState === 'program') {
           variables = [
             {
               name: 'pc',
-              value: state.pc.toString(),
+              value: programState.pc.toString(),
               type: 'uint64',
               variablesReference: 0,
               evaluateName: 'pc',
             },
-            ...(state.op !== undefined
+            ...(programState.op !== undefined
               ? [
                   {
                     name: 'op',
-                    value: state.op,
+                    value: programState.op,
                     type: 'string',
                     variablesReference: 0,
                     evaluateName: 'op',
@@ -506,12 +507,12 @@ export class AvmDebugSession extends DebugSession {
               : []),
             {
               name: 'stack',
-              value: state.stack.length === 0 ? '[]' : '[...]',
+              value: programState.stack.length === 0 ? '[]' : '[...]',
               type: 'array',
               variablesReference: this._variableHandles.create(
                 new ProgramStateScope(v.frameIndex, 'stack'),
               ),
-              indexedVariables: state.stack.length,
+              indexedVariables: programState.stack.length,
               presentationHint: {
                 kind: 'data',
               },
@@ -531,7 +532,7 @@ export class AvmDebugSession extends DebugSession {
           ];
         } else if (v.specificState === 'stack') {
           if (args.filter !== 'named') {
-            variables = state.stack.map((value, index) =>
+            variables = programState.stack.map((value, index) =>
               this.convertAvmValue(v, value, index),
             );
           }
@@ -539,7 +540,7 @@ export class AvmDebugSession extends DebugSession {
           const expandedScratch: algosdk.modelsv2.AvmValue[] = [];
           for (let i = 0; i < 256; i++) {
             expandedScratch.push(
-              state.scratch.get(i) ||
+              programState.scratch.get(i) ||
                 new algosdk.modelsv2.AvmValue({ type: 2 }),
             );
           }
@@ -587,7 +588,7 @@ export class AvmDebugSession extends DebugSession {
             variablesReference: this._variableHandles.create(
               new AppSpecificStateScope({ scope: 'global', appID: v.appID }),
             ),
-            namedVariables: 1,
+            namedVariables: 1, // TODO
           },
           {
             name: 'local',
@@ -596,7 +597,7 @@ export class AvmDebugSession extends DebugSession {
             variablesReference: this._variableHandles.create(
               new AppSpecificStateScope({ scope: 'local', appID: v.appID }),
             ),
-            namedVariables: 1,
+            namedVariables: 1, // TODO
           },
           {
             name: 'box',
@@ -605,7 +606,7 @@ export class AvmDebugSession extends DebugSession {
             variablesReference: this._variableHandles.create(
               new AppSpecificStateScope({ scope: 'box', appID: v.appID }),
             ),
-            namedVariables: 1,
+            namedVariables: 1, // TODO
           },
         ];
       } else if (v instanceof AppSpecificStateScope) {
@@ -628,7 +629,7 @@ export class AvmDebugSession extends DebugSession {
                   account,
                 }),
               ),
-              namedVariables: 1,
+              namedVariables: 1, // TODO
               evaluateName: evaluateNameForScope(v, account),
             }));
           } else {
@@ -1114,49 +1115,70 @@ export class AvmDebugSession extends DebugSession {
 
   private expandAvmValue(
     avmValue: algosdk.modelsv2.AvmValue,
-    filter?: 'indexed' | 'named',
+    filter?: DebugProtocol.VariablesArguments['filter'],
   ): DebugProtocol.Variable[] {
-    const variables: DebugProtocol.Variable[] = [];
+    // uint64 has no expanded variables
+    if (avmValue.type !== 1) {
+      return [];
+    }
 
-    if (avmValue.type === 1) {
-      // byte array
-      const bytes = avmValue.bytes || new Uint8Array();
-      if (!filter || filter === 'named') {
-        variables.push({
-          name: 'length',
-          value: bytes.length.toString(),
-          type: 'number',
-          variablesReference: 0,
-        });
-        variables.push({
-          name: 'hex',
-          value: `0x${Buffer.from(bytes).toString('hex')}`,
+    const bytes = avmValue.bytes || new Uint8Array();
+    const values: DebugProtocol.Variable[] = [];
+
+    if (filter !== 'indexed') {
+      values.push({
+        name: 'hex',
+        type: 'string',
+        value: algosdk.bytesToHex(bytes),
+        variablesReference: 0,
+      });
+
+      values.push({
+        name: 'base64',
+        type: 'string',
+        value: algosdk.bytesToBase64(bytes),
+        variablesReference: 0,
+      });
+
+      const utf8Value = utf8Decode(bytes);
+      if (typeof utf8Value !== 'undefined') {
+        values.push({
+          name: 'utf-8',
           type: 'string',
+          value: utf8Value,
           variablesReference: 0,
         });
-        const utf8String = utf8Decode(bytes);
-        if (typeof utf8String !== 'undefined') {
-          variables.push({
-            name: 'utf8',
-            value: `"${utf8String}"`,
-            type: 'string',
-            variablesReference: 0,
-          });
-        }
       }
-      if (!filter || filter === 'indexed') {
-        for (let i = 0; i < bytes.length; i++) {
-          variables.push({
-            name: i.toString(),
-            value: bytes[i].toString(),
-            type: 'number',
-            variablesReference: 0,
-          });
-        }
+
+      if (bytes.length === 32) {
+        values.push({
+          name: 'address',
+          type: 'string',
+          value: algosdk.encodeAddress(bytes),
+          variablesReference: 0,
+        });
+      }
+
+      values.push({
+        name: 'length',
+        type: 'int',
+        value: bytes.length.toString(),
+        variablesReference: 0,
+      });
+    }
+
+    if (filter !== 'named') {
+      for (let i = 0; i < bytes.length; i++) {
+        values.push({
+          name: i.toString(),
+          type: 'uint8',
+          value: bytes[i].toString(),
+          variablesReference: 0,
+        });
       }
     }
 
-    return variables;
+    return values;
   }
 
   private convertAvmKeyValue(
@@ -1292,7 +1314,6 @@ class ProgramStateScope {
       | 'op'
       | 'stack'
       | 'scratch'
-      | 'params'
       | 'program' = 'program',
   ) {}
 }
@@ -1437,17 +1458,3 @@ function evaluateNameToScope(name: string): [AvmValueScope, number | string] {
   }
   throw new Error(`Unexpected expression: ${name}`);
 }
-
-// function variableToString(avmValue: algosdk.modelsv2.AvmValue): string {
-//   if (avmValue.type === 1) {
-//     // byte array
-//     const bytes = avmValue.bytes || new Uint8Array();
-//     const utf8 = utf8Decode(bytes);
-//     return utf8 === undefined
-//       ? '0x' + algosdk.bytesToHex(bytes)
-//       : "'" + utf8 + "'";
-//   }
-//   // uint64
-//   const uint = avmValue.uint || 0;
-//   return uint.toString();
-// }

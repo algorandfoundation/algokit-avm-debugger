@@ -27,13 +27,14 @@ export interface IRuntimeBreakpointLocation {
 }
 
 interface IRuntimeStack {
-  total: number;
+  count: number;
   frames: CallStackFrame[];
 }
 
 export class AvmRuntime extends EventEmitter {
   // maps from sourceFile to array of IRuntimeBreakpoint
   private readonly breakPoints = new Map<string, IRuntimeBreakpoint[]>();
+
   private readonly engine: TraceReplayEngine = new TraceReplayEngine();
 
   // since we want to send breakpoint events, we will assign an id to every event
@@ -209,7 +210,7 @@ export class AvmRuntime extends EventEmitter {
     }
     return {
       frames: stack.slice(startFrame, endFrame),
-      total: stack.length,
+      count: stack.length,
     };
   }
 
