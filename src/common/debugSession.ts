@@ -24,6 +24,7 @@ import {
   limitArray,
   ProgramSourceEntryFile,
   prefixPotentialError,
+  isPuyaFrontendSourceExtension,
 } from './utils';
 
 const GENERIC_ERROR_ID = 9999;
@@ -431,7 +432,10 @@ export class AvmDebugSession extends DebugSession {
 
       const scopes: DebugProtocol.Scope[] = [];
       if (frame !== undefined) {
-        if (frame.programState?.variables !== undefined) {
+        if (
+          frame.programState?.variables !== undefined &&
+          isPuyaFrontendSourceExtension(frame.source?.path)
+        ) {
           scopes.push(
             new Scope(
               'Locals',

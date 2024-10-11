@@ -412,6 +412,10 @@ export function isPuyaSourceMap(sourcemap: ISourceMap | undefined): boolean {
   return sourcemap?.pc_events !== undefined;
 }
 
+export function isPuyaFrontendSourceExtension(filePath?: string): boolean {
+  return !filePath?.endsWith('.teal') || false;
+}
+
 export function prefixPotentialError<T>(
   task: Promise<T>,
   prefix: string,
