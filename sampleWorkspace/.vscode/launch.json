@@ -139,54 +139,6 @@
       "simulateTraceFile": "${workspaceFolder}/puya/simulate-response.json",
       "programSourcesDescriptionFile": "${workspaceFolder}/puya/sources.json",
       "stopOnEntry": true
-    },
-    {
-      "type": "avm",
-      "request": "launch",
-      "name": "Debug Puya & Teal",
-      "simulateTraceFile": "${workspaceFolder}/puya_and_teal/simulate-response.json",
-      "programSourcesDescription": {
-        "txn-group-sources": [
-          {
-            "sourcemap-location": "./first_teal_app/approval.teal.tok.map",
-            "hash": "bFjB/jPb8ImVYeAJQIL9lTAtu14+4yet0z5LUMnh1Zk="
-          },
-          {
-            "sourcemap-location": "./second_puya_app/contract_approval.puya.map",
-            "hash": "DbbtDBEqmyLCjAn3yXEp708hrhHkanuMuZ+039KLp/s="
-          },
-          {
-            "sourcemap-location": "./delegated_puya_lsig/lsig.puya.map",
-            "hash": "cFlJEhm1xu42Dpnqg93nIzNIyY6E2H+uSeVXOv7O6Sk="
-          },
-          {
-            "sourcemap-location": "./third_puyats_app/contract_approval.puya.map",
-            "hash": "q7Vsqme7lK4RlmnIlh8Fplo6kDtrFKwuYsOGZz1dKlM="
-          }
-        ]
-      },
-      "programSourcesDescriptionFolder": "${workspaceFolder}/puya_and_teal/",
-      "stopOnEntry": true
-    },
-    {
-      "type": "avm",
-      "request": "launch",
-      "name": "Debug Puya with Third Party export",
-      "simulateTraceFile": "${workspaceFolder}/puya_third_parties/simulate-response.json",
-      "programSourcesDescription": {
-        "txn-group-sources": [
-          {
-            "sourcemap-location": "RSATester.approval.puya.map",
-            "hash": "sHHTmOJCdECH2FtRp7ukCKBX/bhw3MhiwEVLw5lakig="
-          },
-          {
-            "sourcemap-location": ".algokit/sources/opup/approval.teal.map",
-            "hash": "p0zHRDBy7V/S2TDcAaXYEd2OF8KSxV/1y0ceYEL6qxU="
-          }
-        ]
-      },
-      "programSourcesDescriptionFolder": "${workspaceFolder}/puya_third_parties/",
-      "stopOnEntry": true
     }
   ]
 }
