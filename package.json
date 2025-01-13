@@ -1,6 +1,6 @@
 {
-  "name": "avm-debug-adapter",
-  "version": "0.3.0",
+  "name": "@algorandfoundation/algokit-avm-debugger",
+  "version": "0.0.0",
   "description": "Algorand AVM transaction and smart contract debugger using the Debugger Adapter Protocol",
   "author": {
     "name": "Algorand, llc"
@@ -11,46 +11,47 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/algorand/avm-debugger.git"
+    "url": "git+https://github.com/algorandfoundation/algokit-avm-debugger.git"
   },
   "bugs": {
-    "url": "https://github.com/algorand/avm-debugger/issues"
+    "url": "https://github.com/algorandfoundation/algokit-avm-debugger/issues"
   },
-  "main": "out/src/common/index.js",
-  "types": "out/src/common/index.d.ts",
+  "main": "dist/src/common/index.js",
+  "types": "dist/src/common/index.d.ts",
   "typesVersions": {
     "*": {
       ".": [
-        "out/src/common/index.d.ts"
+        "dist/src/common/index.d.ts"
       ],
       "*": [
-        "out/src/common/index.d.ts"
+        "dist/src/common/index.d.ts"
       ],
       "node": [
-        "out/src/node/index.d.ts"
+        "dist/src/node/index.d.ts"
       ]
     }
   },
   "exports": {
     ".": {
-      "types": "./out/src/common/index.d.ts",
-      "default": "./out/src/common/index.js"
+      "types": "./dist/src/common/index.d.ts",
+      "default": "./dist/src/common/index.js"
     },
     "./node": {
-      "types": "./out/src/node/index.d.ts",
-      "default": "./out/src/node/index.js"
+      "types": "./dist/src/node/index.d.ts",
+      "default": "./dist/src/node/index.js"
     }
   },
   "bin": {
-    "avm-debug-adapter": "./out/src/cli.js"
+    "algokit-avm-debugger": "dist/src/cli.js"
   },
   "files": [
-    "out/src",
+    "dist/src",
     "src"
   ],
   "scripts": {
     "prepare": "npm run compile",
-    "compile": "shx rm -rf out && tsc -p ./",
+    "compile": "shx rm -rf dist && tsc -p ./",
+    "build": "npm run compile",
     "lint": "eslint src --ext ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "check-format": "prettier . --check",
@@ -73,12 +74,14 @@
     "await-notify": "^1.0.1"
   },
   "devDependencies": {
+    "semantic-release": "^24.1.2",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@types/glob": "^7.2.0",
     "@types/lodash": "^4.14.196",
     "@types/mocha": "^9.1.0",
     "@types/node": "^14.14.37",
     "@types/vscode": "^1.66.0",
+    "conventional-changelog-conventionalcommits": "8.0.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vscode/debugadapter-testsupport": "^1.64.0",
@@ -95,5 +98,72 @@
     "ts-mocha": "^10.0.0",
     "typescript": "^4.6.3",
     "url": "^0.11.3"
+  },
+  "release": {
+    "branches": [
+      {
+        "name": "main",
+        "prerelease": "beta"
+      },
+      {
+        "name": "release"
+      }
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            {
+              "type": "build",
+              "release": "patch"
+            },
+            {
+              "type": "chore",
+              "release": "patch"
+            },
+            {
+              "type": "refactor",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": "Features"
+              },
+              {
+                "type": "fix",
+                "section": "Bug Fixes"
+              },
+              {
+                "type": "build",
+                "section": "Dependencies and Other Build Updates",
+                "hidden": false
+              },
+              {
+                "type": "refactor",
+                "section": "Code Refactoring"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "pkgRoot": "."
+        }
+      ],
+      "@semantic-release/github"
+    ]
   }
 }
