@@ -90,10 +90,18 @@ function objectToMapRecursive(obj: any): any {
   }
 
   return new Map(
-    Object.entries(obj).map(([key, value]) => [
-      key,
-      objectToMapRecursive(value),
-    ]),
+    Object.entries(obj).map(([key, value]) => {
+      let processedValue = value;
+
+      // Convert string to bigint if key is "uint" and value is a numeric string
+      if (key === 'uint' && typeof value === 'string' && /^\d+$/.test(value)) {
+        processedValue = BigInt(value);
+      } else {
+        processedValue = objectToMapRecursive(value);
+      }
+
+      return [key, processedValue];
+    }),
   );
 }
 
